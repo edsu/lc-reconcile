@@ -39,6 +39,10 @@ def test_upsert_replaces_labels(index_path, tmp_path):
     assert index.lookup(normalize("Verne, Julio, 1828-1905")) == []
     [hit] = index.lookup(normalize("Verne, J. (Jules), 1828-1905"))
     assert hit.record.uri == VERNE
+    # The full-text index follows.
+    assert index.search("julio") == []
+    [(hit, found)] = index.search("verne j jules")
+    assert found == normalize("Verne, J. (Jules), 1828-1905")
     index.close()
     # Replacing a record doesn't change how many there are.
     assert _names(path) == before
@@ -57,5 +61,6 @@ def test_delete(index_path, tmp_path):
     index = Index(path)
     assert index.get(VERNE) is None
     assert index.lookup(normalize("Verne, Jules, 1828-1905")) == []
+    assert index.search("verne") == []
     index.close()
     assert _names(path) == before - 1

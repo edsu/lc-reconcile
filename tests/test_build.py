@@ -107,6 +107,20 @@ def test_cli_builds_from_files(tmp_path):
     assert schemes["subjects"].snapshot_modified == "2026-10-14"
 
 
+def test_cli_snapshot_date_for_each_file(tmp_path, capsys):
+    db = str(tmp_path / "lc.sqlite")
+    argv = ["--db", db, "build"]
+    for scheme, date in (("subjects", "2026-10-14"), ("genreForms", "2026-10-15")):
+        argv += ["--from", str(FIXTURES / f"{scheme}.nt"), "--snapshot-date", date]
+    assert main(argv) == 0
+    schemes = {s.name: s.snapshot_modified for s in Index(db).schemes()}
+    assert schemes == {"subjects": "2026-10-14", "genreForms": "2026-10-15"}
+
+    argv += ["--from", str(FIXTURES / "names.nt")]
+    assert main(argv) == 2
+    assert "one for each --from" in capsys.readouterr().err
+
+
 def test_cli_from_or_scheme(tmp_path, capsys):
     argv = ["--db", str(tmp_path / "x"), "build", "--scheme", "names"]
     assert main([*argv, "--from", "f.nt"]) == 2

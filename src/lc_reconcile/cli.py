@@ -51,15 +51,27 @@ def _parser() -> argparse.ArgumentParser:
     )
     build_.add_argument(
         "--snapshot-date",
+        action="append",
         metavar="DATE",
-        help="when LC published the --from files, where a later sync will start",
+        help="when LC published a --from file, where a later sync will start. "
+        "Give one for all the files, or one for each in the same order",
     )
 
     match = commands.add_parser("match", help="reconcile one heading")
-    match.add_argument("query", help="the heading, e.g. 'Verne, Jules, 1828-1905'")
+    match.add_argument(
+        "query",
+        nargs="?",
+        default="",
+        help="the heading, e.g. 'Verne, Jules, 1828-1905'",
+    )
     match.add_argument("--type", choices=sorted(TYPES))
     match.add_argument("--scheme", choices=SCHEMES)
     match.add_argument("--dates", help="dates to add to a name heading")
+    match.add_argument(
+        "--marc-key",
+        metavar="FIELD",
+        help="the heading as a MARC field, e.g. '7001 $aVerne, Jules,$d1828-1905.'",
+    )
     match.add_argument("--limit", type=int, default=10)
 
     commands.add_parser("status", help="say what the index holds")
@@ -91,7 +103,19 @@ def _build(args: argparse.Namespace) -> int:
                 file=sys.stderr,
             )
             return 2
-        sources = [Source(None, path, args.snapshot_date) for path in args.from_files]
+        dates = args.snapshot_date or [None]
+        if len(dates) == 1:
+            dates = dates * len(args.from_files)
+        if len(dates) != len(args.from_files):
+            print(
+                "lc-reconcile: give one --snapshot-date, or one for each --from",
+                file=sys.stderr,
+            )
+            return 2
+        sources = [
+            Source(None, path, date)
+            for path, date in zip(args.from_files, dates, strict=True)
+        ]
     else:
         sources = default_sources(args.scheme or DEFAULT_SCHEMES)
 
@@ -113,12 +137,16 @@ def _build(args: argparse.Namespace) -> int:
 
 
 def _match(args: argparse.Namespace) -> int:
+    if not (args.query or args.marc_key):
+        print("lc-reconcile: give a heading, or --marc-key", file=sys.stderr)
+        return 2
     reconciler = Reconciler(Index(args.db))
     query = Query(
         text=args.query,
         types=TYPES[args.type] if args.type else None,
         schemes=frozenset({args.scheme}) if args.scheme else None,
         dates=args.dates,
+        marc_key=args.marc_key,
         limit=args.limit,
     )
     results = [c.to_json() for c in reconciler.candidates(query)]

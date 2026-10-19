@@ -5,18 +5,31 @@ Queries and results have the shape of the Reconciliation Service API 0.2
 so the web service passes them straight through and a library caller can
 build them the same way.
 
+A query can give the heading as a marcKey (the ``marc_key`` property) as well
+as, or instead of, a label. The marcKey is tried first, compared subfield by
+subfield; the label is tried when it finds nothing.
+
 Only an exact match on an authorized heading counts as ``match: true``, and
 only when it is the one such heading of the requested type. Everything else
 a lookup finds -- variants, several authorized headings, deprecated ones --
-comes back as candidates for a person to choose between.
+comes back as candidates for a person to choose between, and when it finds
+nothing at all, headings with similar labels do.
 """
 
 from __future__ import annotations
 
+import re
 from collections.abc import Mapping
 from dataclasses import dataclass, replace
+from difflib import SequenceMatcher
 from typing import Any
 
+from lc_reconcile.marckey import (
+    heading_key,
+    is_subdivided,
+    kinds,
+    label_from_marc_key,
+)
 from lc_reconcile.normalize import normalize
 from lc_reconcile.records import AuthorityRecord
 from lc_reconcile.store import Hit, Index
@@ -43,6 +56,18 @@ TYPES: dict[str, frozenset[str]] = {
 SCORE_AUTHORIZED = 100
 SCORE_VARIANT = 90
 SCORE_REPLACEMENT = 70
+#: A similar label scores up to this, by how alike the two are, ...
+SCORE_SIMILAR = 55
+#: ... and this much more when the dates asked for are the heading's, or
+#: this much less when they aren't.
+SCORE_DATES = 10
+#: How alike (see :func:`similarity`) a label must be to be offered at all.
+#: A search that shares only a word or two with a label finds a great deal.
+SIMILAR_ENOUGH = 0.5
+
+_YEAR = re.compile(r"\b\d{4}\b")
+_NUMBERS = re.compile(r"\s*\b\d+\b")
+_WORD = re.compile(r"\w+")
 
 #: Records in this collection stand for more than one person.
 UNDIFFERENTIATED = "collection_NamesUndifferentiated"
@@ -58,6 +83,8 @@ class Query:
     types: frozenset[str] | None = None
     schemes: frozenset[str] | None = None
     dates: str | None = None
+    #: The heading as a MARC field, e.g. ``7001 $aVerne, Jules,$d1828-1905.``
+    marc_key: str | None = None
     limit: int = DEFAULT_LIMIT
 
     @classmethod
@@ -78,6 +105,7 @@ class Query:
             types=kinds,
             schemes=frozenset(schemes.split()) if schemes else None,
             dates=properties.get("dates"),
+            marc_key=properties.get("marc_key"),
             limit=int(data.get("limit") or DEFAULT_LIMIT),
         )
 
@@ -140,12 +168,24 @@ class Reconciler:
         }
 
     def candidates(self, query: Query) -> list[Candidate]:
-        key = normalize(_with_dates(query))
-        if not key:
-            return []
-        if query.types and "--" in key:
+        keys = []
+        field = query.marc_key
+        marc_key = heading_key(field) if field else None
+        if field and marc_key:
+            keys.append(marc_key)
+            if query.types is None:
+                # A 710 is a corporate name whatever its label looks like.
+                query = replace(query, types=kinds(field))
+        if label_key := normalize(_with_dates(query)):
+            keys.append(label_key)
+        subdivided = "--" in label_key or (marc_key and is_subdivided(marc_key))
+        if query.types and subdivided:
             query = replace(query, types=query.types | {"ComplexSubject"})
-        hits = [h for h in self.index.lookup(key) if _wanted(h.record, query)]
+        hits: list[Hit] = []
+        for key in keys:
+            hits = [h for h in self.index.lookup(key) if _wanted(h.record, query)]
+            if hits:
+                break
 
         authorized = _prefer_headings([h for h in hits if h.via == "authorized"])
         if authorized:
@@ -193,7 +233,71 @@ class Reconciler:
                     f"replaces the deprecated heading {hit.record.uri}"
                     + (f": {note}" if note else ""),
                 )
-        return list(candidates.values())[: query.limit]
+        if candidates:
+            return list(candidates.values())[: query.limit]
+
+        if not label_key and query.marc_key:
+            # A heading LC hasn't established, such as a subject with a
+            # subdivision added, may still be like one it has.
+            label_key = normalize(label_from_marc_key(query.marc_key))
+        return self._similar(label_key, query) if label_key else []
+
+    def _similar(self, key: str, query: Query) -> list[Candidate]:
+        """Headings with labels like ``key``, for when nothing matches it."""
+        best: dict[str, Candidate] = {}
+        # Labels are compared without their numbers, and dates are weighed
+        # on their own: "Morrison, Toni" says nothing about her dates, so the
+        # heading's dates shouldn't count against it, but dates that differ
+        # suggest someone else.
+        asked = set(_YEAR.findall(key))
+        name = _without_numbers(key)
+        found = self.index.search(key, kinds=query.types, schemes=query.schemes)
+        for hit, label_key in found:
+            ratio = similarity(name, _without_numbers(label_key))
+            if ratio < SIMILAR_ENOUGH:
+                continue
+            score = round(SCORE_SIMILAR * ratio)
+            if asked:
+                agree = asked <= _years(hit.record)
+                score += SCORE_DATES if agree else -SCORE_DATES
+            current = best.get(hit.record.uri)
+            if current is None or score > current.score:
+                best[hit.record.uri] = Candidate(
+                    hit.record,
+                    score,
+                    False,
+                    "has a heading like this"
+                    if hit.via == "authorized"
+                    else "has a variant like this",
+                )
+        ranked = sorted(best.values(), key=lambda c: c.score, reverse=True)
+        return ranked[: query.limit]
+
+
+def similarity(a: str, b: str) -> float:
+    """How alike two label keys are, from 0 to 1.
+
+    The mean of difflib's character ratio, which forgives small differences
+    in spelling, and the share of words the two have in common, which keeps a
+    longer label that merely starts the same way ("Science fiction,
+    Scottish") from outscoring the one asked for ("Science fiction").
+    """
+    chars = SequenceMatcher(None, a, b).ratio()
+    words_a, words_b = set(_WORD.findall(a)), set(_WORD.findall(b))
+    union = words_a | words_b
+    words = len(words_a & words_b) / len(union) if union else 0.0
+    return (chars + words) / 2
+
+
+def _without_numbers(key: str) -> str:
+    return _NUMBERS.sub("", key).strip() or key
+
+
+def _years(record: AuthorityRecord) -> set[str]:
+    """The years in a record's heading, and of its RWO's birth and death."""
+    years = set(_YEAR.findall(record.label or ""))
+    years |= {date[:4] for date in (record.birth, record.death) if date}
+    return years
 
 
 def _wanted(record: AuthorityRecord, query: Query) -> bool:

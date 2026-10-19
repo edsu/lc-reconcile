@@ -36,7 +36,6 @@ _WANTED = {
             "useInstead",
             "deletionNote",
             "identifiesRWO",
-            "hasExactExternalAuthority",
             "birthDate",
             "deathDate",
         )
@@ -96,10 +95,11 @@ class AuthorityRecord:
     marc_key: str | None = None
     #: Variant headings (4XX), including non-Latin script forms of the heading.
     variants: list[str] = field(default_factory=list)
+    #: The variants' marcKeys, where LC gives them.
+    variant_keys: list[str] = field(default_factory=list)
     use_instead: list[str] = field(default_factory=list)
     deletion_note: str | None = None
     rwo: str | None = None
-    viaf: str | None = None
     birth: str | None = None
     death: str | None = None
 
@@ -155,6 +155,7 @@ def parse_record(uri: str, lines: Iterable[str]) -> AuthorityRecord | None:
     found = False
     variant_nodes: list[str] = []
     variant_labels: dict[str, list[str]] = {}
+    variant_node_keys: dict[str, list[str]] = {}
     labels: list[Label] = []
     keys: list[str] = []
     # Dates belong to the real-world object, a different subject in the same
@@ -174,8 +175,11 @@ def parse_record(uri: str, lines: Iterable[str]) -> AuthorityRecord | None:
         obj = _term(parts[2])
 
         if subject.startswith("_:"):
-            if predicate == MADS + "variantLabel" and isinstance(obj, Label):
-                variant_labels.setdefault(subject, []).append(obj.value)
+            if isinstance(obj, Label):
+                if predicate == MADS + "variantLabel":
+                    variant_labels.setdefault(subject, []).append(obj.value)
+                elif predicate == MARC_KEY:
+                    variant_node_keys.setdefault(subject, []).append(obj.value)
             continue
         if subject != uri:
             if predicate in _DATES and isinstance(obj, Label):
@@ -205,16 +209,9 @@ def parse_record(uri: str, lines: Iterable[str]) -> AuthorityRecord | None:
             record.collections.append(obj.rsplit("/", 1)[-1])
         elif predicate == MADS + "useInstead":
             record.use_instead.append(obj)
-        elif predicate == MADS + "identifiesRWO":
+        elif predicate == MADS + "identifiesRWO" and obj.startswith(RWO_PREFIX):
             # Names also identify their RWO by ISNI and others; we want LC's.
-            if obj.startswith(RWO_PREFIX):
-                record.rwo = obj
-        elif (
-            predicate == MADS + "hasExactExternalAuthority"
-            and "viaf.org" in obj
-            and not record.viaf
-        ):
-            record.viaf = obj
+            record.rwo = obj
 
     if not found:
         return None
@@ -234,8 +231,11 @@ def parse_record(uri: str, lines: Iterable[str]) -> AuthorityRecord | None:
     for node in variant_nodes:
         record.variants.extend(variant_labels.get(node, ()))
 
-    # The heading's own marcKey is the 1XX; the others are script variants.
+    # The heading's own marcKey is the 1XX; the 4XXs are its script forms.
     record.marc_key = next((k for k in keys if k.startswith("1")), None)
+    record.variant_keys = [k for k in keys if k.startswith("4")]
+    for node in variant_nodes:
+        record.variant_keys.extend(variant_node_keys.get(node, ()))
 
     if record.rwo:
         record.birth = dates.get((record.rwo, MADS + "birthDate"))

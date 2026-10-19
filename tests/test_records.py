@@ -32,9 +32,11 @@ def _expected(uri: str, graph: Graph) -> dict:
         for t in graph.objects(node, RDF.type)
         if str(t).startswith(MADS)
     }
-    keys = [
-        str(k) for k in graph.objects(node, URIRef(MARC_KEY)) if str(k).startswith("1")
-    ]
+    keys = [str(k) for k in graph.objects(node, URIRef(MARC_KEY))]
+    variant_keys = {k for k in keys if k.startswith("4")}
+    for variant in graph.objects(node, _mads("hasVariant")):
+        variant_keys |= {str(k) for k in graph.objects(variant, URIRef(MARC_KEY))}
+    keys = [k for k in keys if k.startswith("1")]
     return {
         "label": primary[0] if primary else None,
         "variants": variants - {primary[0] if primary else None},
@@ -45,6 +47,7 @@ def _expected(uri: str, graph: Graph) -> dict:
         },
         "use_instead": {str(u) for u in graph.objects(node, _mads("useInstead"))},
         "marc_key": keys[0] if keys else None,
+        "variant_keys": variant_keys,
     }
 
 
@@ -56,6 +59,7 @@ def _actual(record) -> dict:
         "collections": set(record.collections),
         "use_instead": set(record.use_instead),
         "marc_key": record.marc_key,
+        "variant_keys": set(record.variant_keys),
     }
 
 
@@ -102,7 +106,8 @@ def test_verne():
     assert record.rwo == "http://id.loc.gov/rwo/agents/n79064013"
     assert record.birth == "1828-02-08"
     assert record.death == "1905-04-24"
-    assert record.viaf and "viaf.org" in record.viaf
+    assert "4001 $aVern, Jul,$d1828-1905$7(bcp47)und-latn" in record.variant_keys
+    assert "4001 $aВерн, Жюль,$d1828-1905$7(bcp47)und-cyrl" in record.variant_keys
 
 
 def test_deprecated_record():

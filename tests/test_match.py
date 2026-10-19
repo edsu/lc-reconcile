@@ -44,8 +44,78 @@ def test_dates_property_completes_the_heading(reconciler):
 
 
 def test_name_without_dates_is_not_a_match(reconciler):
-    # id.loc.gov's label service redirects this straight to Verne.
-    assert _ask(reconciler, "Verne, Jules", "PersonalName") == []
+    # id.loc.gov's label service redirects this straight to Verne. Here he is
+    # only a heading like the one asked for.
+    [candidate] = _ask(reconciler, "Verne, Jules", "PersonalName")
+    assert candidate.record.uri == VERNE
+    assert not candidate.match
+    assert candidate.reason == "has a heading like this"
+    assert candidate.score < 70
+
+
+def test_similar_heading(reconciler):
+    [candidate, *_] = _ask(reconciler, "Science-fiction stories", "Topic")
+    assert candidate.record.uri == SUBJECTS + "sh85118629"
+    assert not candidate.match
+
+
+def test_dates_weigh_on_a_similar_heading(reconciler):
+    [without] = _ask(reconciler, "Verne, Jules", "PersonalName")
+    [agreeing] = _ask(reconciler, "Verne, Jules", "PersonalName", dates="1828")
+    [differing] = _ask(reconciler, "Verne, Jules", "PersonalName", dates="1950")
+    assert agreeing.record.uri == without.record.uri == differing.record.uri == VERNE
+    assert agreeing.score > without.score > differing.score
+
+
+def test_similar_headings_respect_type(reconciler):
+    assert _ask(reconciler, "Verne, Jules", "CorporateName") == []
+
+
+def test_bibliographic_marc_key(reconciler):
+    [candidate] = _ask(
+        reconciler,
+        "",
+        marc_key="7001 $aVerne, Jules,$d1828-1905,$eauthor.$4aut",
+    )
+    assert candidate.record.uri == VERNE
+    assert candidate.match
+
+
+def test_marc_key_keeps_subfield_boundaries(reconciler):
+    [candidate] = _ask(reconciler, "", "Geographic", marc_key="651 0$aFrance$xHistory.")
+    assert candidate.record.uri == SUBJECTS + "sh85051256"
+    assert candidate.match
+
+
+def test_marc_key_tag_says_what_kind_of_heading(reconciler):
+    # Verne as a corporate body is no one LC knows.
+    assert _ask(reconciler, "", marc_key="7102 $aVerne, Jules,$d1828-1905") == []
+
+
+def test_unestablished_marc_key_finds_similar_headings(reconciler):
+    # LCSH has no "Science fiction--Abbreviations", but has both parts.
+    candidates = _ask(reconciler, "", marc_key="650 0$aScience fiction$xAbbreviations.")
+    assert SUBJECTS + "sh85118629" in [c.record.uri for c in candidates]
+    assert not any(c.match for c in candidates)
+
+
+def test_marc_key_variant(reconciler):
+    [candidate] = _ask(reconciler, "", marc_key="7001 $aVern, Jul,$d1828-1905")
+    assert candidate.record.uri == VERNE
+    assert not candidate.match
+    assert candidate.score == 90
+
+
+def test_label_tried_when_marc_key_misses(reconciler):
+    # The marcKey splits the heading differently from LC's; the label still
+    # finds it.
+    [candidate] = _ask(
+        reconciler,
+        "Verne, Jules, 1828-1905",
+        marc_key="7001 $aVerne, Jules, 1828-1905",
+    )
+    assert candidate.record.uri == VERNE
+    assert candidate.match
 
 
 def test_variant_is_a_candidate_not_a_match(reconciler):
