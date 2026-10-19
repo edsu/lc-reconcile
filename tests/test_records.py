@@ -67,7 +67,9 @@ def test_snapshot_blocks_agree_with_rdflib():
     checked = 0
     for scheme in ("names", "subjects", "genreForms"):
         path = FIXTURES / f"{scheme}.nt"
-        for uri, lines in iter_blocks(path.open(encoding="utf-8")):
+        for uri, lines in iter_blocks(
+            path.read_text(encoding="utf-8").splitlines(keepends=True)
+        ):
             graph = Graph().parse(data="".join(lines), format="nt")
             record = parse_record(uri, lines)
             assert record is not None
@@ -87,13 +89,20 @@ def test_single_record_document_agrees_with_rdflib():
     graph = Graph().parse(
         data="".join(line for line in lines if line not in bad), format="nt"
     )
-    record = parse_record(VERNE, path.open(encoding="utf-8"))
+    record = parse_record(
+        VERNE, path.read_text(encoding="utf-8").splitlines(keepends=True)
+    )
     assert record is not None
     assert _actual(record) == _expected(VERNE, graph)
 
 
 def test_verne():
-    record = parse_record(VERNE, (FIXTURES / "n79064013.nt").open(encoding="utf-8"))
+    record = parse_record(
+        VERNE,
+        (FIXTURES / "n79064013.nt")
+        .read_text(encoding="utf-8")
+        .splitlines(keepends=True),
+    )
     assert record is not None
     assert record.scheme == "names"
     assert record.kind == "PersonalName"
@@ -113,7 +122,11 @@ def test_verne():
 def test_deprecated_record():
     records = {
         r.uri: r
-        for r in iter_records((FIXTURES / "genreForms.nt").open(encoding="utf-8"))
+        for r in iter_records(
+            (FIXTURES / "genreForms.nt")
+            .read_text(encoding="utf-8")
+            .splitlines(keepends=True)
+        )
     }
     old = records["http://id.loc.gov/authorities/genreForms/gf2011025006"]
     assert old.deprecated

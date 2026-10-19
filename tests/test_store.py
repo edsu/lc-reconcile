@@ -9,7 +9,9 @@ from .conftest import FIXTURES, VERNE
 
 
 def _verne():
-    record = parse_record(VERNE, (FIXTURES / "n79064013.nt").open(encoding="utf-8"))
+    record = parse_record(
+        VERNE, (FIXTURES / "n79064013.nt").read_text(encoding="utf-8").splitlines()
+    )
     assert record is not None
     return record
 

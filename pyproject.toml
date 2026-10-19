@@ -26,7 +26,11 @@ classifiers = [
 dependencies = []
 
 [project.optional-dependencies]
-server = ["fastapi>=0.115", "uvicorn>=0.32"]
+server = [
+    "fastapi>=0.115",
+    "python-multipart>=0.0.20",
+    "uvicorn>=0.32",
+]
 
 [project.scripts]
 lc-reconcile = "lc_reconcile.cli:main"
@@ -37,6 +41,11 @@ Issues = "https://github.com/blue-core-lod/lc-reconcile/issues"
 
 [dependency-groups]
 dev = [
+    # The web service's tests need its extra, and its TestClient httpx2.
+    "lc-reconcile[server]",
+    "httpx2>=2.14.0",
+    # And its schema test validates responses against the spec's schemas.
+    "jsonschema>=4.23",
     "pytest>=8.3.4",
     # Only the tests use rdflib: they check the records reader against it.
     "rdflib>=7.1.3",

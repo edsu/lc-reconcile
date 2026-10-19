@@ -9,8 +9,7 @@ id.loc.gov. Queries and results follow the
 [Reconciliation Service API 0.2](https://www.w3.org/community/reports/reconciliation/CG-FINAL-specs-0.2-20230410/),
 the protocol OpenRefine speaks.
 
-This is early work. The library and the `build`, `sync`, `match` and
-`status` commands exist; the web service is still to come.
+This is early work.
 
 ## Usage
 
@@ -29,6 +28,27 @@ built by default: LC's names snapshot is 7.3 GB compressed, and indexing
 its 12 million records takes about 20 minutes and makes a 9 GB index.
 To build from snapshots you've already downloaded, give each with `--from`
 and the date LC published it with `--snapshot-date`.
+
+## The reconciliation service
+
+```
+uvx --from 'lc-reconcile[server]' lc-reconcile serve
+lc-reconcile serve --port 8000 --sync-every 24
+```
+
+`serve` runs the service at `http://127.0.0.1:8000/`. To use it from
+OpenRefine, choose *Reconcile → Start reconciling… → Add standard
+service…* and give that URL. Types are the MADS kinds of heading
+(`PersonalName`, `Topic`, `GenreForm` and so on). These properties sharpen a
+query:
+
+- `dates`: a name's dates, when they're in a column of their own
+- `marc_key`: the heading as a MARC field
+- `scheme`: `names`, `subjects` or `genreForms`, to search only that scheme
+
+`GET /status` says what the index holds and how far it's synced. With
+`--sync-every HOURS`, the service syncs when it starts and then on that
+schedule, and goes on answering queries while it does.
 
 ## Keeping the index current
 

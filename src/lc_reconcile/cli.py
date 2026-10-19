@@ -6,6 +6,7 @@ import argparse
 import json
 import os
 import sys
+import threading
 import time
 from collections.abc import Sequence
 from datetime import timedelta
@@ -80,19 +81,39 @@ def _parser() -> argparse.ArgumentParser:
     sync_ = commands.add_parser(
         "sync", help="apply the changes LC has published since the last sync"
     )
-    sync_.add_argument(
+    _sync_options(sync_)
+
+    serve = commands.add_parser(
+        "serve", help="run the reconciliation service (needs the server extra)"
+    )
+    serve.add_argument("--host", default="127.0.0.1")
+    serve.add_argument("--port", type=int, default=8000)
+    serve.add_argument(
+        "--sync-every",
+        type=float,
+        metavar="HOURS",
+        help="sync on starting, and then every this many hours (default: never)",
+    )
+    _sync_options(serve)
+
+    commands.add_parser("status", help="say what the index holds")
+    return parser
+
+
+def _sync_options(parser: argparse.ArgumentParser) -> None:
+    parser.add_argument(
         "--scheme",
         action="append",
         choices=SCHEMES,
         help="scheme to sync; repeat for more (default: every scheme in the index)",
     )
-    sync_.add_argument(
+    parser.add_argument(
         "--delay",
         type=float,
         default=0.5,
         help="seconds between requests to id.loc.gov (default: 0.5)",
     )
-    sync_.add_argument(
+    parser.add_argument(
         "--max-age",
         type=int,
         default=MAX_AGE.days,
@@ -100,9 +121,6 @@ def _parser() -> argparse.ArgumentParser:
         help="rebuild rather than sync an index further behind than this "
         f"(default: {MAX_AGE.days})",
     )
-
-    commands.add_parser("status", help="say what the index holds")
-    return parser
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -115,6 +133,8 @@ def main(argv: Sequence[str] | None = None) -> int:
                 return _match(args)
             case "sync":
                 return _sync(args)
+            case "serve":
+                return _serve(args)
             case "status":
                 return _status(args)
     except (IndexUnavailable, SyncError, FetchError) as error:
@@ -158,8 +178,9 @@ def _build(args: argparse.Namespace) -> int:
             print(f"{scheme}: {count:,} records", file=sys.stderr)
 
     build(args.db, sources, progress=progress)
-    index = Index(args.db)
-    for status in index.schemes():
+    with Index(args.db) as index:
+        schemes = index.schemes()
+    for status in schemes:
         print(f"{status.name}: {status.records:,} records", file=sys.stderr)
     print(f"built {args.db} in {time.monotonic() - started:.0f}s", file=sys.stderr)
     return 0
@@ -169,7 +190,6 @@ def _match(args: argparse.Namespace) -> int:
     if not (args.query or args.marc_key):
         print("lc-reconcile: give a heading, or --marc-key", file=sys.stderr)
         return 2
-    reconciler = Reconciler(Index(args.db))
     query = Query(
         text=args.query,
         types=TYPES[args.type] if args.type else None,
@@ -178,7 +198,8 @@ def _match(args: argparse.Namespace) -> int:
         marc_key=args.marc_key,
         limit=args.limit,
     )
-    results = [c.to_json() for c in reconciler.candidates(query)]
+    with Index(args.db) as index:
+        results = [c.to_json() for c in Reconciler(index).candidates(query)]
     json.dump(results, sys.stdout, ensure_ascii=False, indent=2)
     print()
     return 0
@@ -206,8 +227,42 @@ def _sync(args: argparse.Namespace) -> int:
     return 0
 
 
+def _serve(args: argparse.Namespace) -> int:
+    try:
+        import uvicorn
+
+        from lc_reconcile.api import create_app
+    except ImportError:
+        print(
+            "lc-reconcile: serve needs the server extra: "
+            "pip install 'lc-reconcile[server]'",
+            file=sys.stderr,
+        )
+        return 1
+    app = create_app(args.db)
+    if args.sync_every:
+        threading.Thread(
+            target=_sync_forever, args=(args,), name="sync", daemon=True
+        ).start()
+    uvicorn.run(app, host=args.host, port=args.port)
+    return 0
+
+
+def _sync_forever(args: argparse.Namespace) -> None:
+    """Sync now, then every --sync-every hours, while the service runs."""
+    while True:
+        try:
+            _sync(args)
+        except (IndexUnavailable, SyncError, FetchError, OSError) as error:
+            # Keep serving what the index has; the next sync may do better.
+            print(f"lc-reconcile: sync failed: {error}", file=sys.stderr)
+        time.sleep(args.sync_every * 3600)
+
+
 def _status(args: argparse.Namespace) -> int:
-    for status in Index(args.db).schemes():
+    with Index(args.db) as index:
+        schemes = index.schemes()
+    for status in schemes:
         synced = (
             f", synced to {status.cursor}"
             + (f" at {status.synced}" if status.synced else " (interrupted)")

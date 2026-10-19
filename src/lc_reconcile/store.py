@@ -21,6 +21,7 @@ from collections.abc import Iterable
 from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
+from typing import Self
 
 from lc_reconcile.marckey import heading_key
 from lc_reconcile.normalize import normalize
@@ -229,6 +230,12 @@ class Index:
 
     def close(self) -> None:
         self._db.close()
+
+    def __enter__(self) -> Self:
+        return self
+
+    def __exit__(self, *exc: object) -> None:
+        self.close()
 
     def lookup(self, key: str) -> list[Hit]:
         """Every record with ``key`` as its normalized heading or a variant."""
