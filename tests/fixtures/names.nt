@@ -1,0 +1,171 @@
+# BEGIN /authorities/names/n00000022
+
+<http://id.loc.gov/rwo/agents/n00000022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+_:n79ea13496ea749c88f979574255a2954b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n79ea13496ea749c88f979574255a2954b4 .
+_:n79ea13496ea749c88f979574255a2954b4 <http://www.loc.gov/mads/rdf/v1#elementValue> "1965-" .
+_:n79ea13496ea749c88f979574255a2954b2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/rwo/agents/n00000022> <http://www.loc.gov/mads/rdf/v1#birthDate> "1965-07-06"^^<http://id.loc.gov/datatypes/edtf> .
+_:n79ea13496ea749c88f979574255a2954b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:n79ea13496ea749c88f979574255a2954b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/names/n00000022> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/en/viaf/LC%7Cn%20%2000000022> .
+_:n79ea13496ea749c88f979574255a2954b7 <http://www.loc.gov/mads/rdf/v1#citationSource> "Einfluss der Stickstoff-Düngungsintensität auf die Proteinqualität von Weizen, 1998:" .
+<http://id.loc.gov/authorities/names/n00000022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+_:n79ea13496ea749c88f979574255a2954b1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:n79ea13496ea749c88f979574255a2954b7 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+<http://id.loc.gov/rwo/agents/n00000022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://id.loc.gov/authorities/names/n00000022> <http://id.loc.gov/ontologies/bflc/marcKey> "1001 $aSchulze, Petra,$d1965-" .
+<http://id.loc.gov/rwo/agents/n00000022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+<http://id.loc.gov/authorities/names/n00000022> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Schulze, Petra, 1965-" .
+_:n79ea13496ea749c88f979574255a2954b2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2025-08-05T02:35:09"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://id.loc.gov/authorities/names/n00000022> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n79ea13496ea749c88f979574255a2954b1 .
+<http://id.loc.gov/authorities/names/n00000022> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+_:n79ea13496ea749c88f979574255a2954b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n79ea13496ea749c88f979574255a2954b3 .
+<http://id.loc.gov/authorities/names/n00000022> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n00000022> .
+_:n79ea13496ea749c88f979574255a2954b1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2000-01-28T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n79ea13496ea749c88f979574255a2954b2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/rwo/agents/n00000022> <http://www.w3.org/2000/01/rdf-schema#label> "Schulze, Petra, 1965-" .
+_:n79ea13496ea749c88f979574255a2954b1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:n79ea13496ea749c88f979574255a2954b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/names/n00000022> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+_:n79ea13496ea749c88f979574255a2954b7 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Petra Schulze) vita (b. July 6, 1965 in Bremen)" .
+<http://id.loc.gov/authorities/names/n00000022> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+<http://id.loc.gov/authorities/names/n00000022> <http://www.loc.gov/mads/rdf/v1#elementList> _:n79ea13496ea749c88f979574255a2954b5 .
+_:n79ea13496ea749c88f979574255a2954b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n79ea13496ea749c88f979574255a2954b1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/names/n00000022> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n79ea13496ea749c88f979574255a2954b7 .
+_:n79ea13496ea749c88f979574255a2954b3 <http://www.loc.gov/mads/rdf/v1#elementValue> "Schulze, Petra," .
+_:n79ea13496ea749c88f979574255a2954b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:n79ea13496ea749c88f979574255a2954b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:n79ea13496ea749c88f979574255a2954b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n79ea13496ea749c88f979574255a2954b6 .
+<http://id.loc.gov/rwo/agents/n00000022> <http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority> <http://id.loc.gov/authorities/names/n00000022> .
+_:n79ea13496ea749c88f979574255a2954b2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/names/n00000022> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n79ea13496ea749c88f979574255a2954b2 .
+<http://id.loc.gov/authorities/names/n00000022> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 00000022" .
+<http://id.loc.gov/authorities/names/n00000022> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+
+# END /authorities/names/n00000022
+# BEGIN /authorities/names/n00000060
+
+_:n02154b26ad2f496088741ab7c0ab17d7b1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n00000060> .
+<http://id.loc.gov/authorities/names/n00000060> <http://id.loc.gov/ontologies/bflc/marcKey> "1001 $aBrennan, Michael" .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#elementList> _:n02154b26ad2f496088741ab7c0ab17d7b4 .
+_:n02154b26ad2f496088741ab7c0ab17d7b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n02154b26ad2f496088741ab7c0ab17d7b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n02154b26ad2f496088741ab7c0ab17d7b6 <http://www.loc.gov/mads/rdf/v1#citationSource> "[Co-author of Custody for fathers]" .
+_:n02154b26ad2f496088741ab7c0ab17d7b1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+_:n02154b26ad2f496088741ab7c0ab17d7b7 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n02154b26ad2f496088741ab7c0ab17d7b8 <http://www.loc.gov/mads/rdf/v1#citationSource> "[Author-editor of Dean Griff's charming tails]" .
+<http://id.loc.gov/authorities/names/n00000060> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 00000060" .
+<http://id.loc.gov/rwo/agents/n00000060> <http://www.w3.org/2000/01/rdf-schema#label> "Brennan, Michael" .
+_:n02154b26ad2f496088741ab7c0ab17d7b10 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n02154b26ad2f496088741ab7c0ab17d7b5 .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n02154b26ad2f496088741ab7c0ab17d7b6 .
+<http://id.loc.gov/rwo/agents/n00000060> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Brennan, Michael" .
+<http://id.loc.gov/rwo/agents/n00000060> <http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority> <http://id.loc.gov/authorities/names/n00000060> .
+_:n02154b26ad2f496088741ab7c0ab17d7b5 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#editorialNote> "[THIS 1XX FIELD CANNOT BE USED UNDER RDA UNTIL THIS UNDIFFERENTIATED RECORD HAS BEEN HANDLED FOLLOWING THE GUIDELINES IN DCM Z1 008/32]" .
+_:n02154b26ad2f496088741ab7c0ab17d7b1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2000-01-03T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesUndifferentiated> .
+_:n02154b26ad2f496088741ab7c0ab17d7b6 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n02154b26ad2f496088741ab7c0ab17d7b9 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n02154b26ad2f496088741ab7c0ab17d7b7 <http://www.loc.gov/mads/rdf/v1#citationSource> "Drugs, all you need to know, 1970:" .
+_:n02154b26ad2f496088741ab7c0ab17d7b5 <http://www.loc.gov/mads/rdf/v1#citationSource> "Brennan, Michael. Dean Griff's charming tails, 1999:" .
+_:n02154b26ad2f496088741ab7c0ab17d7b7 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Michael Brennan)" .
+_:n02154b26ad2f496088741ab7c0ab17d7b10 <http://www.loc.gov/mads/rdf/v1#citationSource> "Custody for fathers, 1994:" .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:n02154b26ad2f496088741ab7c0ab17d7b10 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Michael Brennan)" .
+_:n02154b26ad2f496088741ab7c0ab17d7b2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:n02154b26ad2f496088741ab7c0ab17d7b9 <http://www.loc.gov/mads/rdf/v1#citationSource> "[Author of Drugs, all you need to know]" .
+_:n02154b26ad2f496088741ab7c0ab17d7b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n02154b26ad2f496088741ab7c0ab17d7b3 .
+<http://id.loc.gov/rwo/agents/n00000060> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:n02154b26ad2f496088741ab7c0ab17d7b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+<http://id.loc.gov/rwo/agents/n00000060> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+_:n02154b26ad2f496088741ab7c0ab17d7b2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/tnlvils> .
+_:n02154b26ad2f496088741ab7c0ab17d7b8 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n02154b26ad2f496088741ab7c0ab17d7b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n02154b26ad2f496088741ab7c0ab17d7b5 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Michael Brennan)" .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n02154b26ad2f496088741ab7c0ab17d7b9 .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n02154b26ad2f496088741ab7c0ab17d7b7 .
+_:n02154b26ad2f496088741ab7c0ab17d7b2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2025-08-05T02:34:08"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n02154b26ad2f496088741ab7c0ab17d7b1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+_:n02154b26ad2f496088741ab7c0ab17d7b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n02154b26ad2f496088741ab7c0ab17d7b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n02154b26ad2f496088741ab7c0ab17d7b10 .
+_:n02154b26ad2f496088741ab7c0ab17d7b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n02154b26ad2f496088741ab7c0ab17d7b2 .
+_:n02154b26ad2f496088741ab7c0ab17d7b3 <http://www.loc.gov/mads/rdf/v1#elementValue> "Brennan, Michael" .
+_:n02154b26ad2f496088741ab7c0ab17d7b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n02154b26ad2f496088741ab7c0ab17d7b1 .
+_:n02154b26ad2f496088741ab7c0ab17d7b2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:n02154b26ad2f496088741ab7c0ab17d7b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n02154b26ad2f496088741ab7c0ab17d7b8 .
+<http://id.loc.gov/authorities/names/n00000060> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/en/viaf/LC%7Cn%20%2000000060> .
+_:n02154b26ad2f496088741ab7c0ab17d7b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+
+# END /authorities/names/n00000060
+# BEGIN /authorities/names/n00000074
+
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n997e78d642d6472f979e8a6dda50339cb1 .
+_:n997e78d642d6472f979e8a6dda50339cb9 <http://www.loc.gov/mads/rdf/v1#citationSource> "His Die Fondas, c2001:" .
+_:n997e78d642d6472f979e8a6dda50339cb6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#editorialNote> "[THIS 1XX FIELD CANNOT BE USED UNDER RDA UNTIL THIS UNDIFFERENTIATED RECORD HAS BEEN HANDLED FOLLOWING THE GUIDELINES IN DCM Z1 008/32]" .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesUndifferentiated> .
+_:n997e78d642d6472f979e8a6dda50339cb7 <http://www.loc.gov/mads/rdf/v1#citationSource> "Das gotische Rathaus in Meissen, 1999:" .
+<http://id.loc.gov/rwo/agents/n00000074> <http://www.w3.org/2000/01/rdf-schema#label> "Kern, Andreas" .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:n997e78d642d6472f979e8a6dda50339cb9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+<http://id.loc.gov/authorities/names/n00000074> <http://id.loc.gov/ontologies/bflc/marcKey> "1001 $aKern, Andreas" .
+<http://id.loc.gov/rwo/agents/n00000074> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n997e78d642d6472f979e8a6dda50339cb2 .
+_:n997e78d642d6472f979e8a6dda50339cb8 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n997e78d642d6472f979e8a6dda50339cb1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/rwo/agents/n00000074> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+_:n997e78d642d6472f979e8a6dda50339cb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n997e78d642d6472f979e8a6dda50339cb5 .
+_:n997e78d642d6472f979e8a6dda50339cb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:n997e78d642d6472f979e8a6dda50339cb8 <http://www.loc.gov/mads/rdf/v1#citationSource> "[Joint author of Das gotische Rathaus in Meissen]" .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Kern, Andreas" .
+_:n997e78d642d6472f979e8a6dda50339cb9 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Andreas Kern) jkt. (freelance author & film journalist in Hamburg; for eleven yrs. was editor with publishing group \"Milchstrasse\"; author of: Making of-- wie ein Film entsteht (1996))" .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n997e78d642d6472f979e8a6dda50339cb6 .
+_:n997e78d642d6472f979e8a6dda50339cb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n997e78d642d6472f979e8a6dda50339cb3 .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n997e78d642d6472f979e8a6dda50339cb9 .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n00000074> .
+<http://id.loc.gov/authorities/names/n00000074> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 00000074" .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+_:n997e78d642d6472f979e8a6dda50339cb1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/en/viaf/LC%7Cn%20%2000000074> .
+_:n997e78d642d6472f979e8a6dda50339cb6 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n997e78d642d6472f979e8a6dda50339cb7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n997e78d642d6472f979e8a6dda50339cb7 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Andreas Kern)" .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n997e78d642d6472f979e8a6dda50339cb8 .
+_:n997e78d642d6472f979e8a6dda50339cb2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:n997e78d642d6472f979e8a6dda50339cb5 <http://www.loc.gov/mads/rdf/v1#citationStatus> "notfound" .
+<http://id.loc.gov/rwo/agents/n00000074> <http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority> <http://id.loc.gov/authorities/names/n00000074> .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+_:n997e78d642d6472f979e8a6dda50339cb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:n997e78d642d6472f979e8a6dda50339cb3 <http://www.loc.gov/mads/rdf/v1#elementValue> "Kern, Andreas" .
+_:n997e78d642d6472f979e8a6dda50339cb5 <http://www.loc.gov/mads/rdf/v1#citationSource> "Kürsch. deut. Lit.-Kal., 1988;WW in Germany, 1992, 1996;Wer ist wer? 2000/01;Kürsch. deut. Gel.-Kal., 1996, 2001." .
+_:n997e78d642d6472f979e8a6dda50339cb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n997e78d642d6472f979e8a6dda50339cb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n997e78d642d6472f979e8a6dda50339cb2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2000-01-07T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n997e78d642d6472f979e8a6dda50339cb6 <http://www.loc.gov/mads/rdf/v1#citationSource> "[Author of Die Fondas]" .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n997e78d642d6472f979e8a6dda50339cb7 .
+_:n997e78d642d6472f979e8a6dda50339cb1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:n997e78d642d6472f979e8a6dda50339cb2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:n997e78d642d6472f979e8a6dda50339cb9 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n997e78d642d6472f979e8a6dda50339cb1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2025-08-05T02:34:20"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n997e78d642d6472f979e8a6dda50339cb2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:n997e78d642d6472f979e8a6dda50339cb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+<http://id.loc.gov/rwo/agents/n00000074> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+<http://id.loc.gov/authorities/names/n00000074> <http://www.loc.gov/mads/rdf/v1#elementList> _:n997e78d642d6472f979e8a6dda50339cb4 .
+_:n997e78d642d6472f979e8a6dda50339cb7 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+
+# END /authorities/names/n00000074

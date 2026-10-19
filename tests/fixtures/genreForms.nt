@@ -1,0 +1,523 @@
+# BEGIN /authorities/genreForms/gf2011025006
+
+<http://id.loc.gov/authorities/genreForms/gf2011025006> <http://www.loc.gov/mads/rdf/v1#deletionNote> "This authority record has been deleted because the genre/form term is covered by the genre/form terms {Pornographic films} (DLC)gf2011026460 and {Gay films} (DLC)gf2018026031"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011025006> <http://www.loc.gov/mads/rdf/v1#elementList> _:nae79b149cc004336bc07b6498562d556b4 .
+_:nae79b149cc004336bc07b6498562d556b2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2011-09-28T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:nae79b149cc004336bc07b6498562d556b2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/genreForms/gf2011025006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:nae79b149cc004336bc07b6498562d556b2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/wau> .
+_:nae79b149cc004336bc07b6498562d556b3 <http://www.loc.gov/mads/rdf/v1#elementValue> "Gay pornographic films"@en .
+_:nae79b149cc004336bc07b6498562d556b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/genreForms/gf2011025006> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:nae79b149cc004336bc07b6498562d556b2 .
+_:nae79b149cc004336bc07b6498562d556b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:nae79b149cc004336bc07b6498562d556b3 .
+_:nae79b149cc004336bc07b6498562d556b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/genreForms/gf2011025006> <http://www.loc.gov/mads/rdf/v1#variantLabel> "Gay pornographic films"@en .
+_:nae79b149cc004336bc07b6498562d556b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/genreForms/gf2011025006> <http://www.loc.gov/mads/rdf/v1#useInstead> <http://id.loc.gov/authorities/genreForms/gf2011026460> .
+_:nae79b149cc004336bc07b6498562d556b1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:nae79b149cc004336bc07b6498562d556b1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:nae79b149cc004336bc07b6498562d556b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+<http://id.loc.gov/authorities/genreForms/gf2011025006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:nae79b149cc004336bc07b6498562d556b1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2018-04-16T09:48:46"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:nae79b149cc004336bc07b6498562d556b2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/genreForms/gf2011025006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority> .
+<http://id.loc.gov/authorities/genreForms/gf2011025006> <http://www.loc.gov/mads/rdf/v1#useInstead> <http://id.loc.gov/authorities/genreForms/gf2018026031> .
+_:nae79b149cc004336bc07b6498562d556b1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "deprecated"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/genreForms/gf2011025006> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:nae79b149cc004336bc07b6498562d556b1 .
+
+# END /authorities/genreForms/gf2011025006
+# BEGIN /authorities/genreForms/gf2011026460
+
+_:n583e99917adb404bb429fa28b0d63a74b9 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n583e99917adb404bb429fa28b0d63a74b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n583e99917adb404bb429fa28b0d63a74b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n583e99917adb404bb429fa28b0d63a74b25 <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b27 .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://id.loc.gov/ontologies/bflc/marcKey> "155  $aPornographic films" .
+_:n583e99917adb404bb429fa28b0d63a74b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n583e99917adb404bb429fa28b0d63a74b27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b26 .
+_:n583e99917adb404bb429fa28b0d63a74b13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n583e99917adb404bb429fa28b0d63a74b32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n583e99917adb404bb429fa28b0d63a74b9 .
+_:n583e99917adb404bb429fa28b0d63a74b10 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n583e99917adb404bb429fa28b0d63a74b29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n583e99917adb404bb429fa28b0d63a74b5 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Gay pornographic films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n583e99917adb404bb429fa28b0d63a74b19 <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b21 .
+_:n583e99917adb404bb429fa28b0d63a74b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n583e99917adb404bb429fa28b0d63a74b15 <http://www.loc.gov/mads/rdf/v1#citationSource> "LaRue, C.C. Making it big : sex stars, porn films, and me, 1997." .
+_:n583e99917adb404bb429fa28b0d63a74b40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n583e99917adb404bb429fa28b0d63a74b37 .
+_:n583e99917adb404bb429fa28b0d63a74b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n583e99917adb404bb429fa28b0d63a74b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n583e99917adb404bb429fa28b0d63a74b50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n583e99917adb404bb429fa28b0d63a74b48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n583e99917adb404bb429fa28b0d63a74b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n583e99917adb404bb429fa28b0d63a74b46 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Adult films (Pornographic films)"@en .
+_:n583e99917adb404bb429fa28b0d63a74b11 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n583e99917adb404bb429fa28b0d63a74b14 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n583e99917adb404bb429fa28b0d63a74b43 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Skin flicks"@en .
+_:n583e99917adb404bb429fa28b0d63a74b13 <http://www.loc.gov/mads/rdf/v1#citationNote> "(the San Fernando Valley, where many porn films are produced)"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/genreForms/gf2011026406> .
+_:n583e99917adb404bb429fa28b0d63a74b20 <http://www.loc.gov/mads/rdf/v1#elementValue> "Porno films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b34 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Sex films (Pornographic films)"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/genreForms> .
+_:n583e99917adb404bb429fa28b0d63a74b14 <http://www.loc.gov/mads/rdf/v1#citationNote> "(pornography: Work representing persons engaged in explicit, usually unfaked, sexual acts with a primary intent of arousing viewers; RT erotic)"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n583e99917adb404bb429fa28b0d63a74b22 .
+_:n583e99917adb404bb429fa28b0d63a74b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n583e99917adb404bb429fa28b0d63a74b22 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Pornies (Pornographic films)"@en .
+_:n583e99917adb404bb429fa28b0d63a74b8 <http://www.loc.gov/mads/rdf/v1#citationSource> "Wikipedia, Jan. 7, 2009" .
+_:n583e99917adb404bb429fa28b0d63a74b14 <http://www.loc.gov/mads/rdf/v1#citationSource> "Moving image genre-form guide online, Jan. 7, 2009" .
+_:n583e99917adb404bb429fa28b0d63a74b43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n583e99917adb404bb429fa28b0d63a74b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n583e99917adb404bb429fa28b0d63a74b47 <http://www.loc.gov/mads/rdf/v1#elementValue> "Adult films (Pornographic films)"@en .
+_:n583e99917adb404bb429fa28b0d63a74b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n583e99917adb404bb429fa28b0d63a74b37 <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b39 .
+_:n583e99917adb404bb429fa28b0d63a74b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n583e99917adb404bb429fa28b0d63a74b1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:n583e99917adb404bb429fa28b0d63a74b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b17 .
+_:n583e99917adb404bb429fa28b0d63a74b12 <http://www.loc.gov/mads/rdf/v1#citationNote> "(Sex film (Sex-oriented film). A film whose main theme is the presentation of sex on the screen. Sex movies are classed under two general headings: Erotic film and Sex exploitation film)"@en .
+_:n583e99917adb404bb429fa28b0d63a74b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n583e99917adb404bb429fa28b0d63a74b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n583e99917adb404bb429fa28b0d63a74b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n583e99917adb404bb429fa28b0d63a74b43 <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b45 .
+_:n583e99917adb404bb429fa28b0d63a74b3 <http://www.loc.gov/mads/rdf/v1#elementValue> "Pornographic films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n583e99917adb404bb429fa28b0d63a74b2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n583e99917adb404bb429fa28b0d63a74b1 .
+_:n583e99917adb404bb429fa28b0d63a74b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n583e99917adb404bb429fa28b0d63a74b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n583e99917adb404bb429fa28b0d63a74b23 <http://www.loc.gov/mads/rdf/v1#elementValue> "Pornies (Pornographic films)"@en .
+_:n583e99917adb404bb429fa28b0d63a74b46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n583e99917adb404bb429fa28b0d63a74b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n583e99917adb404bb429fa28b0d63a74b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n583e99917adb404bb429fa28b0d63a74b8 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+_:n583e99917adb404bb429fa28b0d63a74b34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#useFor> <http://id.loc.gov/authorities/genreForms/gf2011025006> .
+_:n583e99917adb404bb429fa28b0d63a74b47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n583e99917adb404bb429fa28b0d63a74b30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b29 .
+_:n583e99917adb404bb429fa28b0d63a74b31 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Gay pornographic films"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n583e99917adb404bb429fa28b0d63a74b12 .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n583e99917adb404bb429fa28b0d63a74b49 .
+_:n583e99917adb404bb429fa28b0d63a74b2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n583e99917adb404bb429fa28b0d63a74b11 .
+_:n583e99917adb404bb429fa28b0d63a74b2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2011-05-07T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n583e99917adb404bb429fa28b0d63a74b41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n583e99917adb404bb429fa28b0d63a74b14 .
+_:n583e99917adb404bb429fa28b0d63a74b44 <http://www.loc.gov/mads/rdf/v1#elementValue> "Skin flicks"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n583e99917adb404bb429fa28b0d63a74b6 <http://www.loc.gov/mads/rdf/v1#elementValue> "Gay pornographic films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b10 <http://www.loc.gov/mads/rdf/v1#citationNote> "(Sex exploitation film (Porn film/Pornie/Porno film/Pornographic film/Skin flick/Skinpic/Sexploitation film/Sexploiter). The sex exploitation film is a type of exploitation movie that, as the name indicates, exploits the subject of sex for monetary gain)"@en .
+_:n583e99917adb404bb429fa28b0d63a74b49 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Sex exploitation films"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/genreForms/collection_LCGFT_General> .
+_:n583e99917adb404bb429fa28b0d63a74b37 <http://www.loc.gov/mads/rdf/v1#variantLabel> "XXX films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b5 <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b7 .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasEarlierEstablishedForm> _:n583e99917adb404bb429fa28b0d63a74b5 .
+_:n583e99917adb404bb429fa28b0d63a74b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n583e99917adb404bb429fa28b0d63a74b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n583e99917adb404bb429fa28b0d63a74b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n583e99917adb404bb429fa28b0d63a74b48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b47 .
+_:n583e99917adb404bb429fa28b0d63a74b37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#useFor> <http://id.loc.gov/authorities/subjects/sh2009025004> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n583e99917adb404bb429fa28b0d63a74b10 .
+_:n583e99917adb404bb429fa28b0d63a74b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Pornographic films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b10 <http://www.loc.gov/mads/rdf/v1#citationSource> "Lopez, D. Films by genre, c1993" .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n583e99917adb404bb429fa28b0d63a74b40 .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n583e99917adb404bb429fa28b0d63a74b43 .
+_:n583e99917adb404bb429fa28b0d63a74b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n583e99917adb404bb429fa28b0d63a74b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b20 .
+_:n583e99917adb404bb429fa28b0d63a74b19 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Porno films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b35 .
+_:n583e99917adb404bb429fa28b0d63a74b15 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n583e99917adb404bb429fa28b0d63a74b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b3 .
+_:n583e99917adb404bb429fa28b0d63a74b37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n583e99917adb404bb429fa28b0d63a74b13 <http://www.loc.gov/mads/rdf/v1#citationSource> "Enforcing condoms in porn films won't be easy, L.A. supervisors say, in Los Angeles times online, July 11, 2012, viewed on July 13, 2012" .
+_:n583e99917adb404bb429fa28b0d63a74b49 <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b51 .
+_:n583e99917adb404bb429fa28b0d63a74b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n583e99917adb404bb429fa28b0d63a74b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b38 .
+_:n583e99917adb404bb429fa28b0d63a74b28 <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b30 .
+_:n583e99917adb404bb429fa28b0d63a74b39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n583e99917adb404bb429fa28b0d63a74b42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b41 .
+_:n583e99917adb404bb429fa28b0d63a74b45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b44 .
+_:n583e99917adb404bb429fa28b0d63a74b22 <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b24 .
+_:n583e99917adb404bb429fa28b0d63a74b51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n583e99917adb404bb429fa28b0d63a74b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n583e99917adb404bb429fa28b0d63a74b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b6 .
+_:n583e99917adb404bb429fa28b0d63a74b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n583e99917adb404bb429fa28b0d63a74b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b23 .
+_:n583e99917adb404bb429fa28b0d63a74b41 <http://www.loc.gov/mads/rdf/v1#elementValue> "Blue movies"@en .
+_:n583e99917adb404bb429fa28b0d63a74b38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b4 .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n583e99917adb404bb429fa28b0d63a74b16 .
+_:n583e99917adb404bb429fa28b0d63a74b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n583e99917adb404bb429fa28b0d63a74b28 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Porn films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n583e99917adb404bb429fa28b0d63a74b36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n583e99917adb404bb429fa28b0d63a74b2 .
+_:n583e99917adb404bb429fa28b0d63a74b17 <http://www.loc.gov/mads/rdf/v1#elementValue> "Stag films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n583e99917adb404bb429fa28b0d63a74b2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:n583e99917adb404bb429fa28b0d63a74b33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b32 .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n583e99917adb404bb429fa28b0d63a74b28 .
+_:n583e99917adb404bb429fa28b0d63a74b12 <http://www.loc.gov/mads/rdf/v1#citationSource> "Lopez, D. Films by genre, c1993" .
+_:n583e99917adb404bb429fa28b0d63a74b26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n583e99917adb404bb429fa28b0d63a74b49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n583e99917adb404bb429fa28b0d63a74b1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2018-04-16T09:48:46"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n583e99917adb404bb429fa28b0d63a74b8 .
+_:n583e99917adb404bb429fa28b0d63a74b35 <http://www.loc.gov/mads/rdf/v1#elementValue> "Sex films (Pornographic films)"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n583e99917adb404bb429fa28b0d63a74b15 .
+_:n583e99917adb404bb429fa28b0d63a74b9 <http://www.loc.gov/mads/rdf/v1#citationNote> "(pornographic films; adult films)"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n583e99917adb404bb429fa28b0d63a74b19 .
+_:n583e99917adb404bb429fa28b0d63a74b31 <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b33 .
+_:n583e99917adb404bb429fa28b0d63a74b51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n583e99917adb404bb429fa28b0d63a74b50 .
+_:n583e99917adb404bb429fa28b0d63a74b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n583e99917adb404bb429fa28b0d63a74b13 .
+_:n583e99917adb404bb429fa28b0d63a74b34 <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b36 .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n583e99917adb404bb429fa28b0d63a74b31 .
+_:n583e99917adb404bb429fa28b0d63a74b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n583e99917adb404bb429fa28b0d63a74b30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n583e99917adb404bb429fa28b0d63a74b40 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Blue movies"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://id.loc.gov/vocabulary/identifiers/lccn> "gf2011026460" .
+_:n583e99917adb404bb429fa28b0d63a74b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n583e99917adb404bb429fa28b0d63a74b9 <http://www.loc.gov/mads/rdf/v1#citationSource> "Medina, J. Los Angeles vote to decide on condoms in sex films, in New York times online, Dec. 28, 2011, viewed on July 13, 2012" .
+_:n583e99917adb404bb429fa28b0d63a74b38 <http://www.loc.gov/mads/rdf/v1#elementValue> "XXX films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b16 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Stag films"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n583e99917adb404bb429fa28b0d63a74b25 .
+_:n583e99917adb404bb429fa28b0d63a74b32 <http://www.loc.gov/mads/rdf/v1#elementValue> "Gay pornographic films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n583e99917adb404bb429fa28b0d63a74b26 <http://www.loc.gov/mads/rdf/v1#elementValue> "Sexploitation films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:n583e99917adb404bb429fa28b0d63a74b11 <http://www.loc.gov/mads/rdf/v1#citationSource> "Mandatory condoms for sex films in Los Angeles, via You Tube, viewed on July 13, 2012." .
+_:n583e99917adb404bb429fa28b0d63a74b13 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n583e99917adb404bb429fa28b0d63a74b29 <http://www.loc.gov/mads/rdf/v1#elementValue> "Porn films"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n583e99917adb404bb429fa28b0d63a74b34 .
+_:n583e99917adb404bb429fa28b0d63a74b49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n583e99917adb404bb429fa28b0d63a74b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:n583e99917adb404bb429fa28b0d63a74b35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n583e99917adb404bb429fa28b0d63a74b44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n583e99917adb404bb429fa28b0d63a74b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n583e99917adb404bb429fa28b0d63a74b46 <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b48 .
+_:n583e99917adb404bb429fa28b0d63a74b50 <http://www.loc.gov/mads/rdf/v1#elementValue> "Sex exploitation films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n583e99917adb404bb429fa28b0d63a74b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n583e99917adb404bb429fa28b0d63a74b12 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2011026585> .
+_:n583e99917adb404bb429fa28b0d63a74b25 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Sexploitation films"@en .
+_:n583e99917adb404bb429fa28b0d63a74b1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:n583e99917adb404bb429fa28b0d63a74b8 <http://www.loc.gov/mads/rdf/v1#citationNote> "(pornographic film: older names for a pornographic movie include adult film, stag film, and blue movie; pornographic works often refered to as porno; xxx: identifier for pornography, especially x-rated movies)"@en .
+_:n583e99917adb404bb429fa28b0d63a74b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n583e99917adb404bb429fa28b0d63a74b46 .
+<http://id.loc.gov/authorities/genreForms/gf2011026460> <http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority> <http://id.loc.gov/authorities/genreForms/gf2011026227> .
+_:n583e99917adb404bb429fa28b0d63a74b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n583e99917adb404bb429fa28b0d63a74b40 <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b42 .
+_:n583e99917adb404bb429fa28b0d63a74b16 <http://www.loc.gov/mads/rdf/v1#elementList> _:n583e99917adb404bb429fa28b0d63a74b18 .
+
+# END /authorities/genreForms/gf2011026460
+# BEGIN /authorities/genreForms/gf2014026339
+
+_:n7373f807d7a24a3a9ccaa3102efeeb23b3 <http://www.loc.gov/mads/rdf/v1#elementValue> "Fiction"@en .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026381> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2015026110> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026314> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n7373f807d7a24a3a9ccaa3102efeeb23b5 .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n7373f807d7a24a3a9ccaa3102efeeb23b1 .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2017026013> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n7373f807d7a24a3a9ccaa3102efeeb23b7 .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026370> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026325> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026581> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n7373f807d7a24a3a9ccaa3102efeeb23b11 .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2017026032> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/genreForms> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026469> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026492> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b7 <http://www.loc.gov/mads/rdf/v1#elementList> _:n7373f807d7a24a3a9ccaa3102efeeb23b9 .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026295> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2020026014> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Fiction"@en .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2015-05-13T18:11:23"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2016026090> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026502> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026373> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026559> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026590> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2018026032> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2018026127> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2019026069> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b8 <http://www.loc.gov/mads/rdf/v1#elementValue> "Tales"@en .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026217> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b6 <http://www.loc.gov/mads/rdf/v1#citationSource> "Baldick, C. Oxford dictionary of literary terms, c2008" .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026340> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026347> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2017026034> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026475> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026482> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2018026026> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026516> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026583> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2019026073> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2021026002> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026415> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026360> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2015026112> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026344> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/genreForms/collection_LCGFT_General> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b7 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Tales"@en .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2016026006> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#elementList> _:n7373f807d7a24a3a9ccaa3102efeeb23b4 .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2017026011> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b5 <http://www.loc.gov/mads/rdf/v1#citationSource> "Britannica online, April 12, 2012" .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026330> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026571> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026529> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026513> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://id.loc.gov/vocabulary/identifiers/lccn> "gf2014026339" .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/ilchalcs> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026220> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026240> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2015026019> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2019026138> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026283> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026333> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n7373f807d7a24a3a9ccaa3102efeeb23b8 .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026280> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2016026001> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b5 <http://www.loc.gov/mads/rdf/v1#citationNote> "(Fiction: literature created from the imagination, not presented as fact, though it may be based on a true story or situation. Types of literature in the fiction genre include the novel, short story, and novella. The word is from the Latin fictiō, \"the act of making, fashioning, or molding.\")"@en .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2016026002> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2019026080> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026424> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2019026070> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026430> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2016026104> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026479> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026537> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://id.loc.gov/ontologies/bflc/marcKey> "155  $aFiction" .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b6 <http://www.loc.gov/mads/rdf/v1#citationNote> "(Fiction: the general term for invented stories, now usually applied to novels, short stories, novellas, romances, fables and other narrative works in prose, even though most plays and narrative poems are also fictional.)"@en .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026246> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026406> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2015026020> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2022026063> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2015026095> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2019026075> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026456> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026542> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2016026098> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2014-12-01T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2019026139> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026320> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026309> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026518> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026271> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b10 <http://www.loc.gov/mads/rdf/v1#elementList> _:n7373f807d7a24a3a9ccaa3102efeeb23b12 .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b6 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026288> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026594> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026259> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026377> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2016026101> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2023026013> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n7373f807d7a24a3a9ccaa3102efeeb23b6 .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n7373f807d7a24a3a9ccaa3102efeeb23b3 .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2017026142> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b10 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Stories"@en .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026286> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2017026141> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2017026040> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b5 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026454> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026243> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n7373f807d7a24a3a9ccaa3102efeeb23b2 .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n7373f807d7a24a3a9ccaa3102efeeb23b10 .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2024026041> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2018026025> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b11 <http://www.loc.gov/mads/rdf/v1#elementValue> "Stories"@en .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2014026555> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2018026099> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:n7373f807d7a24a3a9ccaa3102efeeb23b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+<http://id.loc.gov/authorities/genreForms/gf2014026339> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2019026108> .
+
+# END /authorities/genreForms/gf2014026339
+# BEGIN /authorities/genreForms/gf2018026031
+
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://id.loc.gov/ontologies/bflc/marcKey> "155  $aGay films" .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n3ced91f8dfff40f7933d8ec56bad4d7cb9 .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2023-11-09T14:22:46"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n3ced91f8dfff40f7933d8ec56bad4d7cb19 .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#elementList> _:n3ced91f8dfff40f7933d8ec56bad4d7cb4 .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb9 <http://www.loc.gov/mads/rdf/v1#elementValue> "Gay pornographic films"@en .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb11 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb18 <http://www.loc.gov/mads/rdf/v1#elementList> _:n3ced91f8dfff40f7933d8ec56bad4d7cb20 .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#useFor> <http://id.loc.gov/authorities/genreForms/gf2011025006> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb12 <http://www.loc.gov/mads/rdf/v1#elementList> _:n3ced91f8dfff40f7933d8ec56bad4d7cb14 .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/csds> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n3ced91f8dfff40f7933d8ec56bad4d7cb6 .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb12 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Homosexual films"@en .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb19 <http://www.loc.gov/mads/rdf/v1#elementValue> "Gay erotic films"@en .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb5 <http://www.loc.gov/mads/rdf/v1#elementList> _:n3ced91f8dfff40f7933d8ec56bad4d7cb7 .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb8 <http://www.loc.gov/mads/rdf/v1#elementList> _:n3ced91f8dfff40f7933d8ec56bad4d7cb10 .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n3ced91f8dfff40f7933d8ec56bad4d7cb12 .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#note> "Films featuring gay characters or addressing gay themes." .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb5 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Gay erotic films"@en .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n3ced91f8dfff40f7933d8ec56bad4d7cb13 .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb6 <http://www.loc.gov/mads/rdf/v1#elementValue> "Gay erotic films"@en .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb11 <http://www.loc.gov/mads/rdf/v1#citationNote> "Gay film (aka Homosexual film; these films seek to explore, present and illustrate the way of life of the homosexual; picture of the gay community is not always accurate)"@en .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb15 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Gay pornographic films"@en .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#useFor> <http://id.loc.gov/authorities/genreForms/gf2011026292> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb15 <http://www.loc.gov/mads/rdf/v1#elementList> _:n3ced91f8dfff40f7933d8ec56bad4d7cb17 .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n3ced91f8dfff40f7933d8ec56bad4d7cb18 .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n3ced91f8dfff40f7933d8ec56bad4d7cb15 .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n3ced91f8dfff40f7933d8ec56bad4d7cb3 .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://id.loc.gov/vocabulary/identifiers/lccn> "gf2018026031" .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/genreForms/gf2022026039> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb3 <http://www.loc.gov/mads/rdf/v1#elementValue> "Gay films"@en .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/genreForms/collection_LCGFT_General> .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/genreForms> .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n3ced91f8dfff40f7933d8ec56bad4d7cb11 .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb18 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Gay erotic films"@en .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb16 <http://www.loc.gov/mads/rdf/v1#elementValue> "Gay pornographic films"@en .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n3ced91f8dfff40f7933d8ec56bad4d7cb16 .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Gay films"@en .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb13 <http://www.loc.gov/mads/rdf/v1#elementValue> "Homosexual films"@en .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n3ced91f8dfff40f7933d8ec56bad4d7cb2 .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb8 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Gay pornographic films"@en .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb11 <http://www.loc.gov/mads/rdf/v1#citationSource> "Films by genre, 1993:" .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n3ced91f8dfff40f7933d8ec56bad4d7cb1 .
+_:n3ced91f8dfff40f7933d8ec56bad4d7cb2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2018-03-16T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#hasEarlierEstablishedForm> _:n3ced91f8dfff40f7933d8ec56bad4d7cb8 .
+<http://id.loc.gov/authorities/genreForms/gf2018026031> <http://www.loc.gov/mads/rdf/v1#hasEarlierEstablishedForm> _:n3ced91f8dfff40f7933d8ec56bad4d7cb5 .
+
+# END /authorities/genreForms/gf2018026031
+# BEGIN /authorities/genreForms/gf2011026302
+
+<http://id.loc.gov/authorities/genreForms/gf2011026302> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "deprecated"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/genreForms/gf2011026302> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority> .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n34ab7e89e1204ecdad0646d4ab3abc72b3 .
+<http://id.loc.gov/authorities/genreForms/gf2011026302> <http://www.loc.gov/mads/rdf/v1#elementList> _:n34ab7e89e1204ecdad0646d4ab3abc72b4 .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b3 <http://www.loc.gov/mads/rdf/v1#elementValue> "Godzilla films"@en .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2011-05-06T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://id.loc.gov/authorities/genreForms/gf2011026302> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+<http://id.loc.gov/authorities/genreForms/gf2011026302> <http://www.loc.gov/mads/rdf/v1#deletionNote> "This authority record has been deleted because the term is covered by the genre/form term Monster films {(gf2011026402).}"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026302> <http://www.loc.gov/mads/rdf/v1#variantLabel> "Godzilla films"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026302> <http://www.loc.gov/mads/rdf/v1#useInstead> <http://id.loc.gov/authorities/genreForms/gf2011026402> .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2012-03-12T12:34:41"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/genreForms/gf2011026302> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n34ab7e89e1204ecdad0646d4ab3abc72b1 .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/genreForms/gf2011026302> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n34ab7e89e1204ecdad0646d4ab3abc72b2 .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:n34ab7e89e1204ecdad0646d4ab3abc72b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+
+# END /authorities/genreForms/gf2011026302
+# BEGIN /authorities/genreForms/gf2011026402
+
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://id.loc.gov/vocabulary/identifiers/lccn> "gf2011026402" .
+_:naaaa032c804e4b12898423d6dc8a7cefb3 <http://www.loc.gov/mads/rdf/v1#elementValue> "Monster films"@en .
+_:naaaa032c804e4b12898423d6dc8a7cefb7 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Creature features (Motion pictures)"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:naaaa032c804e4b12898423d6dc8a7cefb2 .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2011026749> .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://id.loc.gov/ontologies/bflc/marcKey> "155  $aMonster films" .
+_:naaaa032c804e4b12898423d6dc8a7cefb2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:naaaa032c804e4b12898423d6dc8a7cefb6 <http://www.loc.gov/mads/rdf/v1#citationSource> "Yee, M.  Moving image materials, 1988" .
+_:naaaa032c804e4b12898423d6dc8a7cefb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:naaaa032c804e4b12898423d6dc8a7cefb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:naaaa032c804e4b12898423d6dc8a7cefb3 .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority> <http://id.loc.gov/authorities/genreForms/gf2011026321> .
+_:naaaa032c804e4b12898423d6dc8a7cefb2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:naaaa032c804e4b12898423d6dc8a7cefb1 .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2011026733> .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2011026380> .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/genreForms/gf2011026716> .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#hasSource> _:naaaa032c804e4b12898423d6dc8a7cefb6 .
+_:naaaa032c804e4b12898423d6dc8a7cefb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:naaaa032c804e4b12898423d6dc8a7cefb7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:naaaa032c804e4b12898423d6dc8a7cefb1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2011-05-07T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:naaaa032c804e4b12898423d6dc8a7cefb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:naaaa032c804e4b12898423d6dc8a7cefb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:naaaa032c804e4b12898423d6dc8a7cefb1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#useFor> <http://id.loc.gov/authorities/subjects/sh2007025215> .
+_:naaaa032c804e4b12898423d6dc8a7cefb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+_:naaaa032c804e4b12898423d6dc8a7cefb1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:naaaa032c804e4b12898423d6dc8a7cefb5 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:naaaa032c804e4b12898423d6dc8a7cefb9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:naaaa032c804e4b12898423d6dc8a7cefb7 <http://www.loc.gov/mads/rdf/v1#elementList> _:naaaa032c804e4b12898423d6dc8a7cefb9 .
+_:naaaa032c804e4b12898423d6dc8a7cefb5 <http://www.loc.gov/mads/rdf/v1#citationSource> "Lopez, D. Films by genre, c1993" .
+_:naaaa032c804e4b12898423d6dc8a7cefb2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#hasSource> _:naaaa032c804e4b12898423d6dc8a7cefb5 .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:naaaa032c804e4b12898423d6dc8a7cefb7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:naaaa032c804e4b12898423d6dc8a7cefb2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2011-05-18T13:17:51"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:naaaa032c804e4b12898423d6dc8a7cefb7 .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/genreForms/gf2011026406> .
+_:naaaa032c804e4b12898423d6dc8a7cefb8 <http://www.loc.gov/mads/rdf/v1#elementValue> "Creature features (Motion pictures)"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/genreForms/collection_LCGFT_General> .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/genreForms> .
+_:naaaa032c804e4b12898423d6dc8a7cefb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:naaaa032c804e4b12898423d6dc8a7cefb6 <http://www.loc.gov/mads/rdf/v1#citationNote> "(monster drama: use for fictional genre films and programs which focus on an animate being, part human or nonhuman, with supernatural or prodigious powers, which threatens human life. Monsters include atomic mutants, monstrous throwbacks, monsters made and/or controlled by mad scientists, animal-man combinations, scientists who transform themselves into monsters, the various species of resurrected dead, and creatures from outer space, including alien parasites)"@en .
+_:naaaa032c804e4b12898423d6dc8a7cefb6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Monster films"@en .
+_:naaaa032c804e4b12898423d6dc8a7cefb9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:naaaa032c804e4b12898423d6dc8a7cefb8 .
+_:naaaa032c804e4b12898423d6dc8a7cefb1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:naaaa032c804e4b12898423d6dc8a7cefb6 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:naaaa032c804e4b12898423d6dc8a7cefb5 <http://www.loc.gov/mads/rdf/v1#citationNote> "(monster movie (creature feature): the term is interchangable with that of horror film. However, in a stricter sense, monster movies, as the name indicates, deal exclusively with monsters which have in most cases malevolent intentions and prey on human life and property. Besides, not all horror movies include monsters. There are all sorts of monsters: supernatural, extraterrestrial, man-made, nature-made and god-made)"@en .
+<http://id.loc.gov/authorities/genreForms/gf2011026402> <http://www.loc.gov/mads/rdf/v1#elementList> _:naaaa032c804e4b12898423d6dc8a7cefb4 .
+
+# END /authorities/genreForms/gf2011026402

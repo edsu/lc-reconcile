@@ -1,0 +1,60 @@
+[project]
+name = "lc-reconcile"
+version = "0.1.0"
+description = "Reconcile headings against a local, self-updating index of id.loc.gov authorities"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+keywords = [
+    "reconciliation",
+    "openrefine",
+    "id.loc.gov",
+    "lcnaf",
+    "lcsh",
+    "lcgft",
+    "mads",
+    "libraries",
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+# The library and the command line need nothing beyond the standard library;
+# only the web service has dependencies, and they sit behind the extra.
+dependencies = []
+
+[project.optional-dependencies]
+server = ["fastapi>=0.115", "uvicorn>=0.32"]
+
+[project.scripts]
+lc-reconcile = "lc_reconcile.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/blue-core-lod/lc-reconcile"
+Issues = "https://github.com/blue-core-lod/lc-reconcile/issues"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+    # Only the tests use rdflib: they check the records reader against it.
+    "rdflib>=7.1.3",
+    "ruff>=0.9.6",
+    "ty>=0.0.1a1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lc_reconcile"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-v -m 'not live'"
+markers = [
+    "network: may reach the network, so the offline guard stands aside",
+    "live: talks to the live id.loc.gov, deselected by default",
+]

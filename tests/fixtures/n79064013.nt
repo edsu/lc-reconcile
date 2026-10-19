@@ -1,0 +1,942 @@
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules, 1828-1905" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ジュール.ヴェルヌ, 1828-1905"@ja-jpan .
+<http://id.loc.gov/authorities/names/n79064013> <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aジュール.ヴェルヌ,$d1828-1905$7(bcp47)ja-jpan"@ja-jpan .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "װערן, ז."@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aװערן, ז.$7(bcp47)und-hebr"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "凡尔纳儒尔, 1828-1905"@und-hani .
+<http://id.loc.gov/authorities/names/n79064013> <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $a凡尔纳儒尔,$d1828-1905$7(bcp47)und-hani"@und-hani .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ورن، ژول"@und-arab .
+<http://id.loc.gov/authorities/names/n79064013> <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aورن، ژول$7(bcp47)und-arab"@und-arab .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Верн, Жюль, 1828-1905"@und-cyrl .
+<http://id.loc.gov/authorities/names/n79064013> <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aВерн, Жюль,$d1828-1905$7(bcp47)und-cyrl"@und-cyrl .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#elementList> _:b27httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b27httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b28httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b27httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b030 .
+_:b28httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b28httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Verne, Jules," .
+_:b030 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b31httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b030 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b31httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b31httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+<http://id.loc.gov/authorities/names/n79064013> <http://id.loc.gov/ontologies/bflc/marcKey> "1001 $aVerne, Jules,$d1828-1905" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n79064013> .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.w3.org/2000/01/rdf-schema#label> "Verne, Jules, 1828-1905" .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#birthDate> "1828-02-08"^^<http://id.loc.gov/datatypes/edtf> .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#deathDate> "1905-04-24"^^<http://id.loc.gov/datatypes/edtf> .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#entityDescriptor> <http://id.loc.gov/authorities/demographicTerms/dg2015060737> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060737> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060737> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060737> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "French"@en .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#birthPlace> <http://id.loc.gov/rwo/agents/n50045845> .
+<http://id.loc.gov/rwo/agents/n50045845> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Geographic> .
+<http://id.loc.gov/rwo/agents/n50045845> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/rwo/agents/n50045845> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Nantes (France)" .
+<http://id.loc.gov/rwo/agents/n50045845> <http://www.loc.gov/mads/rdf/v1#code> "e-fr---"^^<http://id.loc.gov/datatypes/codes/gac> .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#deathPlace> <http://id.loc.gov/rwo/agents/n79116223> .
+<http://id.loc.gov/rwo/agents/n79116223> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Geographic> .
+<http://id.loc.gov/rwo/agents/n79116223> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/rwo/agents/n79116223> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Amiens (France)" .
+<http://id.loc.gov/rwo/agents/n79116223> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Амьен (France)"@zxx-Cyrl .
+<http://id.loc.gov/rwo/agents/n79116223> <http://www.loc.gov/mads/rdf/v1#code> "e-fr---"^^<http://id.loc.gov/datatypes/codes/gac> .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#associatedLocale> <http://id.loc.gov/rwo/agents/n79006404> .
+<http://id.loc.gov/rwo/agents/n79006404> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Geographic> .
+<http://id.loc.gov/rwo/agents/n79006404> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/rwo/agents/n79006404> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "France" .
+<http://id.loc.gov/rwo/agents/n79006404> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "프랑스"@ko-hang .
+<http://id.loc.gov/rwo/agents/n79006404> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "フランス"@ja-jpan .
+<http://id.loc.gov/rwo/agents/n79006404> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Γαλλική Δημοκρατία"@und-grek .
+<http://id.loc.gov/rwo/agents/n79006404> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Франц"@und-cyrl .
+<http://id.loc.gov/rwo/agents/n79006404> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "פראנקרייך"@und-hebr .
+<http://id.loc.gov/rwo/agents/n79006404> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "法国"@und-hani .
+<http://id.loc.gov/rwo/agents/n79006404> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "فرانسه"@und-arab .
+<http://id.loc.gov/rwo/agents/n79006404> <http://www.loc.gov/mads/rdf/v1#code> "e-fr---"^^<http://id.loc.gov/datatypes/codes/gac> .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#fieldOfActivity> _:b88httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b88httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#fieldOfActivity> <http://id.loc.gov/authorities/genreForms/gf2014026529> .
+<http://id.loc.gov/authorities/genreForms/gf2014026529> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+<http://id.loc.gov/authorities/genreForms/gf2014026529> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/genreForms/gf2014026529> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Science fiction"@en .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#fieldOfActivity> _:b95httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b95httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#fieldOfActivity> <http://id.loc.gov/authorities/genreForms/gf2014026217> .
+<http://id.loc.gov/authorities/genreForms/gf2014026217> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+<http://id.loc.gov/authorities/genreForms/gf2014026217> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/genreForms/gf2014026217> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Action and adventure fiction"@en .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#fieldOfActivity> _:b102httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b102httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#fieldOfActivity> <http://id.loc.gov/authorities/genreForms/gf2015026020> .
+<http://id.loc.gov/authorities/genreForms/gf2015026020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+<http://id.loc.gov/authorities/genreForms/gf2015026020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/genreForms/gf2015026020> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Novels"@en .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#fieldOfActivity> _:b109httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b109httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#fieldOfActivity> <http://id.loc.gov/authorities/genreForms/gf2014026481> .
+<http://id.loc.gov/authorities/genreForms/gf2014026481> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+<http://id.loc.gov/authorities/genreForms/gf2014026481> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/genreForms/gf2014026481> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Poetry"@en .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#fieldOfActivity> _:b116httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b116httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#fieldOfActivity> <http://id.loc.gov/authorities/genreForms/gf2014026297> .
+<http://id.loc.gov/authorities/genreForms/gf2014026297> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+<http://id.loc.gov/authorities/genreForms/gf2014026297> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/genreForms/gf2014026297> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Drama"@en .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#fieldOfActivity> _:b123httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b123httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#fieldOfActivity> <http://id.loc.gov/authorities/subjects/sh85144441> .
+<http://id.loc.gov/authorities/subjects/sh85144441> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+<http://id.loc.gov/authorities/subjects/sh85144441> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/subjects/sh85144441> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Voyages, Imaginary"@en .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#occupation> _:b130httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b130httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#occupation> <http://id.loc.gov/authorities/subjects/sh85009907> .
+<http://id.loc.gov/authorities/subjects/sh85009907> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+<http://id.loc.gov/authorities/subjects/sh85009907> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/subjects/sh85009907> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Authors, French"@en .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#occupation> _:b137httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b137httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#occupation> <http://id.loc.gov/authorities/demographicTerms/dg2016060313> .
+<http://id.loc.gov/authorities/demographicTerms/dg2016060313> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/demographicTerms/dg2016060313> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/demographicTerms/dg2016060313> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Novelists"@en .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#occupation> _:b144httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b144httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#occupation> <http://id.loc.gov/authorities/demographicTerms/dg2016060301> .
+<http://id.loc.gov/authorities/demographicTerms/dg2016060301> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/demographicTerms/dg2016060301> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/demographicTerms/dg2016060301> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Poets"@en .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#occupation> _:b151httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b151httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#occupation> <http://id.loc.gov/authorities/demographicTerms/dg2016060418> .
+<http://id.loc.gov/authorities/demographicTerms/dg2016060418> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/demographicTerms/dg2016060418> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/demographicTerms/dg2016060418> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Playwrights"@en .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#associatedLanguage> <http://id.loc.gov/vocabulary/languages/fre> .
+<http://id.loc.gov/vocabulary/languages/fre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Language> .
+<http://id.loc.gov/vocabulary/languages/fre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/languages/fre> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "French"@en .
+<http://id.loc.gov/vocabulary/languages/fre> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Französisch"@de .
+<http://id.loc.gov/vocabulary/languages/fre> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "français"@fr .
+<http://id.loc.gov/vocabulary/languages/fre> <http://www.loc.gov/mads/rdf/v1#code> "fre"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/rwo/agents/n79064013> <http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority> <http://id.loc.gov/authorities/names/n79064013> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules, 1828-1905" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ジュール.ヴェルヌ, 1828-1905"@ja-jpan .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "װערן, ז."@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "凡尔纳儒尔, 1828-1905"@und-hani .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ورن، ژول"@und-arab .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Верн, Жюль, 1828-1905"@und-cyrl .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#fullerName> _:b184httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b184httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b184httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2000/01/rdf-schema#label> "Jules Gabriel" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b188httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b188httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b188httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b188httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Fan'erna, 1828-1905"@und-latn .
+_:b188httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b193httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b193httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b194httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b193httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0196 .
+_:b194httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b194httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Fan'erna," .
+_:b0196 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b197httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0196 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b197httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b197httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b188httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4000 $aFan'erna,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b202httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b202httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b202httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b202httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Vec nơ, Juyn, 1828-1905"@und-latn .
+_:b202httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b207httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b207httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b208httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b207httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0210 .
+_:b208httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b208httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Vec nơ, Juyn," .
+_:b0210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b211httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0210 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b211httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b211httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b202httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVec nơ, Juyn,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b216httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b216httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b216httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b216httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Vern, Jul, 1828-1905"@und-latn .
+_:b216httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b221httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b221httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b222httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b221httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0224 .
+_:b222httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b222httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Vern, Jul," .
+_:b0224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b225httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0224 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b225httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b225httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b216httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVern, Jul,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b230httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b230httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b230httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b230httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Vern̲, Jūls, 1828-1905"@und-latn .
+_:b230httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b235httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b235httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b236httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b235httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0238 .
+_:b236httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b236httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Vern̲, Jūls," .
+_:b0238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b239httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0238 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b239httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b239httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b230httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVern̲, Jūls,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b244httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b244httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b244httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b244httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Vern, Zhi︠u︡lʹ, 1828-1905"@und-latn .
+_:b244httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b249httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b249httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b250httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b249httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0252 .
+_:b250httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b250httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Vern, Zhi︠u︡lʹ," .
+_:b0252 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b253httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0252 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b253httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b253httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b244httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVern, Zhi︠u︡lʹ,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b258httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b258httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b258httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b258httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Vern, Zhul, 1828-1905"@und-latn .
+_:b258httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b263httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b263httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b264httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b263httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0266 .
+_:b264httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b264httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Vern, Zhul," .
+_:b0266 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b267httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0266 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b267httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b267httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b258httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVern, Zhul,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b272httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b272httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b272httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b272httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Ṿern, Z'ul, 1828-1905"@und-latn .
+_:b272httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b277httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b277httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b278httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b277httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0280 .
+_:b278httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b278httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Ṿern, Z'ul," .
+_:b0280 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b281httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0280 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b281httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b281httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b272httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aṾern, Z'ul,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b286httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b286httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b286httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b286httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Verne, Gyula, 1828-1905"@und-latn .
+_:b286httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b291httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b291httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b292httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b291httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0294 .
+_:b292httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b292httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Verne, Gyula," .
+_:b0294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b295httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b295httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b295httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b286httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVerne, Gyula,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b300httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b300httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b300httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b300httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Verne, Jul. (Jules Gabriel), 1828-1905"@und-latn .
+_:b300httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b305httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b305httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b306httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b305httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0308 .
+_:b306httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b306httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Verne, Jul." .
+_:b0308 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b309httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0308 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0311 .
+_:b309httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b309httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "(Jules Gabriel)," .
+_:b0311 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b312httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0311 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b312httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b312httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b300httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVerne, Jul.$q(Jules Gabriel),$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b317httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b317httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b317httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b317httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Verne, Jules (Jules Gabriel), 1828-1905"@und-latn .
+_:b317httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b322httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b322httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b323httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b322httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0325 .
+_:b323httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b323httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Verne, Jules" .
+_:b0325 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b326httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0325 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0328 .
+_:b326httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b326httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "(Jules Gabriel)," .
+_:b0328 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b329httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0328 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b329httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b329httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b317httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVerne, Jules$q(Jules Gabriel),$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b334httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b334httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b334httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b334httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Verne, Julio, 1828-1905"@und-latn .
+_:b334httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b339httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b339httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b340httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b339httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0342 .
+_:b340httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b340httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Verne, Julio," .
+_:b0342 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b343httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0342 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b343httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b343httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b334httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVerne, Julio,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b348httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b348httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b348httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b348httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Verne, Julius, 1828-1905"@und-latn .
+_:b348httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b353httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b353httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b354httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b353httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0356 .
+_:b354httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b354httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Verne, Julius," .
+_:b0356 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b357httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0356 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b357httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b357httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b348httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVerne, Julius,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b362httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b362httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b362httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b362httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Verne, Juliusz, 1828-1905"@und-latn .
+_:b362httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b367httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b367httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b368httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b367httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0370 .
+_:b368httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b368httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Verne, Juliusz," .
+_:b0370 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b371httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0370 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b371httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b371httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b362httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVerne, Juliusz,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b376httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b376httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b376httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b376httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Verne, Juljusz, 1828-1905"@und-latn .
+_:b376httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b381httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b381httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b382httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b381httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0384 .
+_:b382httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b382httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Verne, Juljusz," .
+_:b0384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b385httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0384 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b385httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b385httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b376httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVerne, Juljusz,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b390httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b390httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b390httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b390httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Верн, Жюль, 1828-1905"@und-cyrl .
+_:b390httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b395httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b395httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b396httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b395httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0398 .
+_:b396httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b396httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Верн, Жюль," .
+_:b0398 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b399httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0398 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b399httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b399httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b390httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aВерн, Жюль,$d1828-1905$7(bcp47)und-cyrl"@und-cyrl .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b404httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b404httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b404httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b404httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "װערן, ז."@und-hebr .
+_:b404httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b409httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b409httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b410httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b409httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b410httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b410httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "װערן, ז." .
+_:b404httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aװערן, ז.$7(bcp47)und-hebr"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b415httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b415httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b415httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b415httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "װערן, זשול"@und-hebr .
+_:b415httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b420httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b420httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b421httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b420httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b421httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b421httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "װערן, זשול" .
+_:b415httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aװערן, זשול$7(bcp47)und-hebr"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b426httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b426httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b426httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b426httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "װערן, זשול, 1828־1905"@und-hebr .
+_:b426httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b431httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b431httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b432httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b431httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0434 .
+_:b432httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b432httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "װערן, זשול," .
+_:b0434 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b435httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0434 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b435httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b435httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828־1905" .
+_:b426httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aװערן, זשול,$d1828־1905$7(bcp47)und-hebr"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b440httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b440httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b440httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b440httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "ורן, ז׳ול"@und-hebr .
+_:b440httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b445httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b445httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b446httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b445httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b446httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b446httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "ורן, ז׳ול" .
+_:b440httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aורן, ז׳ול$7(bcp47)und-hebr"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b451httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b451httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b451httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b451httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "ורן, ז׳ול, 1828-1905"@und-hebr .
+_:b451httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b456httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b456httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b457httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b456httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0459 .
+_:b457httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b457httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "ורן, ז׳ול," .
+_:b0459 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b460httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0459 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b460httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b460httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b451httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aורן, ז׳ול,$d1828-1905$7(bcp47)und-hebr"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b465httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b465httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b465httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b465httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "ורן, ז׳ול, 8182־1905"@und-hebr .
+_:b465httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b470httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b470httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b471httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b470httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0473 .
+_:b471httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b471httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "ורן, ז׳ול," .
+_:b0473 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b474httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0473 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b474httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b474httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "8182־1905" .
+_:b465httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aורן, ז׳ול,$d8182־1905$7(bcp47)und-hebr"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b479httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b479httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b479httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b479httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "ווערן, ז'ול, 1828-1905"@und-hebr .
+_:b479httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b484httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b484httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b485httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b484httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0487 .
+_:b485httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b485httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "ווערן, ז'ול," .
+_:b0487 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b488httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0487 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b488httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b488httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b479httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aווערן, ז'ול,$d1828-1905$7(bcp47)und-hebr"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b493httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b493httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b493httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b493httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "וורן, ז׳ול"@und-hebr .
+_:b493httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b498httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b498httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b499httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b498httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b499httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b499httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "וורן, ז׳ול" .
+_:b493httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aוורן, ז׳ול$7(bcp47)und-hebr"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b504httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b504httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b504httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b504httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "ジュール.ヴェルヌ, 1828-1905"@ja-jpan .
+_:b504httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b509httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b509httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b510httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b509httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0512 .
+_:b510httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b510httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "ジュール.ヴェルヌ," .
+_:b0512 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b513httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0512 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b513httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b513httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b504httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aジュール.ヴェルヌ,$d1828-1905$7(bcp47)ja-jpan"@ja-jpan .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b518httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b518httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b518httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b518httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "ジュールベルヌ, 1828-1905"@ja-jpan .
+_:b518httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b523httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b523httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b524httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b523httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0526 .
+_:b524httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b524httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "ジュールベルヌ," .
+_:b0526 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b527httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0526 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b527httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b527httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b518httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aジュールベルヌ,$d1828-1905$7(bcp47)ja-jpan"@ja-jpan .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b532httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b532httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b532httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b532httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "凡尔纳儒尔, 1828-1905"@und-hani .
+_:b532httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b537httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b537httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b538httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b537httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0540 .
+_:b538httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b538httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "凡尔纳儒尔," .
+_:b0540 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b541httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0540 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b541httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b541httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b532httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $a凡尔纳儒尔,$d1828-1905$7(bcp47)und-hani"@und-hani .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b546httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b546httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b546httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b546httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "貝爾魯裘爾, 1828-1905"@und-hani .
+_:b546httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b551httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b551httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b552httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b551httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0554 .
+_:b552httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b552httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "貝爾魯裘爾," .
+_:b0554 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b555httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0554 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b555httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b555httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b546httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $a貝爾魯裘爾,$d1828-1905$7(bcp47)und-hani"@und-hani .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b560httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b560httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b560httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b560httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Virn, Zhūl, 1828-1905"@und-latn .
+_:b560httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b565httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b565httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b566httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b565httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0568 .
+_:b566httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b566httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Virn, Zhūl," .
+_:b0568 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b569httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0568 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b569httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b569httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b560httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVirn, Zhūl,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b574httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b574httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b574httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b574httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "ورن، ژول"@und-arab .
+_:b574httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b579httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b579httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b580httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b579httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b580httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b580httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "ورن، ژول" .
+_:b574httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aورن، ژول$7(bcp47)und-arab"@und-arab .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b585httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b585httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b585httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b585httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Verns, Žils, 1828-1905"@und-latn .
+_:b585httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b590httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b590httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b591httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b590httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0593 .
+_:b591httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b591httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Verns, Žils," .
+_:b0593 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b594httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0593 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b594httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b594httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b585httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVerns, Žils,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:b599httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b599httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+_:b599httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:b599httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Veṛn, Zhyul, 1828-1905"@und-latn .
+_:b599httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementList> _:b604httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b604httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b605httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b604httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b0607 .
+_:b605httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b605httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "Veṛn, Zhyul," .
+_:b0607 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b608httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b0607 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b608httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DateNameElement> .
+_:b608httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#elementValue> "1828-1905" .
+_:b599httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/bflc/marcKey> "4001 $aVeṛn, Zhyul,$d1828-1905$7(bcp47)und-latn"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b613httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b613httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b613httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b613httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Vperedsmotri︠a︡shchiĭ, 1976:" .
+_:b613httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "leaf preceding t.p. (Zhi︠u︡lʹ Vern)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b621httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b621httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b621httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b621httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Juliusz w Polsce, 1986:" .
+_:b621httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Juliusz Verne)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b629httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b629httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b629httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b629httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Yo, Julio Verne, 1988." .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b635httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b635httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b635httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b635httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Antil adalarına seyahat, 1904 or 1905:" .
+_:b635httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Jul Vern)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b643httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b643httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b643httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b643httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Masaʻo u-fegaʻav ṣhel ha-Ḳapiṭan Haṭeras, 1923 or 1924-:" .
+_:b643httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "v. 1, t.p. (Z'ul Ṿern [voc.])" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b651httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b651httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b651httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b651httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "W pogoni za meteorem, 19--?" .
+_:b651httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Juljusz Verne)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b659httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b659httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b659httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b659httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Người đàn bà trên tàu, 1994:" .
+_:b659httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Juyn Vec noʼ)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b667httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b667httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b667httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b667httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Eṇticaiyum cur̲rivara eṇpatunāḷ, 1963:" .
+_:b667httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Jūls Vern̲)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b675httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b675httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b675httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b675httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Ni̇ġucadu aral, 1983:" .
+_:b675httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "v. 1, t.p. (Jul Verne) colophon (Fan'erna)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b683httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b683httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b683httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b683httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Vynález zkázy, 1959:" .
+_:b683httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Julius Verne)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b691httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b691httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b691httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b691httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Gale Literature Resource Center WWW Site, 5 Sep. 2008:" .
+_:b691httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "French authors page (Jules (Gabriel) Verne, born 8 Feb. 1828, Nantes, France; died 24 Apr. 1905, Amiens, France)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b699httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b699httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b699httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b699httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Antifer mester csudás kalandjai, 1907:" .
+_:b699httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (Verne Gyula)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b707httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b707httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b707httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b707httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Britannica online, April 21, 2017" .
+_:b707httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "(Jules Verne (born Feb. 8, 1828, Nantes, France--died March 24, 1905, Amiens), prolific French author whose writings laid much of the foundation of modern science fiction; wrote several plays, worked as secretary of the Théâtre Lyrique (1852-54), and published short stories and scientific essays in the periodical Musée des familles; for several years worked as a broker at the Paris Stock Market; more than 60 works in the popular series Voyages extraordinaires)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b715httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b715httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b715httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b715httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Wikipedia, April 21, 2017" .
+_:b715httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "(Jules Verne; Jules Gabriel Verne (8 February 1828-24 March 1905); French novelist, poet, and playwright; born Nantes, France; died Amiens, France)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b723httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b723httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b723httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b723httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Carův Kurýr (Michal Strogov), 1890z:" .
+_:b723httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "(Jul. Verne)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b731httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b731httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b731httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b731httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Siyāḥat bar dawrādawr-i kurah-ʼi zamīn bih hashtād rūz, 1952:" .
+_:b731httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "t.p. (ژول ورن = Zhūl Virn)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b739httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b739httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b739httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b739httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Kapteina Granta bērni, 1949:" .
+_:b739httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "title page (Žils Verns)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b747httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b747httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b747httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b747httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationSource> "Erkeri zhoghovatsu, 1963:" .
+_:b747httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.loc.gov/mads/rdf/v1#citationNote> "title page (Zhyul Veṛn)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#editorialNote> "[Machine-derived non-Latin script reference project.]" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#editorialNote> "[Non-Latin script references not evaluated.]" .
+<http://id.loc.gov/authorities/names/n79064013> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 79064013" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#classification> <http://id.loc.gov/authorities/classification/PQ2469> .
+<http://id.loc.gov/authorities/classification/PQ2469> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/lcc#ClassNumber> .
+<http://id.loc.gov/authorities/classification/PQ2469> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+<http://id.loc.gov/authorities/classification/PQ2469> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules, 1828-1905" .
+<http://id.loc.gov/authorities/classification/PQ2469> <http://www.loc.gov/mads/rdf/v1#code> "PQ2469" .
+<http://id.loc.gov/authorities/classification/PQ2469> <http://www.w3.org/2000/01/rdf-schema#label> "Language And Literature--French literature--Modern French literature--Individual authors--19th century--Verne, Jules, 1828-1905" .
+<http://id.loc.gov/authorities/classification/PQ2469> <http://id.loc.gov/ontologies/bibframe/assigner> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "United States, Library of Congress" .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.loc.gov/mads/rdf/v1#code> "DLC"^^<http://id.loc.gov/datatypes/orgs/code> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.loc.gov/mads/rdf/v1#code> "dlc"^^<http://id.loc.gov/datatypes/orgs/normalized> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.loc.gov/mads/rdf/v1#code> "US-dlc"^^<http://id.loc.gov/datatypes/orgs/iso15511> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/en/viaf/LC%7Cn%20%2079064013> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://isni.org/isni/0000000121400562> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/n2018002690> .
+<http://id.loc.gov/authorities/names/n2018002690> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameTitle> .
+<http://id.loc.gov/authorities/names/n2018002690> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/n2018002690> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules, 1828-1905. Voyage au centre de la terre" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/no2013128368> .
+<http://id.loc.gov/authorities/names/no2013128368> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameTitle> .
+<http://id.loc.gov/authorities/names/no2013128368> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/no2013128368> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules, 1828-1905. Vingt mille lieues sous les mers" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/no2014011738> .
+<http://id.loc.gov/authorities/names/no2014011738> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameTitle> .
+<http://id.loc.gov/authorities/names/no2014011738> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/no2014011738> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules, 1828-1905. Tour du monde en quatre-vingts jours" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/no2018038576> .
+<http://id.loc.gov/authorities/names/no2018038576> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameTitle> .
+<http://id.loc.gov/authorities/names/no2018038576> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/no2018038576> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules, 1828-1905. De la terre à la lune" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/no2018038753> .
+<http://id.loc.gov/authorities/names/no2018038753> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameTitle> .
+<http://id.loc.gov/authorities/names/no2018038753> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/no2018038753> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules, 1828-1905. Autour de la lune" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority> <http://id.loc.gov/authorities/names/no2019178592> .
+<http://id.loc.gov/authorities/names/no2019178592> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+<http://id.loc.gov/authorities/names/no2019178592> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/no2019178592> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Fogg, Phileas (Fictitious character)" .
+<http://id.loc.gov/authorities/names/no2019178592> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Фог, Филеас (Fictitious character)"@und-cyrl .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/no2020021051> .
+<http://id.loc.gov/authorities/names/no2020021051> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameTitle> .
+<http://id.loc.gov/authorities/names/no2020021051> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/no2020021051> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules, 1828-1905. Indes noires" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority> <http://id.loc.gov/authorities/names/no2020021950> .
+<http://id.loc.gov/authorities/names/no2020021950> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+<http://id.loc.gov/authorities/names/no2020021950> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/no2020021950> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Nemo, Captain (Fictitious character)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/no2023020659> .
+<http://id.loc.gov/authorities/names/no2023020659> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameTitle> .
+<http://id.loc.gov/authorities/names/no2023020659> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/no2023020659> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules, 1828-1905. Voyage au centre de la Terre. Spanish (Martínez)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> <http://id.loc.gov/authorities/names/no2023020662> .
+<http://id.loc.gov/authorities/names/no2023020662> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#NameTitle> .
+<http://id.loc.gov/authorities/names/no2023020662> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/no2023020662> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules, 1828-1905. Un neveu d'Amérique. Spanish" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://id.worldcat.org/fast/37290> .
+<http://id.worldcat.org/fast/37290> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+<http://id.worldcat.org/fast/37290> <http://id.loc.gov/ontologies/bflc/marcKey> "1001 $aVerne, Jules,$d1828-1905" .
+<http://id.worldcat.org/fast/37290> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules, 1828-1905" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://vocab.getty.edu/ulan/500253402> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://www.wikidata.org/entity/Q33977> .
+<http://www.wikidata.org/entity/Q33977> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+<http://www.wikidata.org/entity/Q33977> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Jules Verne" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <https://d-nb.info/gnd/118626620> .
+<https://d-nb.info/gnd/118626620> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+<https://d-nb.info/gnd/118626620> <http://www.w3.org/2000/01/rdf-schema#label> "Verne, Jules" .
+<https://d-nb.info/gnd/118626620> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <https://id.ndl.go.jp/auth/ndlna/00459687> .
+<https://id.ndl.go.jp/auth/ndlna/00459687> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+<https://id.ndl.go.jp/auth/ndlna/00459687> <http://id.loc.gov/ontologies/bflc/marcKey> "1001 $aVerne, Jules,$d1828-1905" .
+<https://id.ndl.go.jp/auth/ndlna/00459687> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verne, Jules, 1828-1905" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <https://isni.org/isni/0000000121400562> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b862httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b862httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:b862httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1979-08-03T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b862httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:b862httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "United States, Library of Congress" .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.loc.gov/mads/rdf/v1#code> "DLC"^^<http://id.loc.gov/datatypes/orgs/code> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.loc.gov/mads/rdf/v1#code> "dlc"^^<http://id.loc.gov/datatypes/orgs/normalized> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.loc.gov/mads/rdf/v1#code> "US-dlc"^^<http://id.loc.gov/datatypes/orgs/iso15511> .
+_:b862httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Language> .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <//www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language> .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "English" .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "anglais" .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Englisch" .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.loc.gov/mads/rdf/v1#code> "eng"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b891httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b891httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:b891httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2025-08-05T01:10:10"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b891httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:b891httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/ocolc> .
+<http://id.loc.gov/vocabulary/organizations/ocolc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+<http://id.loc.gov/vocabulary/organizations/ocolc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/organizations/ocolc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Online Computer Library Center, Inc." .
+<http://id.loc.gov/vocabulary/organizations/ocolc> <http://www.loc.gov/mads/rdf/v1#code> "OCoLC"^^<http://id.loc.gov/datatypes/orgs/code> .
+<http://id.loc.gov/vocabulary/organizations/ocolc> <http://www.loc.gov/mads/rdf/v1#code> "ocolc"^^<http://id.loc.gov/datatypes/orgs/normalized> .
+<http://id.loc.gov/vocabulary/organizations/ocolc> <http://www.loc.gov/mads/rdf/v1#code> "US-ocolc"^^<http://id.loc.gov/datatypes/orgs/iso15511> .
+_:b891httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Language> .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <//www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language> .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "English" .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "anglais" .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Englisch" .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.loc.gov/mads/rdf/v1#code> "eng"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verne, Jules, 1828-1905" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#prefLabel> "ジュール.ヴェルヌ, 1828-1905"@ja-jpan .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#prefLabel> "װערן, ז."@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#prefLabel> "凡尔纳儒尔, 1828-1905"@und-hani .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#prefLabel> "ورن، ژول"@und-arab .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#prefLabel> "Верн, Жюль, 1828-1905"@und-cyrl .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b933httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b933httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b933httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Fan'erna, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b938httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b938httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b938httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Vec nơ, Juyn, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b943httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b943httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b943httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Vern, Jul, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b948httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b948httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b948httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Vern̲, Jūls, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b953httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b953httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b953httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Vern, Zhi︠u︡lʹ, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b958httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b958httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b958httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Vern, Zhul, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b963httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b963httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b963httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Ṿern, Z'ul, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b968httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b968httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b968httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Verne, Gyula, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b973httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b973httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b973httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Verne, Jul. (Jules Gabriel), 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b978httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b978httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b978httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Verne, Jules (Jules Gabriel), 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b983httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b983httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b983httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Verne, Julio, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b988httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b988httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b988httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Verne, Julius, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b993httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b993httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b993httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Verne, Juliusz, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b998httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b998httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b998httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Verne, Juljusz, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1003httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1003httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1003httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Верн, Жюль, 1828-1905"@und-cyrl .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1008httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1008httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1008httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "װערן, ז."@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1013httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1013httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1013httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "װערן, זשול"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1018httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1018httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1018httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "װערן, זשול, 1828־1905"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1023httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1023httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1023httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "ורן, ז׳ול"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1028httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1028httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1028httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "ורן, ז׳ול, 1828-1905"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1033httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1033httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1033httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "ורן, ז׳ול, 8182־1905"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1038httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1038httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1038httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "ווערן, ז'ול, 1828-1905"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1043httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1043httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1043httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "וורן, ז׳ול"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1048httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1048httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1048httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "ジュール.ヴェルヌ, 1828-1905"@ja-jpan .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1053httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1053httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1053httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "ジュールベルヌ, 1828-1905"@ja-jpan .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1058httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1058httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1058httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "凡尔纳儒尔, 1828-1905"@und-hani .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1063httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1063httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1063httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "貝爾魯裘爾, 1828-1905"@und-hani .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1068httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1068httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1068httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Virn, Zhūl, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1073httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1073httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1073httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "ورن، ژول"@und-arab .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1078httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1078httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1078httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Verns, Žils, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2008/05/skos-xl#altLabel> _:b1083httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1083httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos-xl#Label> .
+_:b1083httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/2008/05/skos-xl#literalForm> "Veṛn, Zhyul, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#related> <http://id.loc.gov/authorities/names/no2019178592> .
+<http://id.loc.gov/authorities/names/no2019178592> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/no2019178592> <http://www.w3.org/2004/02/skos/core#prefLabel> "Fogg, Phileas (Fictitious character)" .
+<http://id.loc.gov/authorities/names/no2019178592> <http://www.w3.org/2004/02/skos/core#prefLabel> "Фог, Филеас (Fictitious character)"@und-cyrl .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#related> <http://id.loc.gov/authorities/names/no2020021950> .
+<http://id.loc.gov/authorities/names/no2020021950> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/no2020021950> <http://www.w3.org/2004/02/skos/core#prefLabel> "Nemo, Captain (Fictitious character)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#semanticRelation> <http://id.loc.gov/authorities/names/n2018002690> .
+<http://id.loc.gov/authorities/names/n2018002690> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/n2018002690> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verne, Jules, 1828-1905. Voyage au centre de la terre" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#semanticRelation> <http://id.loc.gov/authorities/names/no2013128368> .
+<http://id.loc.gov/authorities/names/no2013128368> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/no2013128368> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verne, Jules, 1828-1905. Vingt mille lieues sous les mers" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#semanticRelation> <http://id.loc.gov/authorities/names/no2014011738> .
+<http://id.loc.gov/authorities/names/no2014011738> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/no2014011738> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verne, Jules, 1828-1905. Tour du monde en quatre-vingts jours" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#semanticRelation> <http://id.loc.gov/authorities/names/no2018038576> .
+<http://id.loc.gov/authorities/names/no2018038576> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/no2018038576> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verne, Jules, 1828-1905. De la terre à la lune" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#semanticRelation> <http://id.loc.gov/authorities/names/no2018038753> .
+<http://id.loc.gov/authorities/names/no2018038753> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/no2018038753> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verne, Jules, 1828-1905. Autour de la lune" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#semanticRelation> <http://id.loc.gov/authorities/names/no2020021051> .
+<http://id.loc.gov/authorities/names/no2020021051> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/no2020021051> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verne, Jules, 1828-1905. Indes noires" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#semanticRelation> <http://id.loc.gov/authorities/names/no2023020659> .
+<http://id.loc.gov/authorities/names/no2023020659> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/no2023020659> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verne, Jules, 1828-1905. Voyage au centre de la Terre. Spanish (Martínez)" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#semanticRelation> <http://id.loc.gov/authorities/names/no2023020662> .
+<http://id.loc.gov/authorities/names/no2023020662> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/no2023020662> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verne, Jules, 1828-1905. Un neveu d'Amérique. Spanish" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/en/viaf/LC%7Cn%20%2079064013> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://id.worldcat.org/fast/37290> .
+<http://id.worldcat.org/fast/37290> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.worldcat.org/fast/37290> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verne, Jules, 1828-1905" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://vocab.getty.edu/ulan/500253402> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.wikidata.org/entity/Q33977> .
+<http://www.wikidata.org/entity/Q33977> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.wikidata.org/entity/Q33977> <http://www.w3.org/2004/02/skos/core#prefLabel> "Jules Verne" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#closeMatch> <https://id.ndl.go.jp/auth/ndlna/00459687> .
+<https://id.ndl.go.jp/auth/ndlna/00459687> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://id.ndl.go.jp/auth/ndlna/00459687> <http://www.w3.org/2004/02/skos/core#prefLabel> "Verne, Jules, 1828-1905" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#editorialNote> "[Machine-derived non-Latin script reference project.]" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#editorialNote> "[Non-Latin script references not evaluated.]" .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/authorities/names> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Fan'erna, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Vec nơ, Juyn, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Vern, Jul, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Vern̲, Jūls, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Vern, Zhi︠u︡lʹ, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Vern, Zhul, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Ṿern, Z'ul, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Verne, Gyula, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Verne, Jul. (Jules Gabriel), 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Verne, Jules (Jules Gabriel), 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Verne, Julio, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Verne, Julius, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Verne, Juliusz, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Verne, Juljusz, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Верн, Жюль, 1828-1905"@und-cyrl .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "װערן, ז."@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "װערן, זשול"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "װערן, זשול, 1828־1905"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "ורן, ז׳ול"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "ורן, ז׳ול, 1828-1905"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "ורן, ז׳ול, 8182־1905"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "ווערן, ז'ול, 1828-1905"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "וורן, ז׳ול"@und-hebr .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "ジュール.ヴェルヌ, 1828-1905"@ja-jpan .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "ジュールベルヌ, 1828-1905"@ja-jpan .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "凡尔纳儒尔, 1828-1905"@und-hani .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "貝爾魯裘爾, 1828-1905"@und-hani .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Virn, Zhūl, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "ورن، ژول"@und-arab .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Verns, Žils, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#altLabel> "Veṛn, Zhyul, 1828-1905"@und-latn .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#changeNote> _:b1224httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1224httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+_:b1224httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n79064013> .
+_:b1224httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://purl.org/vocab/changeset/schema#creatorName> "United States, Library of CongressDLCdlcUS-dlc" .
+_:b1224httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://purl.org/vocab/changeset/schema#createdDate> "1979-08-03T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b1224httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/names/n79064013> <http://www.w3.org/2004/02/skos/core#changeNote> _:b1233httpc0liddOtlocdOtgovauthoritiesnamesn79064013 .
+_:b1233httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+_:b1233httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n79064013> .
+_:b1233httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://purl.org/vocab/changeset/schema#creatorName> "Online Computer Library Center, Inc.OCoLCocolcUS-ocolc" .
+_:b1233httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://purl.org/vocab/changeset/schema#createdDate> "2025-08-05T01:10:10"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b1233httpc0liddOtlocdOtgovauthoritiesnamesn79064013 <http://purl.org/vocab/changeset/schema#changeReason> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
