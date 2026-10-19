@@ -9,9 +9,8 @@ id.loc.gov. Queries and results follow the
 [Reconciliation Service API 0.2](https://www.w3.org/community/reports/reconciliation/CG-FINAL-specs-0.2-20230410/),
 the protocol OpenRefine speaks.
 
-This is early work. The library and the `build`, `match` and `status`
-commands exist. Keeping the index current from LC's activity streams and
-the web service are still to come.
+This is early work. The library and the `build`, `sync`, `match` and
+`status` commands exist; the web service is still to come.
 
 ## Usage
 
@@ -21,6 +20,7 @@ lc-reconcile build --scheme names --scheme subjects --scheme genreForms
 lc-reconcile match "Science fiction" --type Topic
 lc-reconcile match "Verne, Jules" --dates 1828-1905 --type PersonalName
 lc-reconcile match --marc-key '7001 $aVerne, Jules,$d1828-1905,$eauthor.'
+lc-reconcile sync                   # apply LC's changes since the last sync
 lc-reconcile status
 ```
 
@@ -30,7 +30,22 @@ its 12 million records takes about 20 minutes and makes a 9 GB index.
 To build from snapshots you've already downloaded, give each with `--from`
 and the date LC published it with `--snapshot-date`.
 
-From Python:
+## Keeping the index current
+
+`sync` reads each scheme's
+[activity stream](https://id.loc.gov/authorities/names/activitystreams/feed)
+back to a few days before the last sync (or the snapshot, the first time),
+fetches each record that changed, and replaces it in the index. It waits
+half a second between requests (`--delay`), and saves its place after each
+day of changes, so it can be stopped and run again.
+
+LCNAF changes by about 1,200 records a day, which takes about 15 minutes to
+sync. LC's names snapshot is published less often than that: a build from
+one three weeks old has about 24,000 changes to catch up on, about four and
+a half hours. A sync of an index more than 30 days behind is refused: rebuild
+it from a newer snapshot, or raise the limit with `--max-age`.
+
+## From Python
 
 ```python
 from lc_reconcile import Index, Reconciler

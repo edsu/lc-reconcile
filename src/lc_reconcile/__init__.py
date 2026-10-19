@@ -15,6 +15,7 @@ from lc_reconcile.match import TYPES, Candidate, Query, Reconciler
 from lc_reconcile.normalize import normalize
 from lc_reconcile.records import AuthorityRecord, iter_records, parse_record
 from lc_reconcile.store import Index, IndexUnavailable
+from lc_reconcile.sync import RebuildNeeded, SyncError, sync
 
 __all__ = [
     "SCHEMES",
@@ -24,11 +25,14 @@ __all__ = [
     "Index",
     "IndexUnavailable",
     "Query",
+    "RebuildNeeded",
     "Reconciler",
     "Source",
+    "SyncError",
     "build",
     "default_sources",
     "iter_records",
     "normalize",
     "parse_record",
+    "sync",
 ]

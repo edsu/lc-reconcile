@@ -8,10 +8,13 @@ import os
 import sys
 import time
 from collections.abc import Sequence
+from datetime import timedelta
 
+from lc_reconcile._net import Client, FetchError
 from lc_reconcile.build import SCHEMES, Source, build, default_sources
 from lc_reconcile.match import TYPES, Query, Reconciler
 from lc_reconcile.store import Index, IndexUnavailable
+from lc_reconcile.sync import MAX_AGE, SyncError, sync
 
 DEFAULT_DB = "lc-reconcile.sqlite"
 
@@ -74,6 +77,30 @@ def _parser() -> argparse.ArgumentParser:
     )
     match.add_argument("--limit", type=int, default=10)
 
+    sync_ = commands.add_parser(
+        "sync", help="apply the changes LC has published since the last sync"
+    )
+    sync_.add_argument(
+        "--scheme",
+        action="append",
+        choices=SCHEMES,
+        help="scheme to sync; repeat for more (default: every scheme in the index)",
+    )
+    sync_.add_argument(
+        "--delay",
+        type=float,
+        default=0.5,
+        help="seconds between requests to id.loc.gov (default: 0.5)",
+    )
+    sync_.add_argument(
+        "--max-age",
+        type=int,
+        default=MAX_AGE.days,
+        metavar="DAYS",
+        help="rebuild rather than sync an index further behind than this "
+        f"(default: {MAX_AGE.days})",
+    )
+
     commands.add_parser("status", help="say what the index holds")
     return parser
 
@@ -86,9 +113,11 @@ def main(argv: Sequence[str] | None = None) -> int:
                 return _build(args)
             case "match":
                 return _match(args)
+            case "sync":
+                return _sync(args)
             case "status":
                 return _status(args)
-    except IndexUnavailable as error:
+    except (IndexUnavailable, SyncError, FetchError) as error:
         print(f"lc-reconcile: {error}", file=sys.stderr)
         return 1
     return 2
@@ -155,11 +184,40 @@ def _match(args: argparse.Namespace) -> int:
     return 0
 
 
+def _sync(args: argparse.Namespace) -> int:
+    Index(args.db).close()  # says clearly if there is no index
+
+    def progress(scheme: str, message: str) -> None:
+        print(f"{scheme}: {message}", file=sys.stderr)
+
+    results = sync(
+        args.db,
+        args.scheme,
+        client=Client(delay=args.delay),
+        max_age=timedelta(days=args.max_age),
+        progress=progress,
+    )
+    for result in results:
+        print(
+            f"{result.scheme}: {result.updated:,} updated, {result.deleted:,} "
+            f"removed, synced to {result.cursor}",
+            file=sys.stderr,
+        )
+    return 0
+
+
 def _status(args: argparse.Namespace) -> int:
     for status in Index(args.db).schemes():
+        synced = (
+            f", synced to {status.cursor}"
+            + (f" at {status.synced}" if status.synced else " (interrupted)")
+            if status.cursor
+            else ", never synced"
+        )
         print(
             f"{status.name}: {status.records:,} records, snapshot of "
             f"{status.snapshot_modified or 'unknown date'}, built {status.built}"
+            + synced
         )
     return 0
 

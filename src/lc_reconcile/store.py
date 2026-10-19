@@ -31,7 +31,7 @@ _WORDS = re.compile(r"\w+")
 _MAX_WORDS = 12
 
 #: Bumped whenever the schema changes; an index of another version is rebuilt.
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 
 #: How a label belongs to its record, as stored in ``label.kind``.
 VIA = ("authorized", "variant", "deprecated")
@@ -74,12 +74,16 @@ CREATE TABLE use_instead (
 -- a build has filled it.
 CREATE VIRTUAL TABLE label_fts USING fts5(key, content='label', content_rowid='id');
 
+-- cursor is the date (YYYY-MM-DD) up to which changes from the scheme's
+-- activity stream have been applied; synced is when a sync last finished.
 CREATE TABLE scheme (
     name TEXT PRIMARY KEY,
     source TEXT,
     snapshot_modified TEXT,
     built TEXT NOT NULL,
-    records INTEGER NOT NULL
+    records INTEGER NOT NULL,
+    cursor TEXT,
+    synced TEXT
 );
 """
 
@@ -189,6 +193,8 @@ class SchemeStatus:
     snapshot_modified: str | None
     built: str
     records: int
+    cursor: str | None = None
+    synced: str | None = None
 
 
 class IndexUnavailable(Exception):
@@ -412,7 +418,7 @@ class Writer:
         ).fetchone()
         with self._db:
             self._db.execute(
-                "INSERT OR REPLACE INTO scheme VALUES (?, ?, ?, ?, ?)",
+                "INSERT OR REPLACE INTO scheme VALUES (?, ?, ?, ?, ?, NULL, NULL)",
                 (
                     name,
                     source,
@@ -420,6 +426,21 @@ class Writer:
                     datetime.now(UTC).isoformat(timespec="seconds"),
                     count,
                 ),
+            )
+
+    def schemes(self) -> list[SchemeStatus]:
+        cursor = self._db.execute("SELECT * FROM scheme ORDER BY name")
+        columns = [column[0] for column in cursor.description]
+        return [SchemeStatus(**dict(zip(columns, row, strict=True))) for row in cursor]
+
+    def set_cursor(self, name: str, cursor: str, *, finished: bool) -> None:
+        """Record that changes up to ``cursor`` have been applied."""
+        synced = datetime.now(UTC).isoformat(timespec="seconds") if finished else None
+        with self._db:
+            self._db.execute(
+                "UPDATE scheme SET cursor = ?, synced = coalesce(?, synced) "
+                "WHERE name = ?",
+                (cursor, synced, name),
             )
 
     def close(self) -> None:

@@ -1,0 +1,74 @@
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Irwansyah, M. Rudi" .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.loc.gov/mads/rdf/v1#elementList> _:b7httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 .
+_:b7httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:b8httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 .
+_:b7httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:b8httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#FullNameElement> .
+_:b8httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://www.loc.gov/mads/rdf/v1#elementValue> "Irwansyah, M. Rudi" .
+<http://id.loc.gov/authorities/names/n2026542348> <http://id.loc.gov/ontologies/bflc/marcKey> "1001 $aIrwansyah, M. Rudi" .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.loc.gov/mads/rdf/v1#identifiesRWO> <http://id.loc.gov/rwo/agents/n2026542348> .
+<http://id.loc.gov/rwo/agents/n2026542348> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#RWO> .
+<http://id.loc.gov/rwo/agents/n2026542348> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/bibframe/Person> .
+<http://id.loc.gov/rwo/agents/n2026542348> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://id.loc.gov/rwo/agents/n2026542348> <http://www.w3.org/2000/01/rdf-schema#label> "Irwansyah, M. Rudi" .
+<http://id.loc.gov/rwo/agents/n2026542348> <http://www.loc.gov/mads/rdf/v1#associatedLocale> <http://id.loc.gov/rwo/agents/n80083633> .
+<http://id.loc.gov/rwo/agents/n80083633> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Geographic> .
+<http://id.loc.gov/rwo/agents/n80083633> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/rwo/agents/n80083633> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Indonesia" .
+<http://id.loc.gov/rwo/agents/n80083633> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "インドネシア"@ja-jpan .
+<http://id.loc.gov/rwo/agents/n80083633> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "إندونيسيا"@und-arab .
+<http://id.loc.gov/rwo/agents/n80083633> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Рэспубліка Інданезія"@und-cyrl .
+<http://id.loc.gov/rwo/agents/n80083633> <http://www.loc.gov/mads/rdf/v1#code> "a-io---"^^<http://id.loc.gov/datatypes/codes/gac> .
+<http://id.loc.gov/rwo/agents/n2026542348> <http://www.loc.gov/mads/rdf/v1#associatedLanguage> <http://id.loc.gov/vocabulary/languages/ind> .
+<http://id.loc.gov/vocabulary/languages/ind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Language> .
+<http://id.loc.gov/vocabulary/languages/ind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/languages/ind> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Indonesian"@en .
+<http://id.loc.gov/vocabulary/languages/ind> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Bahasa Indonesia"@de .
+<http://id.loc.gov/vocabulary/languages/ind> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "indonésien"@fr .
+<http://id.loc.gov/vocabulary/languages/ind> <http://www.loc.gov/mads/rdf/v1#code> "ind"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/rwo/agents/n2026542348> <http://www.loc.gov/mads/rdf/v1#isIdentifiedByAuthority> <http://id.loc.gov/authorities/names/n2026542348> .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#PersonalName> .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Irwansyah, M. Rudi" .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.loc.gov/mads/rdf/v1#hasSource> _:b48httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 .
+_:b48httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:b48httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:b48httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://www.loc.gov/mads/rdf/v1#citationSource> "Budaya & kesejahteraan masyarakat Indonesia, 2025:" .
+_:b48httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://www.loc.gov/mads/rdf/v1#citationSource> <http://id.loc.gov/resources/instances/in00024494916> .
+_:b48httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://www.loc.gov/mads/rdf/v1#citationNote> "title page (M. Rudi Irwansyah)" .
+<http://id.loc.gov/authorities/names/n2026542348> <http://id.loc.gov/vocabulary/identifiers/lccn> "n 2026542348" .
+<http://id.loc.gov/authorities/names/n2026542348> <http://id.loc.gov/vocabulary/identifiers/local> "n2026542348" .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_NamesAuthorizedHeadings> .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/names> .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/names/collection_LCNAF> .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://viaf.org/en/viaf/LC%7Cn%202026542348> .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:b65httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 .
+_:b65httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:b65httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2026-10-19T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b65httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:b65httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#CorporateName> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "United States, Library of Congress" .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.loc.gov/mads/rdf/v1#code> "DLC"^^<http://id.loc.gov/datatypes/orgs/code> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.loc.gov/mads/rdf/v1#code> "dlc"^^<http://id.loc.gov/datatypes/orgs/normalized> .
+<http://id.loc.gov/vocabulary/organizations/dlc> <http://www.loc.gov/mads/rdf/v1#code> "US-dlc"^^<http://id.loc.gov/datatypes/orgs/iso15511> .
+_:b65httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Language> .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <//www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/vocabulary/iso639-2/iso639-2_Language> .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "English" .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "anglais" .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Englisch" .
+<http://id.loc.gov/vocabulary/iso639-2/eng> <http://www.loc.gov/mads/rdf/v1#code> "eng"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.w3.org/2004/02/skos/core#prefLabel> "Irwansyah, M. Rudi" .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://viaf.org/en/viaf/LC%7Cn%202026542348> .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.w3.org/2004/02/skos/core#inScheme> <http://id.loc.gov/authorities/names> .
+<http://id.loc.gov/authorities/names/n2026542348> <http://www.w3.org/2004/02/skos/core#changeNote> _:b99httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 .
+_:b99httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+_:b99httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/authorities/names/n2026542348> .
+_:b99httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://purl.org/vocab/changeset/schema#creatorName> "United States, Library of CongressDLCdlcUS-dlc" .
+_:b99httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://purl.org/vocab/changeset/schema#createdDate> "2026-10-19T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:b99httpc0liddOtlocdOtgovauthoritiesnamesn2026542348 <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
