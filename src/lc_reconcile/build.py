@@ -18,7 +18,14 @@ from lc_reconcile.records import iter_records
 from lc_reconcile.store import Writer
 
 #: Schemes a build knows how to fetch. Each is a MADS/RDF N-Triples snapshot.
-SCHEMES = ("names", "subjects", "genreForms")
+SCHEMES = (
+    "names",
+    "subjects",
+    "genreForms",
+    "childrensSubjects",
+    "demographicTerms",
+    "performanceMediums",
+)
 
 SNAPSHOT_URL = "https://id.loc.gov/download/authorities/{scheme}.madsrdf.nt.gz"
 

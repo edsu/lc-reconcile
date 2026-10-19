@@ -1,0 +1,215 @@
+# BEGIN /authorities/childrensSubjects/sj00008213
+
+_:n2d41e03bc95e4015b91ad3bf2a029842b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b6 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Fiction"@en .
+_:n2d41e03bc95e4015b91ad3bf2a029842b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n2d41e03bc95e4015b91ad3bf2a029842b4 .
+_:n2d41e03bc95e4015b91ad3bf2a029842b3 <http://www.loc.gov/mads/rdf/v1#elementList> _:n2d41e03bc95e4015b91ad3bf2a029842b5 .
+_:n2d41e03bc95e4015b91ad3bf2a029842b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/childrensSubjects/sj00008213> <http://www.loc.gov/mads/rdf/v1#variantLabel> "Theater--Fiction"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj00008213> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n2d41e03bc95e4015b91ad3bf2a029842b6 .
+_:n2d41e03bc95e4015b91ad3bf2a029842b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b7 <http://www.loc.gov/mads/rdf/v1#elementValue> "Fiction"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj00008213> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#ComplexSubject> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/childrensSubjects/sj00008213> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n2d41e03bc95e4015b91ad3bf2a029842b2 .
+<http://id.loc.gov/authorities/childrensSubjects/sj00008213> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b4 <http://www.loc.gov/mads/rdf/v1#elementValue> "Theater"@en .
+_:n2d41e03bc95e4015b91ad3bf2a029842b2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2000-10-16T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2026-04-09T14:46:08"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/childrensSubjects/sj00008213> <http://www.w3.org/2002/07/owl#sameAs> <info:lc/authorities/sj00008213> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreFormElement> .
+<http://id.loc.gov/authorities/childrensSubjects/sj00008213> <http://www.loc.gov/mads/rdf/v1#componentList> _:n2d41e03bc95e4015b91ad3bf2a029842b9 .
+<http://id.loc.gov/authorities/childrensSubjects/sj00008213> <http://www.loc.gov/mads/rdf/v1#deletionNote> "This authority record has been deleted because the heading is replaced by the heading {Theater,} a heading for which a subject authority record is not made because it uses a free-floating subdivision."@en .
+_:n2d41e03bc95e4015b91ad3bf2a029842b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b3 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Theater"@en .
+_:n2d41e03bc95e4015b91ad3bf2a029842b6 <http://www.loc.gov/mads/rdf/v1#elementList> _:n2d41e03bc95e4015b91ad3bf2a029842b8 .
+<http://id.loc.gov/authorities/childrensSubjects/sj00008213> <http://www.w3.org/2002/07/owl#sameAs> <http://id.loc.gov/authorities/sj00008213#concept> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#GenreForm> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/childrensSubjects/sj00008213> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n2d41e03bc95e4015b91ad3bf2a029842b1 .
+_:n2d41e03bc95e4015b91ad3bf2a029842b1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "deprecated"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n2d41e03bc95e4015b91ad3bf2a029842b7 .
+_:n2d41e03bc95e4015b91ad3bf2a029842b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n2d41e03bc95e4015b91ad3bf2a029842b3 .
+_:n2d41e03bc95e4015b91ad3bf2a029842b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:n2d41e03bc95e4015b91ad3bf2a029842b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:n2d41e03bc95e4015b91ad3bf2a029842b10 .
+
+# END /authorities/childrensSubjects/sj00008213
+# BEGIN /authorities/childrensSubjects/sj2021050042
+
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#classification> _:n773f3d6f957a49b385c41f50ae56d6cab3 .
+_:n773f3d6f957a49b385c41f50ae56d6cab6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n773f3d6f957a49b385c41f50ae56d6cab3 <http://www.w3.org/2000/01/rdf-schema#label> "Collections of fiction" .
+_:n773f3d6f957a49b385c41f50ae56d6cab2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.w3.org/2002/07/owl#sameAs> <http://id.loc.gov/authorities/sj2021050042#concept> .
+_:n773f3d6f957a49b385c41f50ae56d6cab5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n773f3d6f957a49b385c41f50ae56d6cab4 .
+_:n773f3d6f957a49b385c41f50ae56d6cab2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:n773f3d6f957a49b385c41f50ae56d6cab5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.w3.org/2002/07/owl#sameAs> <info:lc/authorities/sj2021050042> .
+_:n773f3d6f957a49b385c41f50ae56d6cab1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:n773f3d6f957a49b385c41f50ae56d6cab8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://id.loc.gov/ontologies/bflc/marcKey> "150  $aScience fiction" .
+_:n773f3d6f957a49b385c41f50ae56d6cab1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#editorialNote> "[Machine-derived authority record.]" .
+_:n773f3d6f957a49b385c41f50ae56d6cab8 <http://www.loc.gov/mads/rdf/v1#elementValue> "Science stories"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:n773f3d6f957a49b385c41f50ae56d6cab9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n773f3d6f957a49b385c41f50ae56d6cab8 .
+_:n773f3d6f957a49b385c41f50ae56d6cab7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n773f3d6f957a49b385c41f50ae56d6cab3 <http://id.loc.gov/ontologies/bibframe/assigner> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/childrensSubjects> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n773f3d6f957a49b385c41f50ae56d6cab1 .
+_:n773f3d6f957a49b385c41f50ae56d6cab3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/lcc#ClassNumber> .
+_:n773f3d6f957a49b385c41f50ae56d6cab2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:n773f3d6f957a49b385c41f50ae56d6cab4 <http://www.loc.gov/mads/rdf/v1#elementValue> "Science fiction"@en .
+_:n773f3d6f957a49b385c41f50ae56d6cab6 <http://www.loc.gov/mads/rdf/v1#citationSource> "Tom Swift and his submarine boat, or, Under the ocean for sunken treasure, 1910." .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://id.loc.gov/vocabulary/identifiers/lccn> "sj2021050042" .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#classification> <http://id.loc.gov/authorities/classification/P96.S34> .
+_:n773f3d6f957a49b385c41f50ae56d6cab7 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Science stories"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/childrensSubjects/sj2021051250> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n773f3d6f957a49b385c41f50ae56d6cab7 .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+_:n773f3d6f957a49b385c41f50ae56d6cab1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#note> "Here are entered collections and discussions of science fiction as realized in various media, including films, television, comic strips, etc., as well as works limited to fiction in the literary sense. Works dealing with science fiction as realized in a specific non-literary medium are entered under the specific heading, e.g. [Science fiction films.]" .
+_:n773f3d6f957a49b385c41f50ae56d6cab9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Science fiction"@en .
+_:n773f3d6f957a49b385c41f50ae56d6cab4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n773f3d6f957a49b385c41f50ae56d6cab2 .
+_:n773f3d6f957a49b385c41f50ae56d6cab3 <http://www.loc.gov/mads/rdf/v1#code> "PN6120.95.S33" .
+_:n773f3d6f957a49b385c41f50ae56d6cab2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#classification> <http://id.loc.gov/authorities/classification/PN3433-PN3433.8> .
+_:n773f3d6f957a49b385c41f50ae56d6cab1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2009-09-29T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n773f3d6f957a49b385c41f50ae56d6cab1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n773f3d6f957a49b385c41f50ae56d6cab6 .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#elementList> _:n773f3d6f957a49b385c41f50ae56d6cab5 .
+_:n773f3d6f957a49b385c41f50ae56d6cab6 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n773f3d6f957a49b385c41f50ae56d6cab2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2023-07-10T14:07:06"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/childrensSubjects/sj2021051428> .
+_:n773f3d6f957a49b385c41f50ae56d6cab7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:n773f3d6f957a49b385c41f50ae56d6cab7 <http://www.loc.gov/mads/rdf/v1#elementList> _:n773f3d6f957a49b385c41f50ae56d6cab9 .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/childrensSubjects/sj2021061276> .
+<http://id.loc.gov/authorities/childrensSubjects/sj2021050042> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSH_Childrens> .
+
+# END /authorities/childrensSubjects/sj2021050042
+# BEGIN /authorities/childrensSubjects/sj96004989
+
+_:n571849f350d54f1cb7b44e6ebd6d63fcb3 <http://www.w3.org/2000/01/rdf-schema#label> "Pets" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n571849f350d54f1cb7b44e6ebd6d63fcb22 .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/childrensSubjects> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb9 <http://www.loc.gov/mads/rdf/v1#citationSource> "ITIS, viewed March 20, 2024" .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/lcc#ClassNumber> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n571849f350d54f1cb7b44e6ebd6d63fcb23 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb11 <http://www.loc.gov/mads/rdf/v1#elementValue> "Felis catus"@en .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb14 <http://www.loc.gov/mads/rdf/v1#elementValue> "Felis catus domestica"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n571849f350d54f1cb7b44e6ebd6d63fcb2 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2024-10-31T13:10:08"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.w3.org/2002/07/owl#sameAs> <info:lc/authorities/sj96004989> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb8 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb22 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Kittens"@en .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://id.loc.gov/ontologies/bflc/marcKey> "150  $aCats" .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb6 <http://www.loc.gov/mads/rdf/v1#citationSource> "Grabianski, Janusz. Cats, 1967" .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n571849f350d54f1cb7b44e6ebd6d63fcb17 .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n571849f350d54f1cb7b44e6ebd6d63fcb13 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb13 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Felis catus domestica"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n571849f350d54f1cb7b44e6ebd6d63fcb16 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n571849f350d54f1cb7b44e6ebd6d63fcb14 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n571849f350d54f1cb7b44e6ebd6d63fcb20 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n571849f350d54f1cb7b44e6ebd6d63fcb10 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb19 <http://www.loc.gov/mads/rdf/v1#elementList> _:n571849f350d54f1cb7b44e6ebd6d63fcb21 .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_LCSH_Childrens> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb16 <http://www.loc.gov/mads/rdf/v1#elementList> _:n571849f350d54f1cb7b44e6ebd6d63fcb18 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/childrensSubjects/sj2021057178> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb22 <http://www.loc.gov/mads/rdf/v1#elementList> _:n571849f350d54f1cb7b44e6ebd6d63fcb24 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb7 <http://www.loc.gov/mads/rdf/v1#citationNote> "(cat: a carnivorous mammal (Felis catus) long domesticated as a pet and for catching rats and mice)"@en .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/childrensSubjects/sj2001005201> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb25 <http://www.loc.gov/mads/rdf/v1#variantLabel> "House cats"@en .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1996-05-01T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#classification> <http://id.loc.gov/authorities/classification/SF407.C37> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb7 <http://www.loc.gov/mads/rdf/v1#citationSource> "Merriam Webster, viewed March 20, 2024" .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n571849f350d54f1cb7b44e6ebd6d63fcb26 .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Cats"@en .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb17 <http://www.loc.gov/mads/rdf/v1#elementValue> "Domestic cats"@en .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb3 <http://id.loc.gov/ontologies/bibframe/assigner> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb26 <http://www.loc.gov/mads/rdf/v1#elementValue> "House cats"@en .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb6 <http://www.loc.gov/mads/rdf/v1#citationNote> "(DLC)67004346"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#elementList> _:n571849f350d54f1cb7b44e6ebd6d63fcb5 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb3 <http://www.loc.gov/mads/rdf/v1#code> "SF441-SF449" .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb25 <http://www.loc.gov/mads/rdf/v1#elementList> _:n571849f350d54f1cb7b44e6ebd6d63fcb27 .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://id.loc.gov/vocabulary/identifiers/lccn> "sj 96004989" .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb4 <http://www.loc.gov/mads/rdf/v1#elementValue> "Cats"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n571849f350d54f1cb7b44e6ebd6d63fcb25 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n571849f350d54f1cb7b44e6ebd6d63fcb7 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb7 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb10 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Felis catus"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n571849f350d54f1cb7b44e6ebd6d63fcb1 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#classification> <http://id.loc.gov/authorities/classification/SF767.C29> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#classification> <http://id.loc.gov/authorities/classification/QL737.C23> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n571849f350d54f1cb7b44e6ebd6d63fcb4 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb13 <http://www.loc.gov/mads/rdf/v1#elementList> _:n571849f350d54f1cb7b44e6ebd6d63fcb15 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n571849f350d54f1cb7b44e6ebd6d63fcb8 .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n571849f350d54f1cb7b44e6ebd6d63fcb6 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb8 <http://www.loc.gov/mads/rdf/v1#citationSource> "Britannica, viewed March 20, 2024" .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.w3.org/2002/07/owl#sameAs> <http://id.loc.gov/authorities/sj96004989#concept> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/subjects/collection_SubdivideGeographically> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#classification> _:n571849f350d54f1cb7b44e6ebd6d63fcb3 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb23 <http://www.loc.gov/mads/rdf/v1#elementValue> "Kittens"@en .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb9 <http://www.loc.gov/mads/rdf/v1#citationNote> "(Felis catus; Taxonomic rank: Species; Synonym: Felis catus domestica; Common name: Domestic cat; Kingdom: Animalia; Phylum: Chordata; Subphylum: Vertebrata; Class: Mammalia; Order: Carnivora; Family: Felidae; Subfamily: Felinae; Genus: Felis)"@en .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb8 <http://www.loc.gov/mads/rdf/v1#citationNote> "(cat, (Felis catus), domesticated member (felid) of the family Felidae; also known as: domestic cat, house cat)"@en .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb10 <http://www.loc.gov/mads/rdf/v1#elementList> _:n571849f350d54f1cb7b44e6ebd6d63fcb12 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n571849f350d54f1cb7b44e6ebd6d63fcb9 .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#classification> <http://id.loc.gov/authorities/classification/QL813.C38> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n571849f350d54f1cb7b44e6ebd6d63fcb19 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb6 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n571849f350d54f1cb7b44e6ebd6d63fcb11 .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb19 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Felids"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb20 <http://www.loc.gov/mads/rdf/v1#elementValue> "Felids"@en .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb9 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb16 <http://www.loc.gov/mads/rdf/v1#variantLabel> "Domestic cats"@en .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/childrensSubjects/sj2021055939> .
+_:n571849f350d54f1cb7b44e6ebd6d63fcb13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+<http://id.loc.gov/authorities/childrensSubjects/sj96004989> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/childrensSubjects/sj2021050156> .
+
+# END /authorities/childrensSubjects/sj96004989

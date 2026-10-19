@@ -1,0 +1,242 @@
+# BEGIN /authorities/performanceMediums/mp2013015001
+
+_:na36df97c70574f78b9cc1797ba40695eb6 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:na36df97c70574f78b9cc1797ba40695eb25 <http://www.loc.gov/mads/rdf/v1#elementList> _:na36df97c70574f78b9cc1797ba40695eb27 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:na36df97c70574f78b9cc1797ba40695eb19 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:na36df97c70574f78b9cc1797ba40695eb13 .
+_:na36df97c70574f78b9cc1797ba40695eb10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:na36df97c70574f78b9cc1797ba40695eb8 <http://www.loc.gov/mads/rdf/v1#citationSource> "M. Shagudzhev, 1965:" .
+_:na36df97c70574f78b9cc1797ba40695eb10 <http://www.loc.gov/mads/rdf/v1#elementList> _:na36df97c70574f78b9cc1797ba40695eb12 .
+_:na36df97c70574f78b9cc1797ba40695eb7 <http://www.loc.gov/mads/rdf/v1#citationNote> "(Accordion: a portable instrument of the reed organ family, classified as a keyed free-reed aerophone)"@en .
+_:na36df97c70574f78b9cc1797ba40695eb1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+_:na36df97c70574f78b9cc1797ba40695eb1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:na36df97c70574f78b9cc1797ba40695eb12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:na36df97c70574f78b9cc1797ba40695eb11 .
+_:na36df97c70574f78b9cc1797ba40695eb22 <http://www.loc.gov/mads/rdf/v1#variantLabel> "garmonica"@en-latn .
+_:na36df97c70574f78b9cc1797ba40695eb8 <http://www.loc.gov/mads/rdf/v1#citationNote> "label (garmon) OCoLC(863636844)"@en .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/performanceMediums> .
+_:na36df97c70574f78b9cc1797ba40695eb1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/wimtmla> .
+_:na36df97c70574f78b9cc1797ba40695eb11 <http://www.loc.gov/mads/rdf/v1#elementValue> "garmon"@en .
+_:na36df97c70574f78b9cc1797ba40695eb31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+_:na36df97c70574f78b9cc1797ba40695eb20 <http://www.loc.gov/mads/rdf/v1#elementValue> "accordeon"@en .
+_:na36df97c70574f78b9cc1797ba40695eb19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:na36df97c70574f78b9cc1797ba40695eb13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:na36df97c70574f78b9cc1797ba40695eb7 <http://www.loc.gov/mads/rdf/v1#citationSource> "New Grove dict. of musical instruments" .
+_:na36df97c70574f78b9cc1797ba40695eb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:na36df97c70574f78b9cc1797ba40695eb16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "accordion"@en .
+_:na36df97c70574f78b9cc1797ba40695eb8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:na36df97c70574f78b9cc1797ba40695eb11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasSource> _:na36df97c70574f78b9cc1797ba40695eb5 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://id.loc.gov/vocabulary/identifiers/lccn> "mp2013015001" .
+_:na36df97c70574f78b9cc1797ba40695eb6 <http://www.loc.gov/mads/rdf/v1#citationNote> "accordion (term applied to a number of portable free-reed aerophones. Their common features include a mechanical keyboard under each hand, manipulated by the fingers to select pitches)"@en .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/performanceMediums/mp2013015108> .
+_:na36df97c70574f78b9cc1797ba40695eb25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:na36df97c70574f78b9cc1797ba40695eb30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:na36df97c70574f78b9cc1797ba40695eb1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:na36df97c70574f78b9cc1797ba40695eb10 .
+_:na36df97c70574f78b9cc1797ba40695eb6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:na36df97c70574f78b9cc1797ba40695eb31 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasSource> _:na36df97c70574f78b9cc1797ba40695eb8 .
+_:na36df97c70574f78b9cc1797ba40695eb33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:na36df97c70574f78b9cc1797ba40695eb26 <http://www.loc.gov/mads/rdf/v1#elementValue> "garmonik"@en .
+_:na36df97c70574f78b9cc1797ba40695eb10 <http://www.loc.gov/mads/rdf/v1#variantLabel> "garmon"@en-latn .
+_:na36df97c70574f78b9cc1797ba40695eb21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:na36df97c70574f78b9cc1797ba40695eb9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:na36df97c70574f78b9cc1797ba40695eb32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:na36df97c70574f78b9cc1797ba40695eb28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+_:na36df97c70574f78b9cc1797ba40695eb8 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:na36df97c70574f78b9cc1797ba40695eb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:na36df97c70574f78b9cc1797ba40695eb2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "1986-02-11T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:na36df97c70574f78b9cc1797ba40695eb17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:na36df97c70574f78b9cc1797ba40695eb9 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:na36df97c70574f78b9cc1797ba40695eb15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:na36df97c70574f78b9cc1797ba40695eb26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:na36df97c70574f78b9cc1797ba40695eb25 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:na36df97c70574f78b9cc1797ba40695eb28 .
+_:na36df97c70574f78b9cc1797ba40695eb5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:na36df97c70574f78b9cc1797ba40695eb19 <http://www.loc.gov/mads/rdf/v1#elementList> _:na36df97c70574f78b9cc1797ba40695eb21 .
+_:na36df97c70574f78b9cc1797ba40695eb18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:na36df97c70574f78b9cc1797ba40695eb2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:na36df97c70574f78b9cc1797ba40695eb1 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:na36df97c70574f78b9cc1797ba40695eb16 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/performanceMediums/collection_LCMPT_General> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:na36df97c70574f78b9cc1797ba40695eb22 .
+_:na36df97c70574f78b9cc1797ba40695eb22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/performanceMediums/mp2013015428> .
+_:na36df97c70574f78b9cc1797ba40695eb5 <http://www.loc.gov/mads/rdf/v1#citationNote> "Russia (diatonic button accordion (garmon, garmoshka, garmonika) Georgia (the accordion, garmon, also buzika, from muzika 'music')"@en .
+_:na36df97c70574f78b9cc1797ba40695eb14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:na36df97c70574f78b9cc1797ba40695eb4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:na36df97c70574f78b9cc1797ba40695eb3 .
+_:na36df97c70574f78b9cc1797ba40695eb12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#elementList> _:na36df97c70574f78b9cc1797ba40695eb4 .
+_:na36df97c70574f78b9cc1797ba40695eb31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:na36df97c70574f78b9cc1797ba40695eb17 <http://www.loc.gov/mads/rdf/v1#elementValue> "garmoshka"@en .
+_:na36df97c70574f78b9cc1797ba40695eb9 <http://www.loc.gov/mads/rdf/v1#citationSource> "Grove music online, March 8, 2021:" .
+_:na36df97c70574f78b9cc1797ba40695eb29 <http://www.loc.gov/mads/rdf/v1#elementValue> "garmonya"@en .
+_:na36df97c70574f78b9cc1797ba40695eb24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:na36df97c70574f78b9cc1797ba40695eb10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+_:na36df97c70574f78b9cc1797ba40695eb25 <http://www.loc.gov/mads/rdf/v1#variantLabel> "garmonik"@en-latn .
+_:na36df97c70574f78b9cc1797ba40695eb1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2021-06-23T12:31:34"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:na36df97c70574f78b9cc1797ba40695eb9 <http://www.loc.gov/mads/rdf/v1#citationNote> "Garmonik (variants, garmoshka, garmonya; piano accordion of Belarus)"@en .
+_:na36df97c70574f78b9cc1797ba40695eb16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:na36df97c70574f78b9cc1797ba40695eb27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:na36df97c70574f78b9cc1797ba40695eb26 .
+_:na36df97c70574f78b9cc1797ba40695eb27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasSource> _:na36df97c70574f78b9cc1797ba40695eb6 .
+_:na36df97c70574f78b9cc1797ba40695eb7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:na36df97c70574f78b9cc1797ba40695eb2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/performanceMediums/mp2013015271> .
+_:na36df97c70574f78b9cc1797ba40695eb2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:na36df97c70574f78b9cc1797ba40695eb6 <http://www.loc.gov/mads/rdf/v1#citationSource> "New Grove Online April 5, 2013:" .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasSource> _:na36df97c70574f78b9cc1797ba40695eb9 .
+_:na36df97c70574f78b9cc1797ba40695eb32 <http://www.loc.gov/mads/rdf/v1#elementValue> "buzika"@en .
+_:na36df97c70574f78b9cc1797ba40695eb19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+_:na36df97c70574f78b9cc1797ba40695eb5 <http://www.loc.gov/mads/rdf/v1#citationSource> "Garland encyclopedia of world music online, March 8, 2021:" .
+_:na36df97c70574f78b9cc1797ba40695eb29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:na36df97c70574f78b9cc1797ba40695eb13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+_:na36df97c70574f78b9cc1797ba40695eb18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:na36df97c70574f78b9cc1797ba40695eb17 .
+_:na36df97c70574f78b9cc1797ba40695eb16 <http://www.loc.gov/mads/rdf/v1#elementList> _:na36df97c70574f78b9cc1797ba40695eb18 .
+_:na36df97c70574f78b9cc1797ba40695eb20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:na36df97c70574f78b9cc1797ba40695eb33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:na36df97c70574f78b9cc1797ba40695eb32 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:na36df97c70574f78b9cc1797ba40695eb2 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+_:na36df97c70574f78b9cc1797ba40695eb28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:na36df97c70574f78b9cc1797ba40695eb31 <http://www.loc.gov/mads/rdf/v1#variantLabel> "buzika"@en-latn .
+_:na36df97c70574f78b9cc1797ba40695eb24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:na36df97c70574f78b9cc1797ba40695eb23 .
+_:na36df97c70574f78b9cc1797ba40695eb28 <http://www.loc.gov/mads/rdf/v1#variantLabel> "garmonya"@en-latn .
+_:na36df97c70574f78b9cc1797ba40695eb2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:na36df97c70574f78b9cc1797ba40695eb25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+_:na36df97c70574f78b9cc1797ba40695eb22 <http://www.loc.gov/mads/rdf/v1#elementList> _:na36df97c70574f78b9cc1797ba40695eb24 .
+_:na36df97c70574f78b9cc1797ba40695eb7 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:na36df97c70574f78b9cc1797ba40695eb15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:na36df97c70574f78b9cc1797ba40695eb14 .
+_:na36df97c70574f78b9cc1797ba40695eb19 <http://www.loc.gov/mads/rdf/v1#variantLabel> "accordeon"@en-latn .
+_:na36df97c70574f78b9cc1797ba40695eb31 <http://www.loc.gov/mads/rdf/v1#elementList> _:na36df97c70574f78b9cc1797ba40695eb33 .
+_:na36df97c70574f78b9cc1797ba40695eb23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:na36df97c70574f78b9cc1797ba40695eb21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:na36df97c70574f78b9cc1797ba40695eb20 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://id.loc.gov/ontologies/bflc/marcKey> "162  $aaccordion" .
+_:na36df97c70574f78b9cc1797ba40695eb13 <http://www.loc.gov/mads/rdf/v1#elementList> _:na36df97c70574f78b9cc1797ba40695eb15 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015001> <http://www.loc.gov/mads/rdf/v1#hasSource> _:na36df97c70574f78b9cc1797ba40695eb7 .
+_:na36df97c70574f78b9cc1797ba40695eb14 <http://www.loc.gov/mads/rdf/v1#elementValue> "piano accordion"@en .
+_:na36df97c70574f78b9cc1797ba40695eb13 <http://www.loc.gov/mads/rdf/v1#variantLabel> "piano accordion"@en-latn .
+_:na36df97c70574f78b9cc1797ba40695eb3 <http://www.loc.gov/mads/rdf/v1#elementValue> "accordion"@en .
+_:na36df97c70574f78b9cc1797ba40695eb30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:na36df97c70574f78b9cc1797ba40695eb29 .
+_:na36df97c70574f78b9cc1797ba40695eb22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:na36df97c70574f78b9cc1797ba40695eb28 <http://www.loc.gov/mads/rdf/v1#elementList> _:na36df97c70574f78b9cc1797ba40695eb30 .
+_:na36df97c70574f78b9cc1797ba40695eb5 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:na36df97c70574f78b9cc1797ba40695eb16 <http://www.loc.gov/mads/rdf/v1#variantLabel> "garmoshka"@en-latn .
+_:na36df97c70574f78b9cc1797ba40695eb23 <http://www.loc.gov/mads/rdf/v1#elementValue> "garmonica"@en .
+
+# END /authorities/performanceMediums/mp2013015001
+# BEGIN /authorities/performanceMediums/mp2013015550
+
+_:n0e0a777738f64ce3bafd91f929318362b9 <http://www.loc.gov/mads/rdf/v1#elementValue> "upright piano"@en .
+_:n0e0a777738f64ce3bafd91f929318362b17 <http://www.loc.gov/mads/rdf/v1#elementList> _:n0e0a777738f64ce3bafd91f929318362b19 .
+_:n0e0a777738f64ce3bafd91f929318362b27 <http://www.loc.gov/mads/rdf/v1#elementValue> "spinnet (piano)"@en .
+_:n0e0a777738f64ce3bafd91f929318362b13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n0e0a777738f64ce3bafd91f929318362b12 .
+_:n0e0a777738f64ce3bafd91f929318362b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/performanceMediums/mp2013015824> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n0e0a777738f64ce3bafd91f929318362b11 .
+_:n0e0a777738f64ce3bafd91f929318362b20 <http://www.loc.gov/mads/rdf/v1#elementList> _:n0e0a777738f64ce3bafd91f929318362b22 .
+_:n0e0a777738f64ce3bafd91f929318362b7 <http://www.loc.gov/mads/rdf/v1#citationNote> "(Pianoforte (piano): a keyboard instrument distinguished by the fact that its strings are struck by rebounding hammers rather than plucked (as in the harpsichord) or struck by tangents that remain in contact with the strings (as in the clavichord); in the Hornbostel-Sachs classification of instruments, reckoned as a box zither)"@en .
+_:n0e0a777738f64ce3bafd91f929318362b24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:n0e0a777738f64ce3bafd91f929318362b17 <http://www.loc.gov/mads/rdf/v1#variantLabel> "grand piano"@en-latn .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/performanceMediums/mp2013015382> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n0e0a777738f64ce3bafd91f929318362b2 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/performanceMediums/mp2013015536> .
+_:n0e0a777738f64ce3bafd91f929318362b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n0e0a777738f64ce3bafd91f929318362b1 .
+_:n0e0a777738f64ce3bafd91f929318362b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#elementList> _:n0e0a777738f64ce3bafd91f929318362b4 .
+_:n0e0a777738f64ce3bafd91f929318362b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:n0e0a777738f64ce3bafd91f929318362b15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "piano"@en .
+_:n0e0a777738f64ce3bafd91f929318362b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n0e0a777738f64ce3bafd91f929318362b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n0e0a777738f64ce3bafd91f929318362b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n0e0a777738f64ce3bafd91f929318362b8 .
+_:n0e0a777738f64ce3bafd91f929318362b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n0e0a777738f64ce3bafd91f929318362b9 .
+_:n0e0a777738f64ce3bafd91f929318362b27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:n0e0a777738f64ce3bafd91f929318362b21 <http://www.loc.gov/mads/rdf/v1#elementValue> "fortepiano"@en .
+_:n0e0a777738f64ce3bafd91f929318362b26 <http://www.loc.gov/mads/rdf/v1#elementList> _:n0e0a777738f64ce3bafd91f929318362b28 .
+_:n0e0a777738f64ce3bafd91f929318362b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n0e0a777738f64ce3bafd91f929318362b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+_:n0e0a777738f64ce3bafd91f929318362b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+_:n0e0a777738f64ce3bafd91f929318362b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n0e0a777738f64ce3bafd91f929318362b26 .
+_:n0e0a777738f64ce3bafd91f929318362b3 <http://www.loc.gov/mads/rdf/v1#elementValue> "piano"@en .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/performanceMediums/mp2014015004> .
+_:n0e0a777738f64ce3bafd91f929318362b7 <http://www.loc.gov/mads/rdf/v1#citationSource> "New Grove, 2nd ed. WWW site, Aug. 13, 2002" .
+_:n0e0a777738f64ce3bafd91f929318362b18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:n0e0a777738f64ce3bafd91f929318362b5 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n0e0a777738f64ce3bafd91f929318362b7 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n0e0a777738f64ce3bafd91f929318362b13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n0e0a777738f64ce3bafd91f929318362b6 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://id.loc.gov/vocabulary/identifiers/lccn> "mp2013015550" .
+_:n0e0a777738f64ce3bafd91f929318362b15 <http://www.loc.gov/mads/rdf/v1#elementValue> "pianoforte"@en .
+_:n0e0a777738f64ce3bafd91f929318362b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n0e0a777738f64ce3bafd91f929318362b14 .
+_:n0e0a777738f64ce3bafd91f929318362b25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n0e0a777738f64ce3bafd91f929318362b24 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/performanceMediums/collection_LCMPT_General> .
+_:n0e0a777738f64ce3bafd91f929318362b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n0e0a777738f64ce3bafd91f929318362b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n0e0a777738f64ce3bafd91f929318362b20 .
+_:n0e0a777738f64ce3bafd91f929318362b8 <http://www.loc.gov/mads/rdf/v1#variantLabel> "upright piano"@en-latn .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/performanceMediums> .
+_:n0e0a777738f64ce3bafd91f929318362b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:n0e0a777738f64ce3bafd91f929318362b18 <http://www.loc.gov/mads/rdf/v1#elementValue> "grand piano"@en .
+_:n0e0a777738f64ce3bafd91f929318362b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n0e0a777738f64ce3bafd91f929318362b11 <http://www.loc.gov/mads/rdf/v1#elementList> _:n0e0a777738f64ce3bafd91f929318362b13 .
+_:n0e0a777738f64ce3bafd91f929318362b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+_:n0e0a777738f64ce3bafd91f929318362b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/performanceMediums/mp2013015673> .
+_:n0e0a777738f64ce3bafd91f929318362b26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+_:n0e0a777738f64ce3bafd91f929318362b12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:n0e0a777738f64ce3bafd91f929318362b1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+_:n0e0a777738f64ce3bafd91f929318362b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n0e0a777738f64ce3bafd91f929318362b23 .
+_:n0e0a777738f64ce3bafd91f929318362b2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2014-02-24T11:35:10"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n0e0a777738f64ce3bafd91f929318362b16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n0e0a777738f64ce3bafd91f929318362b15 .
+_:n0e0a777738f64ce3bafd91f929318362b19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n0e0a777738f64ce3bafd91f929318362b18 .
+_:n0e0a777738f64ce3bafd91f929318362b23 <http://www.loc.gov/mads/rdf/v1#elementList> _:n0e0a777738f64ce3bafd91f929318362b25 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://id.loc.gov/ontologies/bflc/marcKey> "162  $apiano" .
+_:n0e0a777738f64ce3bafd91f929318362b8 <http://www.loc.gov/mads/rdf/v1#elementList> _:n0e0a777738f64ce3bafd91f929318362b10 .
+_:n0e0a777738f64ce3bafd91f929318362b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+_:n0e0a777738f64ce3bafd91f929318362b2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n0e0a777738f64ce3bafd91f929318362b17 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n0e0a777738f64ce3bafd91f929318362b7 .
+_:n0e0a777738f64ce3bafd91f929318362b22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n0e0a777738f64ce3bafd91f929318362b21 .
+_:n0e0a777738f64ce3bafd91f929318362b1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2008-09-15T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/performanceMediums/mp2013015458> .
+_:n0e0a777738f64ce3bafd91f929318362b1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:n0e0a777738f64ce3bafd91f929318362b23 <http://www.loc.gov/mads/rdf/v1#variantLabel> "concert grand (piano)"@en-latn .
+_:n0e0a777738f64ce3bafd91f929318362b1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/performanceMediums/mp2022015008> .
+_:n0e0a777738f64ce3bafd91f929318362b24 <http://www.loc.gov/mads/rdf/v1#elementValue> "concert grand (piano)"@en .
+_:n0e0a777738f64ce3bafd91f929318362b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n0e0a777738f64ce3bafd91f929318362b11 <http://www.loc.gov/mads/rdf/v1#variantLabel> "spinet (piano)"@en-latn .
+_:n0e0a777738f64ce3bafd91f929318362b17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n0e0a777738f64ce3bafd91f929318362b2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+_:n0e0a777738f64ce3bafd91f929318362b2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/performanceMediums/mp2013015671> .
+_:n0e0a777738f64ce3bafd91f929318362b28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n0e0a777738f64ce3bafd91f929318362b27 .
+_:n0e0a777738f64ce3bafd91f929318362b26 <http://www.loc.gov/mads/rdf/v1#variantLabel> "spinnet (piano)"@en-latn .
+_:n0e0a777738f64ce3bafd91f929318362b6 <http://www.loc.gov/mads/rdf/v1#citationSource> "Handel, G.F. Six overtures fitted to the harpsichord or spinnet, 1737." .
+_:n0e0a777738f64ce3bafd91f929318362b14 <http://www.loc.gov/mads/rdf/v1#elementList> _:n0e0a777738f64ce3bafd91f929318362b16 .
+_:n0e0a777738f64ce3bafd91f929318362b20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+_:n0e0a777738f64ce3bafd91f929318362b21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MediumElement> .
+_:n0e0a777738f64ce3bafd91f929318362b5 <http://www.loc.gov/mads/rdf/v1#citationSource> "Web. 3." .
+_:n0e0a777738f64ce3bafd91f929318362b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n0e0a777738f64ce3bafd91f929318362b3 .
+_:n0e0a777738f64ce3bafd91f929318362b20 <http://www.loc.gov/mads/rdf/v1#variantLabel> "fortepiano"@en-latn .
+_:n0e0a777738f64ce3bafd91f929318362b6 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+_:n0e0a777738f64ce3bafd91f929318362b14 <http://www.loc.gov/mads/rdf/v1#variantLabel> "pianoforte"@en-latn .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n0e0a777738f64ce3bafd91f929318362b5 .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/performanceMediums/mp2013015683> .
+_:n0e0a777738f64ce3bafd91f929318362b23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Medium> .
+<http://id.loc.gov/authorities/performanceMediums/mp2013015550> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/performanceMediums/mp2013015575> .
+_:n0e0a777738f64ce3bafd91f929318362b14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n0e0a777738f64ce3bafd91f929318362b12 <http://www.loc.gov/mads/rdf/v1#elementValue> "spinet (piano)"@en .
+_:n0e0a777738f64ce3bafd91f929318362b26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+_:n0e0a777738f64ce3bafd91f929318362b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+
+# END /authorities/performanceMediums/mp2013015550

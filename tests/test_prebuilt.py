@@ -8,7 +8,7 @@ from pathlib import Path
 
 import pytest
 
-from lc_reconcile import Index, cli
+from lc_reconcile import SCHEMES, Index, cli
 from lc_reconcile.prebuilt import PrebuiltError, fetch, manifest_name, pack
 from lc_reconcile.store import SCHEMA_VERSION
 
@@ -30,11 +30,7 @@ def test_pack(index_path, packed):
     assert packed.name == manifest_name() == f"index-v{SCHEMA_VERSION}.json"
     assert manifest["schema_version"] == SCHEMA_VERSION
     assert manifest["size"] == index_path.stat().st_size
-    assert {s["name"] for s in manifest["schemes"]} == {
-        "genreForms",
-        "names",
-        "subjects",
-    }
+    assert {s["name"] for s in manifest["schemes"]} == set(SCHEMES)
     parts = manifest["parts"]
     assert len(parts) > 1
     assert (

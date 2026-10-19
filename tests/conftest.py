@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from lc_reconcile import Index, Source, build, parse_record
+from lc_reconcile import SCHEMES, Index, Source, build, parse_record
 from lc_reconcile.store import Writer
 
 FIXTURES = Path(__file__).parent / "fixtures"
@@ -40,7 +40,7 @@ def index_path(tmp_path_factory) -> Path:
         path,
         [
             Source(scheme, str(FIXTURES / f"{scheme}.nt"), "2026-10-14T00:00:00+00:00")
-            for scheme in ("names", "subjects", "genreForms")
+            for scheme in SCHEMES
         ],
     )
     record = parse_record(

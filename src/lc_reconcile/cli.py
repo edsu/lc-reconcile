@@ -21,7 +21,7 @@ from lc_reconcile.sync import MAX_AGE, SyncError, sync
 DEFAULT_DB = "lc-reconcile.sqlite"
 
 #: Built when no --scheme is given. Names is opt-in: its snapshot is 7 GB.
-DEFAULT_SCHEMES = ("subjects", "genreForms")
+DEFAULT_SCHEMES = tuple(s for s in SCHEMES if s != "names")
 
 
 def _parser() -> argparse.ArgumentParser:
@@ -44,7 +44,7 @@ def _parser() -> argparse.ArgumentParser:
         "--scheme",
         action="append",
         choices=SCHEMES,
-        help=f"scheme to load; repeat for more (default: {' and '.join(DEFAULT_SCHEMES)})",
+        help="scheme to load; repeat for more (default: every scheme but names)",
     )
     build_.add_argument(
         "--from",

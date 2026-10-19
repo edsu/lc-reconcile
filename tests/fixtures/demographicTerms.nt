@@ -1,0 +1,125 @@
+# BEGIN /authorities/demographicTerms/age
+
+<http://id.loc.gov/authorities/demographicTerms/age> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MADSCollection> .
+_:n5823839175df4dd4937b8cab7b1f0bd1b1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/demographicTerms/age> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n5823839175df4dd4937b8cab7b1f0bd1b1 .
+_:n5823839175df4dd4937b8cab7b1f0bd1b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/demographicTerms/age> <http://www.loc.gov/mads/rdf/v1#hasMADSCollectionMember> <http://id.loc.gov/authorities/demographicTerms/collection_LCDGT_Age> .
+_:n5823839175df4dd4937b8cab7b1f0bd1b1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:n5823839175df4dd4937b8cab7b1f0bd1b1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2016-02-29T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://id.loc.gov/authorities/demographicTerms/age> <http://www.w3.org/2000/01/rdf-schema#comment> "\n            <xhtml:div xmlns:xhtml=\"http://www.w3.org/1999/xhtml\" class=\"aboutCollection\" title=\"About Library of Congress Demographic Group Category: Age [age]:\" property=\"rdfs:comment\">\n                <xhtml:p>The purpose of demographic categories and associated codes is to allow terms that are authorized in Library of Congress Demographic Group Terms (LCDGT) to be collocated at a broad level. The demographic group category codes are three-character lowercase alphabetic strings. They are derived from the first letter of the demographic group category and two additional letters from the word(s) making up the demographic group category name.</xhtml:p>\n                <xhtml:p>Age [age] category is used for the chronological age of the group members (e.g., Adults, Children, Infants).</xhtml:p>\n            </xhtml:div>\n        "^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> .
+<http://id.loc.gov/authorities/demographicTerms/age> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/demographicTerms> .
+<http://id.loc.gov/authorities/demographicTerms/age> <http://www.w3.org/2000/01/rdf-schema#label> "Age [age]"@en .
+
+# END /authorities/demographicTerms/age
+# BEGIN /authorities/demographicTerms/dg2015060001
+
+_:n94779d0700b54b7287bc4550cdc4ff65b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n94779d0700b54b7287bc4550cdc4ff65b3 .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060321> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060019> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://id.loc.gov/ontologies/bflc/marcKey> "150  $aAmericans" .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060118> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060101> .
+_:n94779d0700b54b7287bc4550cdc4ff65b1 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060026> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/demographicTerms/collection_LCDGT_Nationality> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasSource> _:n94779d0700b54b7287bc4550cdc4ff65b5 .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060112> .
+_:n94779d0700b54b7287bc4550cdc4ff65b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Source> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060116> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060016> .
+_:n94779d0700b54b7287bc4550cdc4ff65b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060109> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060104> .
+_:n94779d0700b54b7287bc4550cdc4ff65b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060111> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060022> .
+_:n94779d0700b54b7287bc4550cdc4ff65b1 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060090> .
+_:n94779d0700b54b7287bc4550cdc4ff65b3 <http://www.loc.gov/mads/rdf/v1#elementValue> "Americans"@en .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060086> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060113> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060317> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2022060348> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060092> .
+_:n94779d0700b54b7287bc4550cdc4ff65b1 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2024-06-27T14:02:05"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060124> .
+_:n94779d0700b54b7287bc4550cdc4ff65b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:n94779d0700b54b7287bc4550cdc4ff65b1 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "revised"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060114> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060323> .
+_:n94779d0700b54b7287bc4550cdc4ff65b5 <http://www.loc.gov/mads/rdf/v1#citationNote> "(American: def. 3: a native or inhabitant of the U.S. : a U.S. citizen)"@en .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasVariant> _:n94779d0700b54b7287bc4550cdc4ff65b6 .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060328> .
+_:n94779d0700b54b7287bc4550cdc4ff65b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:n94779d0700b54b7287bc4550cdc4ff65b5 <http://www.loc.gov/mads/rdf/v1#citationSource> "Merriam-Webster online, April 21, 2015:" .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060322> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060021> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060326> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060097> .
+_:n94779d0700b54b7287bc4550cdc4ff65b2 <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Americans"@en .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060096> .
+_:n94779d0700b54b7287bc4550cdc4ff65b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/demographicTerms> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060331> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060091> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060083> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060139> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060095> .
+_:n94779d0700b54b7287bc4550cdc4ff65b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:n94779d0700b54b7287bc4550cdc4ff65b7 .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060103> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060162> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060125> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060121> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060102> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060098> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060320> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060135> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2016060064> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060107> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060093> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060084> .
+_:n94779d0700b54b7287bc4550cdc4ff65b5 <http://www.loc.gov/mads/rdf/v1#citationStatus> "found" .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060085> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060105> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060325> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060089> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> <http://id.loc.gov/authorities/demographicTerms/collection_LCDGT_General> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060126> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060110> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060123> .
+_:n94779d0700b54b7287bc4550cdc4ff65b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Variant> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060122> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060127> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060117> .
+_:n94779d0700b54b7287bc4550cdc4ff65b6 <http://www.loc.gov/mads/rdf/v1#variantLabel> "United States residents"@en-latn .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060099> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060100> .
+_:n94779d0700b54b7287bc4550cdc4ff65b2 <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2015-04-21T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:n94779d0700b54b7287bc4550cdc4ff65b6 <http://www.loc.gov/mads/rdf/v1#elementList> _:n94779d0700b54b7287bc4550cdc4ff65b8 .
+_:n94779d0700b54b7287bc4550cdc4ff65b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Topic> .
+_:n94779d0700b54b7287bc4550cdc4ff65b2 <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> <http://id.loc.gov/vocabulary/iso639-2/eng> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060149> .
+_:n94779d0700b54b7287bc4550cdc4ff65b7 <http://www.loc.gov/mads/rdf/v1#elementValue> "United States residents"@en .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://id.loc.gov/vocabulary/identifiers/lccn> "dg2015060001" .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060119> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060170> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060094> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060108> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n94779d0700b54b7287bc4550cdc4ff65b1 .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060106> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:n94779d0700b54b7287bc4550cdc4ff65b2 .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060115> .
+_:n94779d0700b54b7287bc4550cdc4ff65b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#TopicElement> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060120> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> <http://id.loc.gov/authorities/demographicTerms/nat> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060017> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060166> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060020> .
+_:n94779d0700b54b7287bc4550cdc4ff65b2 <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlc> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> <http://id.loc.gov/authorities/demographicTerms/dg2015060324> .
+<http://id.loc.gov/authorities/demographicTerms/dg2015060001> <http://www.loc.gov/mads/rdf/v1#elementList> _:n94779d0700b54b7287bc4550cdc4ff65b4 .
+
+# END /authorities/demographicTerms/dg2015060001

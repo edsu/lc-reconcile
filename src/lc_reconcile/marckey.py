@@ -29,6 +29,7 @@ _HEADINGS = {
     "50",  # topical term
     "51",  # geographic name
     "55",  # genre/form term
+    "62",  # medium of performance term
     "80",  # general subdivision
     "81",  # geographic subdivision
     "82",  # chronological subdivision
@@ -46,7 +47,21 @@ _KINDS = {
     "50": frozenset({"Topic"}),
     "51": frozenset({"Geographic", "HierarchicalGeographic"}),
     "55": frozenset({"GenreForm"}),
+    "62": frozenset({"Medium"}),
 }
+
+#: Source codes ($2) of LC vocabularies other than LCSH and LCNAF, and the
+#: scheme each is. https://www.loc.gov/standards/sourcelist/
+_SOURCES = {
+    "lcgft": "genreForms",
+    "lcshac": "childrensSubjects",
+    "lcdgt": "demographicTerms",
+    "lcmpt": "performanceMediums",
+}
+
+#: The second indicator of a bibliographic 6XX that says its heading is from
+#: LC's children's subject headings.
+_CHILDRENS = "1"
 
 #: Subfields that are about the field rather than part of the heading:
 #: linking and source subfields ($0-$8), and $w and $i, which say how a
@@ -136,3 +151,37 @@ def label_from_marc_key(marc_key: str) -> str:
 def kinds(marc_key: str) -> frozenset[str] | None:
     """The MADS kinds of heading a marcKey's tag allows, if it says."""
     return _KINDS.get(marc_key[1:3]) if marc_key[:3].isdigit() else None
+
+
+def kind(marc_key: str) -> str | None:
+    """The one MADS kind an authority marcKey stands for, if it says.
+
+    ``150  $aAmericans`` is a Topic, and with a subdivision a ComplexSubject;
+    ``100`` could be a person, a family or a name/title, so says nothing.
+    """
+    key = heading_key(marc_key)
+    if key is not None and is_subdivided(key):
+        return "ComplexSubject"
+    allowed = kinds(marc_key)
+    return next(iter(allowed)) if allowed and len(allowed) == 1 else None
+
+
+def schemes(marc_key: str) -> frozenset[str] | None:
+    """The LC scheme a bibliographic field says its heading is from, if any.
+
+    A ``$2`` source code says so (``655 7$aHorror fiction.$2lcgft``), as does
+    the second indicator of a 6XX (``650 1$aCats.`` is a children's
+    heading). None means the field doesn't say, or says LCSH or LCNAF.
+    """
+    parsed = parse(marc_key)
+    if parsed is None:
+        return None
+    tag, indicators, subfields = parsed
+    for code, value in subfields:
+        if code == "2":
+            scheme = _SOURCES.get(value.strip().rstrip(".").lower())
+            if scheme:
+                return frozenset({scheme})
+    if tag[0] == "6" and indicators[1:2] == _CHILDRENS:
+        return frozenset({"childrensSubjects"})
+    return None

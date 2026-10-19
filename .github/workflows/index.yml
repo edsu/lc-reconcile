@@ -46,6 +46,8 @@ jobs:
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
           df -h .
 
+      # A sync only keeps up the schemes an index already has, so after a
+      # scheme is added here, run this by hand with rebuild ticked.
       - name: Fetch or build the index
         env:
           REBUILD: ${{ inputs.rebuild }}
@@ -53,7 +55,10 @@ jobs:
           if [ "$REBUILD" != true ] && uv run --no-dev lc-reconcile fetch-index; then
             exit 0
           fi
-          uv run --no-dev lc-reconcile build --scheme names --scheme subjects --scheme genreForms
+          uv run --no-dev lc-reconcile build \
+            --scheme names --scheme subjects --scheme genreForms \
+            --scheme childrensSubjects --scheme demographicTerms \
+            --scheme performanceMediums
 
       # A sync stopped at the limit is published as far as it got; the next
       # run carries on from there. This leaves time to pack and upload.

@@ -14,6 +14,8 @@ import re
 from collections.abc import Iterable, Iterator
 from dataclasses import dataclass, field
 
+from lc_reconcile import marckey
+
 MADS = "http://www.loc.gov/mads/rdf/v1#"
 RDF_TYPE = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
 MARC_KEY = "http://id.loc.gov/ontologies/bflc/marcKey"
@@ -58,9 +60,14 @@ KINDS = (
     "Geographic",
     "ComplexSubject",
     "GenreForm",
+    "Medium",
     "Temporal",
     "Topic",
 )
+
+#: Resources in a snapshot that describe a scheme or collection rather than
+#: a heading, such as LCDGT's "Age" grouping.
+_NOT_HEADINGS = {"MADSScheme", "MADSCollection"}
 
 _BEGIN = "# BEGIN "
 _END = "# END "
@@ -213,7 +220,7 @@ def parse_record(uri: str, lines: Iterable[str]) -> AuthorityRecord | None:
             # Names also identify their RWO by ISNI and others; we want LC's.
             record.rwo = obj
 
-    if not found:
+    if not found or _NOT_HEADINGS & set(record.types):
         return None
 
     record.deprecated = "DeprecatedAuthority" in record.types
@@ -234,6 +241,9 @@ def parse_record(uri: str, lines: Iterable[str]) -> AuthorityRecord | None:
     # The heading's own marcKey is the 1XX; the 4XXs are its script forms.
     record.marc_key = next((k for k in keys if k.startswith("1")), None)
     record.variant_keys = [k for k in keys if k.startswith("4")]
+    if record.kind is None and record.marc_key:
+        # LCDGT's records are typed only as Authority; the tag says the rest.
+        record.kind = marckey.kind(record.marc_key)
     for node in variant_nodes:
         record.variant_keys.extend(variant_node_keys.get(node, ()))
 

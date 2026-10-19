@@ -4,7 +4,8 @@ Reconcile name, subject and genre/form headings against a local index of
 [id.loc.gov](https://id.loc.gov) authorities.
 
 The index is built from LC's [bulk snapshots](https://id.loc.gov/download/)
-of LCNAF, LCSH and LCGFT, so matching a heading doesn't send a request to
+of LCNAF, LCSH, LCGFT, children's subject headings, LCDGT (demographic
+group terms) and LCMPT (medium of performance terms), so matching a heading doesn't send a request to
 id.loc.gov. Queries and results follow the
 [Reconciliation Service API 0.2](https://www.w3.org/community/reports/reconciliation/CG-FINAL-specs-0.2-20230410/),
 the protocol OpenRefine speaks.
@@ -14,9 +15,11 @@ This is early work.
 ## Usage
 
 ```
-lc-reconcile fetch-index            # all three, prebuilt: a 2.7 GB download
-lc-reconcile build                  # LCSH and LCGFT, a few minutes
+lc-reconcile fetch-index            # every scheme, prebuilt: a 2.7 GB download
+lc-reconcile build                  # every scheme but names, a minute or so
 lc-reconcile build --scheme names --scheme subjects --scheme genreForms
+lc-reconcile match "Cats" --scheme childrensSubjects
+lc-reconcile match "cello" --type Medium
 lc-reconcile match "Science fiction" --type Topic
 lc-reconcile match "Verne, Jules" --dates 1828-1905 --type PersonalName
 lc-reconcile match --marc-key '7001 $aVerne, Jules,$d1828-1905,$eauthor.'
@@ -32,7 +35,7 @@ and the date LC published it with `--snapshot-date`.
 
 ## A prebuilt index
 
-`fetch-index` downloads an index of all three schemes, built and synced
+`fetch-index` downloads an index of every scheme, built and synced
 each week by this repository's [Index workflow](.github/workflows/index.yml)
 and published as assets of its [`index` release](https://github.com/blue-core-lod/lc-reconcile/releases/tag/index).
 It's one gzip stream in parts, since a release asset must be under 2 GiB,
@@ -61,7 +64,27 @@ query:
 
 - `dates`: a name's dates, when they're in a column of their own
 - `marc_key`: the heading as a MARC field
-- `scheme`: `names`, `subjects` or `genreForms`, to search only that scheme
+- `scheme`: the schemes to search, separated by spaces: `names`,
+  `subjects`, `genreForms`, `childrensSubjects`, `demographicTerms` or
+  `performanceMediums`
+
+## Schemes
+
+A query searches names, subjects and genreForms unless it asks for
+another. The other vocabularies repeat many of their headings, such as
+children's "Science fiction" and "Cats", or LCDGT's "Women", so searching
+everything by default would turn many matches into choices between two.
+A query reaches them by asking:
+
+- with the `scheme` property
+- with a marcKey that says so: a 6XX with second indicator 1 is a
+  children's heading, and a `$2` of `lcshac`, `lcgft`, `lcdgt` or `lcmpt`
+  names its vocabulary (`385  $aWomen$2lcdgt`)
+- with the `Medium` type, which only LCMPT has
+
+A marcKey's field doesn't have to be a heading field: a 385 or 386 of
+LCDGT terms is matched by its label. A 382 with several mediums gives each
+of them as a candidate.
 
 `GET /status` says what the index holds and how far it's synced. With
 `--sync-every HOURS`, the service syncs when it starts and then on that

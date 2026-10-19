@@ -29,6 +29,7 @@ from lc_reconcile.marckey import (
     is_subdivided,
     kinds,
     label_from_marc_key,
+    schemes,
 )
 from lc_reconcile.normalize import normalize
 from lc_reconcile.records import AuthorityRecord
@@ -48,8 +49,19 @@ TYPES: dict[str, frozenset[str]] = {
     "Topic": frozenset({"Topic"}),
     "ComplexSubject": frozenset({"ComplexSubject"}),
     "GenreForm": frozenset({"GenreForm"}),
+    "Medium": frozenset({"Medium"}),
     "Temporal": frozenset({"Temporal"}),
 }
+
+#: The schemes a query is matched against when it doesn't say which. LC's
+#: other vocabularies repeat many of their headings -- children's subjects
+#: has its own "Science fiction", LCDGT its own "Americans" -- so a query
+#: reaches them only by asking: with the ``scheme`` property, with a marcKey
+#: whose indicator or ``$2`` names one, or with a type only one of them has.
+GENERAL_SCHEMES = frozenset({"names", "subjects", "genreForms"})
+
+#: Kinds of heading that only one scheme has.
+_SCHEME_OF_KIND = {"Medium": "performanceMediums"}
 
 #: Scores for each way a candidate can be found. They order the candidates;
 #: only ``match`` says whether one may be accepted without review.
@@ -176,7 +188,16 @@ class Reconciler:
             if query.types is None:
                 # A 710 is a corporate name whatever its label looks like.
                 query = replace(query, types=kinds(field))
-        if label_key := normalize(_with_dates(query)):
+        if field and query.schemes is None:
+            query = replace(query, schemes=schemes(field))
+        if query.schemes is None:
+            query = replace(query, schemes=_default_schemes(query.types))
+        label_key = normalize(_with_dates(query))
+        if not label_key and field and not marc_key:
+            # A field that isn't a heading, such as a 385 of LCDGT terms, is
+            # matched by its label.
+            label_key = normalize(label_from_marc_key(field))
+        if label_key:
             keys.append(label_key)
         subdivided = "--" in label_key or (marc_key and is_subdivided(marc_key))
         if query.types and subdivided:
@@ -298,6 +319,13 @@ def _years(record: AuthorityRecord) -> set[str]:
     years = set(_YEAR.findall(record.label or ""))
     years |= {date[:4] for date in (record.birth, record.death) if date}
     return years
+
+
+def _default_schemes(types: frozenset[str] | None) -> frozenset[str]:
+    implied = {_SCHEME_OF_KIND[k] for k in types or () if k in _SCHEME_OF_KIND}
+    if types and len(implied) == len(types):  # nothing a general scheme has
+        return frozenset(implied)
+    return GENERAL_SCHEMES | implied
 
 
 def _wanted(record: AuthorityRecord, query: Query) -> bool:
