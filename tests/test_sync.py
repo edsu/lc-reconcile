@@ -3,7 +3,7 @@
 import json
 import shutil
 import urllib.error
-from datetime import date
+from datetime import date, timedelta
 from email.message import Message
 
 import pytest
@@ -269,3 +269,26 @@ def test_cli_sync_and_status(index_copy, monkeypatch, capsys):
     assert "names: 3 updated, 1 removed" in capsys.readouterr().err
     assert cli.main(["--db", db, "status"]) == 0
     assert "synced to" in capsys.readouterr().out
+
+
+def test_time_limit(index_copy):
+    # A clock that moves on a second each time it's read.
+    ticks = iter(range(1000))
+    [result] = sync(
+        index_copy,
+        ["names"],
+        client=FakeLC(_feed()),
+        today=TODAY,
+        time_limit=timedelta(seconds=2.5),
+        clock=lambda: next(ticks),
+    )
+    # It started at 0, applied Schulze (the 12th) at 1 and Kern (the 15th) at
+    # 2, and stopped at 3.
+    assert not result.finished
+    assert (result.updated, result.deleted) == (1, 1)
+    status = _status(index_copy)
+    assert (status.cursor, status.synced) == ("2026-10-15", None)
+
+    [result] = sync(index_copy, ["names"], client=FakeLC(_feed()), today=TODAY)
+    assert result.finished
+    assert _status(index_copy).cursor == "2026-10-19"

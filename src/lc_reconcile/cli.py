@@ -14,6 +14,7 @@ from datetime import timedelta
 from lc_reconcile._net import Client, FetchError
 from lc_reconcile.build import SCHEMES, Source, build, default_sources
 from lc_reconcile.match import TYPES, Query, Reconciler
+from lc_reconcile.prebuilt import PrebuiltError, default_manifest_url, fetch, pack
 from lc_reconcile.store import Index, IndexUnavailable
 from lc_reconcile.sync import MAX_AGE, SyncError, sync
 
@@ -97,6 +98,22 @@ def _parser() -> argparse.ArgumentParser:
     _sync_options(serve)
 
     commands.add_parser("status", help="say what the index holds")
+
+    fetch_ = commands.add_parser(
+        "fetch-index",
+        help="download a prebuilt index, replacing any there; sync it afterwards",
+    )
+    fetch_.add_argument(
+        "manifest",
+        nargs="?",
+        help="the index's manifest, a URL or a path "
+        "(default: the latest from the lc-reconcile repository's releases)",
+    )
+
+    pack_ = commands.add_parser(
+        "pack-index", help="write the index as gzipped parts and a manifest"
+    )
+    pack_.add_argument("directory", help="where to write them")
     return parser
 
 
@@ -121,6 +138,13 @@ def _sync_options(parser: argparse.ArgumentParser) -> None:
         help="rebuild rather than sync an index further behind than this "
         f"(default: {MAX_AGE.days})",
     )
+    parser.add_argument(
+        "--max-minutes",
+        type=float,
+        metavar="MINUTES",
+        help="stop after this long, keeping what was applied; "
+        "the next sync carries on (default: no limit)",
+    )
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -137,7 +161,11 @@ def main(argv: Sequence[str] | None = None) -> int:
                 return _serve(args)
             case "status":
                 return _status(args)
-    except (IndexUnavailable, SyncError, FetchError) as error:
+            case "fetch-index":
+                return _fetch_index(args)
+            case "pack-index":
+                return _pack_index(args)
+    except (IndexUnavailable, SyncError, FetchError, PrebuiltError) as error:
         print(f"lc-reconcile: {error}", file=sys.stderr)
         return 1
     return 2
@@ -216,12 +244,14 @@ def _sync(args: argparse.Namespace) -> int:
         args.scheme,
         client=Client(delay=args.delay),
         max_age=timedelta(days=args.max_age),
+        time_limit=timedelta(minutes=args.max_minutes) if args.max_minutes else None,
         progress=progress,
     )
     for result in results:
         print(
             f"{result.scheme}: {result.updated:,} updated, {result.deleted:,} "
-            f"removed, synced to {result.cursor}",
+            f"removed, synced to {result.cursor}"
+            + ("" if result.finished else " (stopped at the time limit)"),
             file=sys.stderr,
         )
     return 0
@@ -274,6 +304,39 @@ def _status(args: argparse.Namespace) -> int:
             f"{status.snapshot_modified or 'unknown date'}, built {status.built}"
             + synced
         )
+    return 0
+
+
+def _fetch_index(args: argparse.Namespace) -> int:
+    manifest = args.manifest or default_manifest_url()
+    last = [0.0]
+
+    def progress(done: int, total: int) -> None:
+        now = time.monotonic()
+        if now - last[0] >= 5 or done == total:
+            last[0] = now
+            print(
+                f"{done / 1e9:.2f} of {total / 1e9:.2f} GB ({done / total:.0%})",
+                file=sys.stderr,
+            )
+
+    print(f"fetching {manifest}", file=sys.stderr)
+    description = fetch(manifest, args.db, progress=progress)
+    print(
+        f"fetched the index of {description['created']} to {args.db}", file=sys.stderr
+    )
+    _status(args)
+    print("run `lc-reconcile sync` to bring it up to today", file=sys.stderr)
+    return 0
+
+
+def _pack_index(args: argparse.Namespace) -> int:
+    started = time.monotonic()
+    manifest = pack(args.db, args.directory)
+    description = json.loads(manifest.read_text(encoding="utf-8"))
+    for part in description["parts"]:
+        print(f"{part['name']}: {part['size']:,} bytes", file=sys.stderr)
+    print(f"wrote {manifest} in {time.monotonic() - started:.0f}s", file=sys.stderr)
     return 0
 
 

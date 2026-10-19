@@ -14,6 +14,7 @@ This is early work.
 ## Usage
 
 ```
+lc-reconcile fetch-index            # all three, prebuilt: a 2.7 GB download
 lc-reconcile build                  # LCSH and LCGFT, a few minutes
 lc-reconcile build --scheme names --scheme subjects --scheme genreForms
 lc-reconcile match "Science fiction" --type Topic
@@ -28,6 +29,22 @@ built by default: LC's names snapshot is 7.3 GB compressed, and indexing
 its 12 million records takes about 20 minutes and makes a 9 GB index.
 To build from snapshots you've already downloaded, give each with `--from`
 and the date LC published it with `--snapshot-date`.
+
+## A prebuilt index
+
+`fetch-index` downloads an index of all three schemes, built and synced
+each week by this repository's [Index workflow](.github/workflows/index.yml)
+and published as assets of its [`index` release](https://github.com/blue-core-lod/lc-reconcile/releases/tag/index).
+It's one gzip stream in parts, since a release asset must be under 2 GiB,
+and a manifest (`index-v3.json`) that gives each part's checksum. The
+index is checked against the manifest before it replaces the one you have.
+After fetching, `sync` brings it up to today, which takes minutes rather
+than the hours a fresh build of names can need.
+
+There's a manifest for each version of the index's schema, so an older
+lc-reconcile goes on finding an index it can read. To publish an index
+somewhere else, `pack-index DIR` writes the parts and manifest, and
+`fetch-index` takes the manifest's URL or path.
 
 ## The reconciliation service
 
@@ -64,6 +81,7 @@ sync. LC's names snapshot is published less often than that: a build from
 one three weeks old has about 24,000 changes to catch up on, about four and
 a half hours. A sync of an index more than 30 days behind is refused: rebuild
 it from a newer snapshot, or raise the limit with `--max-age`.
+`--max-minutes` stops a sync after that long, keeping what it applied.
 
 ## From Python
 

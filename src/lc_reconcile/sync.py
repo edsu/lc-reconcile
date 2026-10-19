@@ -19,6 +19,7 @@ at a change twice does no harm: it is applied the same way both times.
 from __future__ import annotations
 
 import json
+import time
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from datetime import UTC, date, datetime, timedelta
@@ -58,6 +59,8 @@ class SyncResult:
     deleted: int
     #: Where the next sync will start from.
     cursor: date
+    #: False if the sync stopped at its time limit before applying everything.
+    finished: bool = True
 
 
 def item_date(item: dict[str, Any]) -> date | None:
@@ -118,14 +121,20 @@ def sync(
     client: Client | None = None,
     today: date | None = None,
     max_age: timedelta = MAX_AGE,
+    time_limit: timedelta | None = None,
     progress: Callable[[str, str], None] | None = None,
+    clock: Callable[[], float] = time.monotonic,
 ) -> list[SyncResult]:
     """Apply the changes LC has published since the index was last synced.
 
     Changes are applied oldest first, and the cursor is saved after each
     day's, so an interrupted sync picks up close to where it stopped. Once
     all are applied the cursor moves to today.
+
+    With a ``time_limit``, the sync stops once it has run that long, as if
+    interrupted, and leaves the schemes it hasn't reached for next time.
     """
+    deadline = clock() + time_limit.total_seconds() if time_limit else None
     client = client or Client()
     today = today or datetime.now(UTC).date()
     wanted = set(schemes) if schemes is not None else None
@@ -155,6 +164,14 @@ def sync(
             ordered = sorted(changes.items(), key=lambda change: (change[1], change[0]))
             updated = deleted = 0
             for i, (uri, when) in enumerate(ordered):
+                if deadline is not None and clock() >= deadline:
+                    say(status.name, f"stopped at the time limit, synced to {cursor}")
+                    results.append(
+                        SyncResult(
+                            status.name, since, pages, updated, deleted, cursor, False
+                        )
+                    )
+                    return results
                 body = client.get(record_url(uri))
                 record = (
                     parse_record(uri, body.decode("utf-8").splitlines())

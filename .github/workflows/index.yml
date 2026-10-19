@@ -1,0 +1,97 @@
+# Publish a prebuilt, synced index as assets of the `index` release, for
+# `lc-reconcile fetch-index`.
+#
+# Each run starts from the last published index and syncs it, or builds one
+# from LC's snapshots if there is none yet (or when asked to), then packs and
+# uploads it. The manifest is uploaded last, so a download that starts
+# meanwhile still finds the parts its manifest names; the parts of the two
+# newest indexes of each schema version are kept.
+name: Index
+on:
+  schedule:
+    - cron: "17 6 * * 1"  # Mondays
+  workflow_dispatch:
+    inputs:
+      rebuild:
+        description: Build from LC's snapshots instead of syncing the last index
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: index
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      LC_RECONCILE_DB: lc-reconcile.sqlite
+      GH_TOKEN: ${{ github.token }}
+      RELEASE: index
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      # The index, its packed copy and the build's temporary files need about
+      # 15 GB, more than a runner is guaranteed to have free.
+      - name: Make room
+        run: |
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h .
+
+      - name: Fetch or build the index
+        env:
+          REBUILD: ${{ inputs.rebuild }}
+        run: |
+          if [ "$REBUILD" != true ] && uv run --no-dev lc-reconcile fetch-index; then
+            exit 0
+          fi
+          uv run --no-dev lc-reconcile build --scheme names --scheme subjects --scheme genreForms
+
+      # A sync stopped at the limit is published as far as it got; the next
+      # run carries on from there. This leaves time to pack and upload.
+      - name: Sync
+        run: uv run --no-dev lc-reconcile sync --max-minutes 240
+
+      - name: Pack
+        run: |
+          uv run --no-dev lc-reconcile status | tee status.txt
+          uv run --no-dev lc-reconcile pack-index packed
+          rm "$LC_RECONCILE_DB"
+
+      - name: Publish
+        run: |
+          if ! gh release view "$RELEASE" > /dev/null 2>&1; then
+            gh release create "$RELEASE" --latest=false --title "Prebuilt index" \
+              --notes "A prebuilt index for \`lc-reconcile fetch-index\`."
+          fi
+          gh release upload "$RELEASE" packed/*.sqlite.gz.*
+          gh release upload "$RELEASE" packed/index-v*.json --clobber
+          {
+            echo "A prebuilt index for \`lc-reconcile fetch-index\`, updated weekly."
+            echo
+            echo '```'
+            cat status.txt
+            echo '```'
+          } > notes.md
+          gh release edit "$RELEASE" --notes-file notes.md
+
+      - name: Remove old parts
+        run: |
+          gh release view "$RELEASE" --json assets --jq '.assets[].name' > assets.txt
+          # lc-reconcile-v3-20261019T061700Z.sqlite.gz.00 → lc-reconcile-v3-20261019T061700Z
+          grep -E '\.sqlite\.gz\.[0-9]+$' assets.txt | sed -E 's/\.sqlite\.gz\.[0-9]+$//' | sort -u > indexes.txt
+          for version in $(sed -E 's/-[0-9T]+Z$//' indexes.txt | sort -u); do
+            grep "^$version-" indexes.txt | sort | head -n -2 | while read -r old; do
+              grep -F "$old.sqlite.gz." assets.txt | while read -r asset; do
+                gh release delete-asset "$RELEASE" "$asset" --yes
+              done
+            done
+          done
