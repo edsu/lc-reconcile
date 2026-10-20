@@ -10,17 +10,17 @@ with a manifest:
 
     {
       "format": 1,
-      "schema_version": 3,
+      "schema_version": 4,
       "created": "2026-10-19T06:17:00+00:00",
       "size": 8900000000,
       "sha256": "...",
       "schemes": [{"name": "names", "cursor": "2026-10-19", ...}],
-      "parts": [{"name": "lc-reconcile-v3-20261019T061700Z.sqlite.gz.00",
+      "parts": [{"name": "lc-reconcile-v4-20261019T061700Z.sqlite.gz.00",
                  "size": 2000000000, "sha256": "..."}]
     }
 
 Parts are named relative to the manifest. There is one manifest per schema
-version (``index-v3.json``), so an older lc-reconcile keeps finding an index
+version (``index-v4.json``), so an older lc-reconcile keeps finding an index
 it can read after the schema changes.
 """
 

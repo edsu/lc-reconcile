@@ -10,10 +10,14 @@ as, or instead of, a label. The marcKey is tried first, compared subfield by
 subfield; the label is tried when it finds nothing.
 
 Only an exact match on an authorized heading counts as ``match: true``, and
-only when it is the one such heading of the requested type. Everything else
-a lookup finds -- variants, several authorized headings, deprecated ones --
-comes back as candidates for a person to choose between, and when it finds
-nothing at all, headings with similar labels do.
+only when it is the one such heading of the requested type -- or, failing
+that, on the one heading that has the query as an earlier established form,
+the heading LC replaced it with. Everything else a lookup finds -- other
+variants, several authorized headings, deprecated ones -- comes back as
+candidates for a person to choose between, and when it finds nothing at
+all, headings with similar labels do. A field that says its heading is from
+another vocabulary (``650 2``, ``$2fast``) gets the same candidates, but
+never a match.
 """
 
 from __future__ import annotations
@@ -25,6 +29,7 @@ from difflib import SequenceMatcher
 from typing import Any
 
 from lc_reconcile.marckey import (
+    from_lc,
     heading_key,
     is_subdivided,
     kinds,
@@ -66,6 +71,7 @@ _SCHEME_OF_KIND = {"Medium": "performanceMediums"}
 #: Scores for each way a candidate can be found. They order the candidates;
 #: only ``match`` says whether one may be accepted without review.
 SCORE_AUTHORIZED = 100
+SCORE_EARLIER = 95
 SCORE_VARIANT = 90
 SCORE_REPLACEMENT = 70
 #: A similar label scores up to this, by how alike the two are, ...
@@ -80,6 +86,9 @@ SIMILAR_ENOUGH = 0.5
 _YEAR = re.compile(r"\b\d{4}\b")
 _NUMBERS = re.compile(r"\s*\b\d+\b")
 _WORD = re.compile(r"\w+")
+
+#: Ways a key can match one of a heading's other forms.
+_VARIANTS = ("earlier", "variant")
 
 #: Records in this collection stand for more than one person.
 UNDIFFERENTIATED = "collection_NamesUndifferentiated"
@@ -180,6 +189,15 @@ class Reconciler:
         }
 
     def candidates(self, query: Query) -> list[Candidate]:
+        found = self._candidates(query)
+        if query.marc_key and not from_lc(query.marc_key):
+            for candidate in found:
+                if candidate.match:
+                    candidate.match = False
+                    candidate.reason += ", but the field names another vocabulary"
+        return found
+
+    def _candidates(self, query: Query) -> list[Candidate]:
         keys = []
         field = query.marc_key
         marc_key = heading_key(field) if field else None
@@ -221,17 +239,25 @@ class Reconciler:
                 for hit in authorized
             ][: query.limit]
 
-        variants = [h for h in hits if h.via == "variant"]
+        # A heading's earlier form is the heading LC replaced, so a record
+        # catalogued before the change is matched to its successor -- if
+        # nothing else has the label as a variant.
+        variants = _prefer_headings([h for h in hits if h.via in _VARIANTS])
         if variants:
             unique = len(variants) == 1
+            ranked = sorted(variants, key=lambda h: h.via != "earlier")
             return [
                 Candidate(
                     hit.record,
-                    SCORE_VARIANT,
-                    unique and self.accept_unique_variant,
-                    "matches a variant of this heading",
+                    SCORE_EARLIER if hit.via == "earlier" else SCORE_VARIANT,
+                    unique
+                    and UNDIFFERENTIATED not in hit.record.collections
+                    and (hit.via == "earlier" or self.accept_unique_variant),
+                    "matches an earlier form of this heading"
+                    if hit.via == "earlier"
+                    else "matches a variant of this heading",
                 )
-                for hit in variants
+                for hit in ranked
             ][: query.limit]
 
         # Only deprecated headings are left: offer what LC says replaces them.
@@ -287,12 +313,17 @@ class Reconciler:
                     hit.record,
                     score,
                     False,
-                    "has a heading like this"
-                    if hit.via == "authorized"
-                    else "has a variant like this",
+                    _SIMILAR_REASONS[hit.via],
                 )
         ranked = sorted(best.values(), key=lambda c: c.score, reverse=True)
         return ranked[: query.limit]
+
+
+_SIMILAR_REASONS = {
+    "authorized": "has a heading like this",
+    "earlier": "has an earlier form like this",
+    "variant": "has a variant like this",
+}
 
 
 def similarity(a: str, b: str) -> float:

@@ -32,11 +32,11 @@ _WORDS = re.compile(r"\w+")
 _MAX_WORDS = 12
 
 #: Bumped whenever the schema changes; an index of another version is rebuilt.
-SCHEMA_VERSION = 3
+SCHEMA_VERSION = 4
 
 #: How a label belongs to its record, as stored in ``label.kind``.
-VIA = ("authorized", "variant", "deprecated")
-_AUTHORIZED, _VARIANT, _DEPRECATED = range(3)
+VIA = ("authorized", "variant", "deprecated", "earlier")
+_AUTHORIZED, _VARIANT, _DEPRECATED, _EARLIER = range(4)
 
 _SCHEMA = """
 -- rwo is the part of the RWO's URI after http://id.loc.gov/rwo/.
@@ -133,7 +133,13 @@ def label_rows(record: AuthorityRecord) -> list[tuple[str, int]]:
 
     heading = _DEPRECATED if record.deprecated else _AUTHORIZED
     variant = _DEPRECATED if record.deprecated else _VARIANT
+    earlier = _DEPRECATED if record.deprecated else _EARLIER
     add_heading(record.label, record.marc_key, heading)
+    # Before the variants, which often repeat them: a key is stored once.
+    for label in record.earlier:
+        add_heading(label, None, earlier)
+    for marc_key in record.earlier_keys:
+        add_heading(None, marc_key, earlier)
     for label in record.variants:
         add_heading(label, None, variant)
     for marc_key in record.variant_keys:
@@ -183,7 +189,8 @@ class Hit:
     """A record whose heading or variant has the key looked up."""
 
     record: AuthorityRecord
-    #: How the key matched: 'authorized', 'variant' or 'deprecated'.
+    #: How the key matched: 'authorized', 'variant', 'earlier' (an earlier
+    #: established form of the heading) or 'deprecated'.
     via: str
 
 

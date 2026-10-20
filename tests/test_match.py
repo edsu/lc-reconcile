@@ -125,6 +125,46 @@ def test_variant_is_a_candidate_not_a_match(reconciler):
     assert candidate.score == 90
 
 
+def test_earlier_form_is_a_match(reconciler):
+    # LC replaced "Gay erotic films" with "Gay films".
+    [candidate] = _ask(reconciler, "Gay erotic films", "GenreForm")
+    assert candidate.record.uri == GENRE_FORMS + "gf2018026031"
+    assert candidate.match
+    assert candidate.score == 95
+    assert "earlier form" in candidate.reason
+
+
+def test_shared_earlier_form_is_not_a_match(reconciler):
+    # "Gay pornographic films" was split between two headings.
+    found = _ask(reconciler, "Gay pornographic films", "GenreForm")
+    assert {c.record.uri for c in found} == {
+        GENRE_FORMS + "gf2011026460",
+        GENRE_FORMS + "gf2018026031",
+    }
+    assert not any(c.match for c in found)
+
+
+@pytest.mark.parametrize(
+    "field",
+    [
+        "650 2$aScience fiction.",
+        "650 4$aScience fiction.",
+        "650 7$aScience fiction.$2fast",
+        "650 7$aScience fiction.",
+    ],
+)
+def test_another_vocabulary_is_never_a_match(reconciler, field):
+    [candidate] = _ask(reconciler, "", marc_key=field)
+    assert candidate.record.uri == SUBJECTS + "sh85118629"
+    assert not candidate.match
+    assert "another vocabulary" in candidate.reason
+
+
+def test_lcsh_by_source_code_is_a_match(reconciler):
+    [candidate] = _ask(reconciler, "", marc_key="650 7$aScience fiction.$2lcsh")
+    assert candidate.match
+
+
 def test_unique_variant_can_be_accepted(index):
     reconciler = Reconciler(index, accept_unique_variant=True)
     [candidate] = _ask(reconciler, "Science stories", "Topic")

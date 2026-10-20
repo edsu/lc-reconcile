@@ -34,6 +34,7 @@ _WANTED = {
             "authoritativeLabel",
             "variantLabel",
             "hasVariant",
+            "hasEarlierEstablishedForm",
             "isMemberOfMADSCollection",
             "useInstead",
             "deletionNote",
@@ -104,6 +105,12 @@ class AuthorityRecord:
     variants: list[str] = field(default_factory=list)
     #: The variants' marcKeys, where LC gives them.
     variant_keys: list[str] = field(default_factory=list)
+    #: Headings this one replaced (4XX with ``$w`` "earlier established
+    #: form"), such as "Cookery" for "Cooking". LC keeps them as their own
+    #: Variant nodes, apart from the ``hasVariant`` ones, and often repeats
+    #: them there too.
+    earlier: list[str] = field(default_factory=list)
+    earlier_keys: list[str] = field(default_factory=list)
     use_instead: list[str] = field(default_factory=list)
     deletion_note: str | None = None
     rwo: str | None = None
@@ -161,6 +168,7 @@ def parse_record(uri: str, lines: Iterable[str]) -> AuthorityRecord | None:
     record = AuthorityRecord(uri=uri)
     found = False
     variant_nodes: list[str] = []
+    earlier_nodes: list[str] = []
     variant_labels: dict[str, list[str]] = {}
     variant_node_keys: dict[str, list[str]] = {}
     labels: list[Label] = []
@@ -212,6 +220,8 @@ def parse_record(uri: str, lines: Iterable[str]) -> AuthorityRecord | None:
                 record.types.append(obj[len(MADS) :])
         elif predicate == MADS + "hasVariant":
             variant_nodes.append(obj)
+        elif predicate == MADS + "hasEarlierEstablishedForm":
+            earlier_nodes.append(obj)
         elif predicate == MADS + "isMemberOfMADSCollection":
             record.collections.append(obj.rsplit("/", 1)[-1])
         elif predicate == MADS + "useInstead":
@@ -246,6 +256,9 @@ def parse_record(uri: str, lines: Iterable[str]) -> AuthorityRecord | None:
         record.kind = marckey.kind(record.marc_key)
     for node in variant_nodes:
         record.variant_keys.extend(variant_node_keys.get(node, ()))
+    for node in earlier_nodes:
+        record.earlier.extend(variant_labels.get(node, ()))
+        record.earlier_keys.extend(variant_node_keys.get(node, ()))
 
     if record.rwo:
         record.birth = dates.get((record.rwo, MADS + "birthDate"))

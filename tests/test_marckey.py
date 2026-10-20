@@ -1,6 +1,7 @@
 import pytest
 
 from lc_reconcile.marckey import (
+    from_lc,
     heading_key,
     is_subdivided,
     kinds,
@@ -88,3 +89,24 @@ def test_kinds():
     assert kinds("7102 $aGreat Britain.$bArmy") == {"CorporateName", "NameTitle"}
     assert kinds("655 7$aFiction.$2lcgft") == {"GenreForm"}
     assert kinds("6470 $aBattle of Hastings") is None
+
+
+@pytest.mark.parametrize(
+    ("field", "lc"),
+    [
+        ("650 0$aCats.", True),
+        ("650 1$aCats.", True),
+        ("650 2$aCats.", False),
+        ("650 4$aCats.", False),
+        ("650 6$aChats.", False),
+        ("650 7$aCats.$2fast", False),
+        ("650 7$aCats.$2lcsh", True),
+        ("655 7$aHorror fiction.$2lcgft", True),
+        ("650 7$aCats.", False),
+        ("653  $aCats", False),
+        ("385  $aAmericans$2lcdgt", True),
+        ("7001 $aVerne, Jules,$d1828-1905.", True),
+    ],
+)
+def test_from_lc(field, lc):
+    assert from_lc(field) is lc

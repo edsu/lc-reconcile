@@ -59,9 +59,19 @@ _SOURCES = {
     "lcmpt": "performanceMediums",
 }
 
+#: Source codes of everything the index holds: the vocabularies above, LCSH
+#: and LCNAF.
+_LC_SOURCES = {*_SOURCES, "lcsh", "naf", "lcnaf"}
+
 #: The second indicator of a bibliographic 6XX that says its heading is from
 #: LC's children's subject headings.
 _CHILDRENS = "1"
+
+#: Bibliographic subject fields whose second indicator names their
+#: thesaurus: 0 LCSH or LCNAF, 1 children's headings, 2 MeSH, 3 NAL,
+#: 4 not specified, 5 Canadian, 6 RVM, 7 the one in $2.
+_THESAURUS_TAGS = {"600", "610", "611", "630", "647", "648", "650", "651", "655"}
+_LC_THESAURI = {"0", _CHILDRENS}
 
 #: Subfields that are about the field rather than part of the heading:
 #: linking and source subfields ($0-$8), and $w and $i, which say how a
@@ -177,11 +187,38 @@ def schemes(marc_key: str) -> frozenset[str] | None:
     if parsed is None:
         return None
     tag, indicators, subfields = parsed
-    for code, value in subfields:
-        if code == "2":
-            scheme = _SOURCES.get(value.strip().rstrip(".").lower())
-            if scheme:
-                return frozenset({scheme})
+    for code in _source_codes(subfields):
+        scheme = _SOURCES.get(code)
+        if scheme:
+            return frozenset({scheme})
     if tag[0] == "6" and indicators[1:2] == _CHILDRENS:
         return frozenset({"childrensSubjects"})
     return None
+
+
+def from_lc(marc_key: str) -> bool:
+    """Whether a field's heading is from a vocabulary the index holds.
+
+    A field is taken at its word: ``650 2`` (MeSH), ``650 4`` (source not
+    specified) and ``650 7 ...$2fast`` are not, even when LC has a heading
+    with the same words, and a ``653`` is an uncontrolled term. A field
+    that doesn't say, such as a ``700``, is taken to be LCNAF.
+    """
+    parsed = parse(marc_key)
+    if parsed is None:
+        return True
+    tag, indicators, subfields = parsed
+    codes = _source_codes(subfields)
+    if codes:
+        return all(code in _LC_SOURCES for code in codes)
+    if tag == "653":
+        return False
+    if tag in _THESAURUS_TAGS:
+        return indicators[1:2] in _LC_THESAURI
+    return True
+
+
+def _source_codes(subfields: list[tuple[str, str]]) -> list[str]:
+    return [
+        value.strip().rstrip(".").lower() for code, value in subfields if code == "2"
+    ]

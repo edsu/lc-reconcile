@@ -39,7 +39,7 @@ and the date LC published it with `--snapshot-date`.
 each week by this repository's [Index workflow](.github/workflows/index.yml)
 and published as assets of its [`index` release](https://github.com/blue-core-lod/lc-reconcile/releases/tag/index).
 It's one gzip stream in parts, since a release asset must be under 2 GiB,
-and a manifest (`index-v3.json`) that gives each part's checksum. The
+and a manifest (`index-v4.json`) that gives each part's checksum. The
 index is checked against the manifest before it replaces the one you have.
 After fetching, `sync` brings it up to today, which takes minutes rather
 than the hours a fresh build of names can need.
@@ -121,23 +121,41 @@ Only one result is ever marked `"match": true`: the single authorized
 heading of the requested type whose normalized form equals the query.
 Comparison ignores case, diacritics and most punctuation.
 
+Failing that, a query that is the earlier established form of exactly one
+heading matches that heading: `Cookery` matches `Cooking`, which LC
+replaced it with. This is the usual case in records catalogued before a
+heading changed. It scores 95, a little below an authorized heading.
+
 A heading can also be given as a MARC field, a marcKey (the `marc_key`
 property). It's compared with each authority's own marcKey subfield by
 subfield, after dropping the parts of a bibliographic field that aren't the
 heading: relators (`$e`, `$4`), links (`$0`, `$1`) and the source (`$2`).
 The tag says what kind of heading it is, so a `710` never matches a person.
 
+A field that says its heading is from a vocabulary the index doesn't hold
+gets LC candidates but never a match: a 6XX whose second indicator is 2
+(MeSH), 3 (NAL), 4 (source not specified), 5 (Canadian) or 6 (RVM), a `$2`
+other than LC's (`$2fast`, `$2mesh`), or a `653`. LC often has a heading
+with the same words, but matching it would be a claim the cataloger didn't
+make.
+
 Everything else comes back as a candidate with `"match": false`:
 
 - several authorized headings with the same label
 - an undifferentiated name, which covers more than one person
-- a variant label
+- any other variant label
 - the replacement for a deprecated heading
 - when nothing else is found, headings with similar labels, from a
   full-text search, scored by how alike the labels are and whether the
   dates agree. A search finds labels that share words with the query, so
   it helps with wording (`Science fiction stories`) but not with
   misspellings (`Sciense fiction`)
+
+A query without a type, and without a marcKey to supply one, is matched
+against every kind of heading. Exact matches are still exact, but its
+similar-heading candidates are mostly names, which outnumber subjects more
+than twenty to one. Give a type (`--type Topic`, or `"type"` in the query)
+when you know it.
 
 That's stricter than id.loc.gov's label service, which redirects
 `Verne, Jules` (without dates) and variant labels straight to an authority.

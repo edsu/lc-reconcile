@@ -37,6 +37,7 @@ def _expected(uri: str, graph: Graph) -> dict:
     for variant in graph.objects(node, _mads("hasVariant")):
         variant_keys |= {str(k) for k in graph.objects(variant, URIRef(MARC_KEY))}
     keys = [k for k in keys if k.startswith("1")]
+    earlier = list(graph.objects(node, _mads("hasEarlierEstablishedForm")))
     return {
         "label": primary[0] if primary else None,
         "variants": variants - {primary[0] if primary else None},
@@ -48,6 +49,12 @@ def _expected(uri: str, graph: Graph) -> dict:
         "use_instead": {str(u) for u in graph.objects(node, _mads("useInstead"))},
         "marc_key": keys[0] if keys else None,
         "variant_keys": variant_keys,
+        "earlier": {
+            str(v) for e in earlier for v in graph.objects(e, _mads("variantLabel"))
+        },
+        "earlier_keys": {
+            str(k) for e in earlier for k in graph.objects(e, URIRef(MARC_KEY))
+        },
     }
 
 
@@ -60,6 +67,8 @@ def _actual(record) -> dict:
         "use_instead": set(record.use_instead),
         "marc_key": record.marc_key,
         "variant_keys": set(record.variant_keys),
+        "earlier": set(record.earlier),
+        "earlier_keys": set(record.earlier_keys),
     }
 
 
@@ -153,3 +162,14 @@ def test_escapes():
 
 def test_nothing_about_the_uri():
     assert parse_record(VERNE, ["# a comment\n", "\n"]) is None
+
+
+def test_earlier_established_forms():
+    records = {
+        r.uri: r
+        for r in iter_records(
+            (FIXTURES / "genreForms.nt").read_text(encoding="utf-8").splitlines()
+        )
+    }
+    gay_films = records["http://id.loc.gov/authorities/genreForms/gf2018026031"]
+    assert set(gay_films.earlier) == {"Gay pornographic films", "Gay erotic films"}

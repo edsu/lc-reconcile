@@ -91,7 +91,7 @@ jobs:
       - name: Remove old parts
         run: |
           gh release view "$RELEASE" --json assets --jq '.assets[].name' > assets.txt
-          # lc-reconcile-v3-20261019T061700Z.sqlite.gz.00 → lc-reconcile-v3-20261019T061700Z
+          # lc-reconcile-v4-20261019T061700Z.sqlite.gz.00 → lc-reconcile-v4-20261019T061700Z
           grep -E '\.sqlite\.gz\.[0-9]+$' assets.txt | sed -E 's/\.sqlite\.gz\.[0-9]+$//' | sort -u > indexes.txt
           for version in $(sed -E 's/-[0-9T]+Z$//' indexes.txt | sort -u); do
             grep "^$version-" indexes.txt | sort | head -n -2 | while read -r old; do
