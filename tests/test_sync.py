@@ -266,9 +266,22 @@ def test_cli_sync_and_status(index_copy, monkeypatch, capsys):
     assert cli.main(["--db", db, "status"]) == 0
     assert "names: 4 records" in capsys.readouterr().out
     assert cli.main(["--db", db, "sync", "--scheme", "names"]) == 0
-    assert "names: 3 updated, 1 removed" in capsys.readouterr().err
+    err = capsys.readouterr().err
+    assert "names: reading the feed back to 2026-10-11" in err
+    assert "names: 3 updated, 1 removed" in err
+    assert "feed page" not in err
     assert cli.main(["--db", db, "status"]) == 0
     assert "synced to" in capsys.readouterr().out
+
+
+def test_cli_sync_verbose(index_copy, monkeypatch, capsys):
+    monkeypatch.setattr(cli, "Client", lambda delay: FakeLC(_feed()))
+    assert cli.main(["--db", str(index_copy), "sync", "-v"]) == 0
+    err = capsys.readouterr().err
+    assert "names: feed page 1, back to " in err
+    assert "names: feed page 3, back to 2026-09-30" in err
+    assert f"names: updated {VERNE} (2026-10-18)" in err
+    assert f"names: removed {SCHULZE}" in err
 
 
 def test_time_limit(index_copy):

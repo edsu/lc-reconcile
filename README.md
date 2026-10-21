@@ -113,12 +113,16 @@ fetches each record that changed, and replaces it in the index. It waits
 half a second between requests (`--delay`), and saves its place after each
 day of changes, so it can be stopped and run again.
 
-LCNAF changes by about 1,200 records a day, which takes about 15 minutes to
-sync. LC's names snapshot is published less often than that: a build from
-one three weeks old has about 24,000 changes to catch up on, about four and
-a half hours. A sync of an index more than 30 days behind is refused: rebuild
+LCNAF changes by about 1,200 records a day, and a sync fetches each
+record at about 0.7 seconds. Because it looks back three days, a daily sync
+fetches about four days of changes, some 5,000 records and about an hour.
+LC's names snapshot is published only every few weeks: a build from one
+24 days old had 26,567 changes to catch up on, about five hours. A sync of an index more than 30 days behind is refused: rebuild
 it from a newer snapshot, or raise the limit with `--max-age`.
 `--max-minutes` stops a sync after that long, keeping what it applied.
+`--verbose` (`-v`) also reports each feed page read and each record
+applied; otherwise a long feed, like a few weeks of names, is read in
+silence.
 
 ## From Python
 

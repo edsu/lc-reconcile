@@ -152,6 +152,12 @@ def _sync_options(parser: argparse.ArgumentParser) -> None:
         help="stop after this long, keeping what was applied; "
         "the next sync carries on (default: no limit)",
     )
+    parser.add_argument(
+        "-v",
+        "--verbose",
+        action="store_true",
+        help="also report each feed page read and each record applied",
+    )
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -253,6 +259,7 @@ def _sync(args: argparse.Namespace) -> int:
         max_age=timedelta(days=args.max_age),
         time_limit=timedelta(minutes=args.max_minutes) if args.max_minutes else None,
         progress=progress,
+        detail=progress if args.verbose else None,
     )
     for result in results:
         print(

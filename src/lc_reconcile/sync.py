@@ -23,6 +23,7 @@ import time
 from collections.abc import Callable, Iterable
 from dataclasses import dataclass
 from datetime import UTC, date, datetime, timedelta
+from functools import partial
 from pathlib import Path
 from typing import Any
 
@@ -80,11 +81,17 @@ def item_date(item: dict[str, Any]) -> date | None:
     return max(dates, default=None)
 
 
-def read_feed(client: Client, scheme: str, since: date) -> tuple[dict[str, date], int]:
+def read_feed(
+    client: Client,
+    scheme: str,
+    since: date,
+    on_page: Callable[[str], None] | None = None,
+) -> tuple[dict[str, date], int]:
     """Records of ``scheme`` that changed on or after ``since``, with when.
 
     Pages are read until one holds nothing as recent as ``since``. Returns
-    the changes and how many pages were read.
+    the changes and how many pages were read. ``on_page`` is told about each
+    page read, and the oldest date on it.
     """
     prefix = f"{ID_LOC}/authorities/{scheme}/"
     changes: dict[str, date] = {}
@@ -96,6 +103,7 @@ def read_feed(client: Client, scheme: str, since: date) -> tuple[dict[str, date]
             return changes, page - 1
         data = json.loads(body)
         newest: date | None = None
+        oldest: date | None = None
         for item in data.get("orderedItems") or []:
             when = item_date(item)
             obj = item.get("object")
@@ -103,8 +111,11 @@ def read_feed(client: Client, scheme: str, since: date) -> tuple[dict[str, date]
             if when is None or not isinstance(uri, str):
                 continue
             newest = when if newest is None else max(newest, when)
+            oldest = when if oldest is None else min(oldest, when)
             if when >= since and uri.startswith(prefix):
                 changes[uri] = max(changes.get(uri, when), when)
+        if on_page:
+            on_page(f"feed page {page}" + (f", back to {oldest}" if oldest else ""))
         if newest is None or newest < since or not data.get("next"):
             return changes, page
 
@@ -123,6 +134,7 @@ def sync(
     max_age: timedelta = MAX_AGE,
     time_limit: timedelta | None = None,
     progress: Callable[[str, str], None] | None = None,
+    detail: Callable[[str, str], None] | None = None,
     clock: Callable[[], float] = time.monotonic,
 ) -> list[SyncResult]:
     """Apply the changes LC has published since the index was last synced.
@@ -133,12 +145,17 @@ def sync(
 
     With a ``time_limit``, the sync stops once it has run that long, as if
     interrupted, and leaves the schemes it hasn't reached for next time.
+
+    ``progress`` is told when each scheme starts and after each day's
+    changes; ``detail``, if given, is also told each feed page read and each
+    record applied.
     """
     deadline = clock() + time_limit.total_seconds() if time_limit else None
     client = client or Client()
     today = today or datetime.now(UTC).date()
     wanted = set(schemes) if schemes is not None else None
     say = progress or (lambda scheme, message: None)
+    say_more = detail or (lambda scheme, message: None)
     results = []
     writer = Writer(path)
     try:
@@ -158,7 +175,10 @@ def sync(
                     f"{max_age.days} days ago; rebuild it from a new snapshot"
                 )
             since = cursor - MARGIN
-            changes, pages = read_feed(client, status.name, since)
+            say(status.name, f"reading the feed back to {since}")
+            changes, pages = read_feed(
+                client, status.name, since, partial(say_more, status.name)
+            )
             say(status.name, f"{len(changes):,} changed since {since} ({pages} pages)")
 
             ordered = sorted(changes.items(), key=lambda change: (change[1], change[0]))
@@ -181,9 +201,11 @@ def sync(
                 if record is None:
                     writer.delete(uri)
                     deleted += 1
+                    say_more(status.name, f"removed {uri}")
                 else:
                     writer.upsert(record)
                     updated += 1
+                    say_more(status.name, f"updated {uri} ({when})")
                 last_of_day = i + 1 == len(ordered) or ordered[i + 1][1] != when
                 if last_of_day:
                     cursor = max(cursor, min(when, today))
