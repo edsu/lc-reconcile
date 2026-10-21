@@ -180,3 +180,69 @@ when you know it.
 
 That's stricter than id.loc.gov's label service, which redirects
 `Verne, Jules` (without dates) and variant labels straight to an authority.
+
+## Benchmarks
+
+`bench/` holds a benchmark made from LC's own cataloguing.
+`bench/headings.jsonl` is 2,054 agent, subject and genre/form headings
+sampled from LC BIBFRAME records, each with the marcKey and label LC gives
+it and the authority LC linked it to; `bench/extract.py` makes it from the
+records. To run it against a full index:
+
+```
+uv run --extra server lc-reconcile serve --port 8000
+uv run python bench/bench.py --url http://127.0.0.1:8000
+```
+
+The figures below are from 2026-10-21, on an Apple M3 Pro (12 cores,
+36 GB) with every scheme in a 9.6 GB index, and Python 3.13. Each pass ran
+once untimed first, so the index was in the page cache; the first lookups
+in a cold file take far longer. The clients ran on the same machine.
+
+**Accuracy.** Of the 1,674 headings LC linked to an authority, queried by
+marcKey as marc-bibframe asks:
+
+| Outcome | Headings |
+|---|---|
+| `match: true` for LC's own choice | 1,652 (98.7%) |
+| `match: true` for another heading | 0 |
+| `match: true` for the LCSH twin of a children's heading | 15 (0.9%) |
+| LC's choice offered as a candidate | 4 (0.2%) |
+| missed | 3 (0.2%) |
+
+The children's headings (Cats, Bears, Mothers) are a limit of the sample,
+not of matching: LC's BIBFRAME gives a subject's authority marcKey
+(`150  $aCats`), which has lost the second indicator of the bibliographic
+`650 _1` that says it's a children's heading. Queried by label and type,
+as OpenRefine asks, the outcomes are the same.
+
+**One request at a time**, over HTTP:
+
+| Request | Median | 95th percentile | 99th percentile |
+|---|---|---|---|
+| reconcile one marcKey | 1.0 ms | 7 ms | 594 ms |
+| reconcile a label LC didn't link | 1.1 ms | 621 ms | 1,265 ms |
+| reconcile a batch of 50 marcKeys | 467 ms | 3.3 s | 3.6 s |
+| suggest, 6-character prefix | 18 ms | 202 ms | 242 ms |
+| preview | 0.7 ms | 1.2 ms | 1.4 ms |
+
+Exact lookups take about a millisecond. About one query in a hundred falls
+through to the similar-heading search and takes half a second or more,
+when its words are common and its type is rare, or when no label has all
+its words and the search for any of them matches millions of labels. A
+batch waits for its slowest query.
+
+**In parallel**, single marcKey queries and suggest requests per second,
+by `serve --workers`:
+
+| Workers | Reconcile, 8 clients | Reconcile, 32 clients | 99th percentile, 32 clients | Suggest, 16 clients |
+|---|---|---|---|---|
+| 1 | 76 | 69 | 12.0 s | 17 |
+| 4 | 185 | 193 | 4.0 s | 195 |
+| 8 | 243 | 255 | 3.1 s | 248 |
+| 12 | 245 | 240 | 2.9 s | 290 |
+
+One process does its matching on one core, so beyond about four clients it
+only queues them. Worker processes share the index file and the page cache,
+and gain little past eight on this machine.
+
