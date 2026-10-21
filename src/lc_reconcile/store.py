@@ -113,6 +113,8 @@ END;
 
 #: Rows each way of searching reads before they are filtered and re-scored.
 SEARCH_DEPTH = 50
+#: Labels an autocomplete lookup reads at most.
+SUGGEST_SCAN = 2_000
 
 
 def label_rows(record: AuthorityRecord) -> list[tuple[str, int]]:
@@ -301,6 +303,47 @@ class Index:
                 collect(rows)
                 break
         return list(found.values())
+
+    def starting_with(
+        self,
+        prefix: str,
+        *,
+        kinds: Iterable[str] | None = None,
+        schemes: Iterable[str] | None = None,
+        limit: int = 10,
+        offset: int = 0,
+        scan: int = SUGGEST_SCAN,
+    ) -> list[tuple[Hit, str]]:
+        """Records with a label starting with ``prefix``, each with that label.
+
+        For autocomplete: ``prefix`` is a normalized label, possibly ending
+        part way through a word. Headings come before variants, then shorter
+        labels before longer ones, so that "science f" offers "Science
+        fiction" before "Science fiction films--History and criticism". A
+        record is given once, for its best label. Deprecated headings are
+        left out.
+
+        Only the first ``scan`` labels in order are read, so that a short
+        prefix costs about the same as a long one; a kind or scheme with few
+        labels among them may find little.
+        """
+        where, params = _filters(kinds, schemes)
+        rows = self._db.execute(
+            "SELECT a.*, found.kind AS via, found.key AS found FROM ("
+            "SELECT authority, key, kind FROM label WHERE key >= ? AND key < ? "
+            f"AND kind != {_DEPRECATED} AND instr(key, '$') = 0 "
+            "ORDER BY key LIMIT ?"
+            f") found JOIN authority a ON a.id = found.authority WHERE 1{where}",
+            [prefix, prefix + "\U0010ffff", scan, *params],
+        ).fetchall()
+        best: dict[str, tuple[tuple[bool, int, str], sqlite3.Row]] = {}
+        for row in rows:
+            rank = (row["via"] != _AUTHORIZED, len(row["found"]), row["found"])
+            current = best.get(row["uri"])
+            if current is None or rank < current[0]:
+                best[row["uri"]] = (rank, row)
+        ranked = sorted(best.values(), key=lambda item: item[0])
+        return [(_hit(row), row["found"]) for _, row in ranked[offset : offset + limit]]
 
     def get(self, uri: str) -> AuthorityRecord | None:
         row = self._db.execute(

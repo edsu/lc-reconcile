@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lc-reconcile demo</title>
+<!--
+  A page for trying the service in a browser. It uses only the service's
+  public endpoints -- the reconciliation queries, suggest and preview -- the
+  same ones OpenRefine uses, so it shows what a client sees.
+-->
+<style>
+  :root {
+    --bg: #fff; --fg: #1d1d1f; --muted: #666; --line: #ddd; --panel: #f6f6f7;
+    --accent: #0b5cad; --match: #17703a; --match-bg: #e3f4e8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16171a; --fg: #e8e8ea; --muted: #9a9aa2; --line: #33343a; --panel: #1f2024;
+      --accent: #6aa8ff; --match: #7fd49a; --match-bg: #1d3325;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+         font: 15px/1.45 system-ui, -apple-system, sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 24px 16px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .muted { color: var(--muted); font-size: 13px; }
+  form { display: grid; grid-template-columns: 1fr 180px; gap: 8px; margin: 16px 0; }
+  label { font-size: 12px; color: var(--muted); display: block; margin-bottom: 2px; }
+  input, select, button { font: inherit; padding: 7px 9px; border: 1px solid var(--line);
+         border-radius: 6px; background: var(--bg); color: var(--fg); width: 100%; }
+  button { background: var(--accent); color: #fff; border: none; cursor: pointer; }
+  .wide { grid-column: 1 / -1; }
+  .field { position: relative; }
+  #suggestions { position: absolute; z-index: 2; left: 0; right: 0; top: 100%; margin: 2px 0 0;
+         padding: 0; list-style: none; background: var(--bg); border: 1px solid var(--line);
+         border-radius: 6px; max-height: 320px; overflow-y: auto; }
+  #suggestions:empty { display: none; }
+  #suggestions li { padding: 6px 9px; cursor: pointer; }
+  #suggestions li:hover, #suggestions li.active { background: var(--panel); }
+  #suggestions small { display: block; color: var(--muted); }
+  .layout { display: grid; grid-template-columns: 1fr 400px; gap: 16px; align-items: start; }
+  ol { list-style: none; padding: 0; margin: 0; }
+  .candidate { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px;
+         margin-bottom: 8px; cursor: pointer; }
+  .candidate:hover, .candidate.active { border-color: var(--accent); }
+  .candidate .top { display: flex; gap: 8px; align-items: baseline; justify-content: space-between; }
+  .candidate a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  .badge { font-size: 12px; padding: 1px 7px; border-radius: 10px; white-space: nowrap;
+         background: var(--panel); color: var(--muted); }
+  .badge.match { background: var(--match-bg); color: var(--match); font-weight: 600; }
+  iframe { width: 400px; height: 160px; border: 1px solid var(--line); border-radius: 8px;
+         background: #fff; position: sticky; top: 16px; }
+  details { margin-top: 16px; }
+  pre { background: var(--panel); padding: 10px; border-radius: 6px; overflow-x: auto; font-size: 12px; }
+  #api { margin-top: 40px; border-top: 1px solid var(--line); padding-top: 8px; }
+  h2 { font-size: 17px; margin: 24px 0 8px; }
+  h3 { font-size: 15px; margin: 20px 0 6px; }
+  code { font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--panel);
+         padding: 1px 4px; border-radius: 4px; overflow-wrap: anywhere; }
+  pre code { background: none; padding: 0; font-size: 12px; }
+  .table { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  th { font-size: 12px; color: var(--muted); font-weight: 600; }
+  td:first-child { white-space: nowrap; }
+  #api a { color: var(--accent); }
+  @media (max-width: 760px) {
+    form { grid-template-columns: 1fr; }
+    .layout { grid-template-columns: 1fr; }
+    iframe { width: 100%; position: static; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>lc-reconcile</h1>
+  <p class="muted" id="status">Reconcile headings against a local index of id.loc.gov.</p>
+
+  <form id="form" autocomplete="off">
+    <div class="field">
+      <label for="query">Heading</label>
+      <input id="query" placeholder="e.g. Verne, Jules, 1828-1905 or Aeroplanes">
+      <ul id="suggestions" role="listbox"></ul>
+    </div>
+    <div>
+      <label for="type">Type</label>
+      <select id="type"><option value="">any</option></select>
+    </div>
+    <div class="wide">
+      <label for="marc">or a MARC field (marcKey)</label>
+      <input id="marc" placeholder="e.g. 7001 $aVerne, Jules,$d1828-1905,$eauthor.">
+    </div>
+    <div class="wide"><button type="submit">Reconcile</button></div>
+  </form>
+
+  <div class="layout">
+    <ol id="results"></ol>
+    <iframe id="preview" title="Preview" hidden></iframe>
+  </div>
+  <details><summary class="muted">Request and response</summary><pre id="raw"></pre></details>
+
+  <section id="api">
+    <h2>Using the API</h2>
+    <p>This service speaks version 0.2 of the
+      <a href="https://www.w3.org/community/reports/reconciliation/CG-FINAL-specs-0.2-20230410/">Reconciliation
+      Service API</a>, the protocol OpenRefine uses. Its endpoint is</p>
+    <p><code class="url" data-path="reconcile">/reconcile</code></p>
+    <p>To use it in OpenRefine, choose <em>Reconcile → Start reconciling… → Add standard service…</em>
+      and give that URL. This page makes the same requests OpenRefine does; open
+      <em>Request and response</em> above to see them.</p>
+
+    <h3>Endpoints</h3>
+    <div class="table"><table>
+      <tr><th>Request</th><th>Gives</th></tr>
+      <tr><td><a data-path="reconcile">GET /reconcile</a></td>
+        <td>The service manifest: name, types, and where the services below are.</td></tr>
+      <tr><td>GET or POST /reconcile<br>with <code>queries</code></td>
+        <td>Results for a batch of queries, keyed by query id; the manifest asks for 50 at a time. A POST is form-encoded,
+          as OpenRefine sends it. Add <code>callback</code> for JSONP.</td></tr>
+      <tr><td><a data-path="reconcile/suggest/entity?prefix=aeropl">GET /reconcile/suggest/entity</a></td>
+        <td>Autocomplete: headings starting with <code>prefix</code> (two characters or more),
+          optionally of one <code>type</code>, paged with <code>cursor</code>.</td></tr>
+      <tr><td><a data-path="reconcile/suggest/type?prefix=name">GET /reconcile/suggest/type</a><br>
+        <a data-path="reconcile/suggest/property?prefix=">GET /reconcile/suggest/property</a></td>
+        <td>Autocomplete for types and query properties.</td></tr>
+      <tr><td><a data-path="reconcile/preview?id=http://id.loc.gov/authorities/names/n79064013">GET /reconcile/preview</a></td>
+        <td>A small HTML card for the heading <code>id</code>, as shown beside the results above.</td></tr>
+      <tr><td><a data-path="status">GET /status</a></td>
+        <td>What the index holds: each scheme's records, snapshot date and how far it has synced.</td></tr>
+    </table></div>
+
+    <h3>A query</h3>
+    <pre><code>{
+  "q0": {
+    "query": "Verne, Jules",
+    "type": "PersonalName",
+    "limit": 5,
+    "properties": [{"pid": "dates", "v": "1828-1905"}]
+  },
+  "q1": {
+    "query": "",
+    "properties": [{"pid": "marc_key", "v": "650 0$aAeroplanes."}]
+  }
+}</code></pre>
+    <p>Send it as the <code>queries</code> parameter:</p>
+    <pre><code id="curl"></code></pre>
+    <ul>
+      <li><code>type</code> is a MADS kind of heading, such as <code>PersonalName</code>,
+        <code>Topic</code>, <code>GenreForm</code> or <code>Medium</code>. Without one, every kind is
+        searched, and similar headings are mostly names.</li>
+      <li><code>marc_key</code> gives the heading as a MARC field. It's compared subfield by subfield,
+        relators and links are ignored, and its tag sets the type.</li>
+      <li><code>dates</code> are added to a name heading that lacks them.</li>
+      <li><code>scheme</code> chooses the LC schemes to search, separated by spaces. Without it, names,
+        subjects and genre/form terms are searched; a marcKey's indicator or <code>$2</code>, or the
+        <code>Medium</code> type, can choose another.</li>
+    </ul>
+
+    <h3>A result</h3>
+    <p>Each candidate has an <code>id</code> (the authority's URI at id.loc.gov), a <code>name</code>,
+      its <code>type</code>, a <code>score</code> from 0 to 100, <code>match</code> and a
+      <code>description</code> of how it was found. Names also carry <code>rwo</code>, the URI of the
+      person or body itself.</p>
+    <p><code>match: true</code> means the candidate can be accepted without review. It's given only
+      to the one authorized heading of the type asked for whose normalized form equals the query, or
+      failing that to the one heading with the query as an earlier established form (<em>Aeroplanes</em>
+      for <em>Airplanes</em>). Variants, undifferentiated names, replacements for deprecated headings
+      and similar headings are offered as candidates, and so is anything for a field that names another
+      vocabulary (<code>650 2</code>, <code>$2fast</code>). Scores only put the candidates in order.</p>
+  </section>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const el = (tag, cls, text) => {
+  const node = document.createElement(tag);
+  if (cls) node.className = cls;
+  if (text != null) node.textContent = text;
+  return node;
+};
+let manifest = null;
+
+// Show this service's own URLs in the API section.
+function describeApi() {
+  const url = (path) => new URL(path, location.href).href;
+  document.querySelectorAll("code.url").forEach((code) => { code.textContent = url(code.dataset.path); });
+  document.querySelectorAll("#api a[data-path]").forEach((link) => { link.href = url(link.dataset.path); });
+  const queries = JSON.stringify({ q0: { query: "Aeroplanes", type: "Topic" } });
+  $("curl").textContent = `curl ${url("reconcile")} \\\n  --data-urlencode 'queries=${queries}'`;
+}
+
+async function start() {
+  describeApi();
+  manifest = await (await fetch("reconcile")).json();
+  for (const type of manifest.defaultTypes) $("type").append(new Option(type.name, type.id));
+  const status = await (await fetch("status")).json();
+  const total = status.schemes.reduce((sum, s) => sum + s.records, 0);
+  $("status").textContent = `${total.toLocaleString()} headings from ` +
+    status.schemes.map((s) => s.name).join(", ") + ".";
+}
+
+async function reconcile(event) {
+  event?.preventDefault();
+  $("suggestions").replaceChildren();
+  const query = { query: $("query").value.trim(), limit: 10 };
+  if ($("type").value) query.type = $("type").value;
+  const marc = $("marc").value.trim();
+  if (marc) query.properties = [{ pid: "marc_key", v: marc }];
+  if (!query.query && !marc) return;
+  const body = new URLSearchParams({ queries: JSON.stringify({ q0: query }) });
+  const response = await fetch("reconcile", { method: "POST", body });
+  const data = await response.json();
+  $("raw").textContent = JSON.stringify({ q0: query }, null, 2) + "\n\n" + JSON.stringify(data, null, 2);
+  const results = $("results");
+  results.replaceChildren();
+  if (data.error) { results.append(el("li", "muted", data.error)); return; }
+  const candidates = data.q0.result;
+  if (!candidates.length) results.append(el("li", "muted", "Nothing found."));
+  candidates.forEach((candidate, i) => {
+    const item = el("li", "candidate");
+    const top = el("div", "top");
+    const link = el("a", null, candidate.name);
+    link.href = candidate.id;
+    link.target = "_blank";
+    top.append(link, el("span", candidate.match ? "badge match" : "badge",
+      candidate.match ? `match · ${candidate.score}` : `score ${candidate.score}`));
+    const type = candidate.type.map((t) => t.name).join(", ");
+    item.append(top, el("div", "muted", [type, candidate.description].filter(Boolean).join(" — ")));
+    item.addEventListener("click", (e) => { if (e.target !== link) show(candidate.id, item); });
+    results.append(item);
+    if (i === 0) show(candidate.id, item);
+  });
+  if (!candidates.length) $("preview").hidden = true;
+}
+
+function show(id, item) {
+  document.querySelectorAll(".candidate.active").forEach((c) => c.classList.remove("active"));
+  item?.classList.add("active");
+  const frame = $("preview");
+  frame.src = manifest.preview.url.replace("{{id}}", encodeURIComponent(id));
+  frame.hidden = false;
+}
+
+// Autocomplete from the suggest service, as OpenRefine does when you search
+// for a match by hand.
+let timer = null, active = -1;
+async function suggest() {
+  const prefix = $("query").value;
+  const list = $("suggestions");
+  if (prefix.trim().length < 2) { list.replaceChildren(); return; }
+  const params = new URLSearchParams({ prefix });
+  if ($("type").value) params.set("type", $("type").value);
+  const data = await (await fetch("reconcile/suggest/entity?" + params)).json();
+  if ($("query").value !== prefix) return;  // typed on meanwhile
+  active = -1;
+  list.replaceChildren(...(data.result || []).map((s) => {
+    const item = el("li", null, s.name);
+    item.append(el("small", null, s.description));
+    item.addEventListener("mousedown", (e) => { e.preventDefault(); pick(s.name); });
+    return item;
+  }));
+}
+function pick(name) {
+  $("query").value = name;
+  $("suggestions").replaceChildren();
+  reconcile();
+}
+
+$("form").addEventListener("submit", reconcile);
+$("query").addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(suggest, 150); });
+$("query").addEventListener("blur", () => $("suggestions").replaceChildren());
+$("query").addEventListener("keydown", (e) => {
+  const items = [...$("suggestions").children];
+  if (!items.length) return;
+  if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+    e.preventDefault();
+    active = (active + (e.key === "ArrowDown" ? 1 : -1) + items.length) % items.length;
+    items.forEach((item, i) => item.classList.toggle("active", i === active));
+  } else if (e.key === "Enter" && active >= 0) {
+    e.preventDefault();
+    pick(items[active].firstChild.textContent);
+  } else if (e.key === "Escape") {
+    $("suggestions").replaceChildren();
+  }
+});
+start();
+</script>
+</body>
+</html>

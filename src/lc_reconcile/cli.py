@@ -10,6 +10,7 @@ import threading
 import time
 from collections.abc import Sequence
 from datetime import timedelta
+from pathlib import Path
 
 from lc_reconcile._net import Client, FetchError
 from lc_reconcile.build import SCHEMES, Source, build, default_sources
@@ -89,6 +90,12 @@ def _parser() -> argparse.ArgumentParser:
     )
     serve.add_argument("--host", default="127.0.0.1")
     serve.add_argument("--port", type=int, default=8000)
+    serve.add_argument(
+        "--workers",
+        type=int,
+        default=os.cpu_count() or 1,
+        help="worker processes, which share the index (default: one per core)",
+    )
     serve.add_argument(
         "--sync-every",
         type=float,
@@ -261,7 +268,7 @@ def _serve(args: argparse.Namespace) -> int:
     try:
         import uvicorn
 
-        from lc_reconcile.api import create_app
+        from lc_reconcile.api import DB_ENV, create_app
     except ImportError:
         print(
             "lc-reconcile: serve needs the server extra: "
@@ -269,12 +276,26 @@ def _serve(args: argparse.Namespace) -> int:
             file=sys.stderr,
         )
         return 1
+    # Matching is mostly Python, which one process runs on one core at a
+    # time, so the service runs as several processes. Each opens the index
+    # read-only; the operating system caches the file once for all of them.
+    # A sync, the one writer, runs here in the parent.
     app = create_app(args.db)
     if args.sync_every:
         threading.Thread(
             target=_sync_forever, args=(args,), name="sync", daemon=True
         ).start()
-    uvicorn.run(app, host=args.host, port=args.port)
+    if args.workers > 1:
+        os.environ[DB_ENV] = str(Path(args.db).resolve())
+        uvicorn.run(
+            "lc_reconcile.api:app_from_environment",
+            factory=True,
+            host=args.host,
+            port=args.port,
+            workers=args.workers,
+        )
+    else:
+        uvicorn.run(app, host=args.host, port=args.port)
     return 0
 
 

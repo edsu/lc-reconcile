@@ -56,9 +56,11 @@ uvx --from 'lc-reconcile[server]' lc-reconcile serve
 lc-reconcile serve --port 8000 --sync-every 24
 ```
 
-`serve` runs the service at `http://127.0.0.1:8000/`. To use it from
-OpenRefine, choose *Reconcile → Start reconciling… → Add standard
-service…* and give that URL. Types are the MADS kinds of heading
+`serve` runs the service, with its reconciliation endpoint at
+`http://127.0.0.1:8000/reconcile`. To use it from OpenRefine, choose
+*Reconcile → Start reconciling… → Add standard service…* and give that
+URL. `http://127.0.0.1:8000/` is a page for trying it in a browser, using
+the same requests as OpenRefine. Types are the MADS kinds of heading
 (`PersonalName`, `Topic`, `GenreForm` and so on). These properties sharpen a
 query:
 
@@ -67,6 +69,18 @@ query:
 - `scheme`: the schemes to search, separated by spaces: `names`,
   `subjects`, `genreForms`, `childrensSubjects`, `demographicTerms` or
   `performanceMediums`
+
+The service also offers the protocol's optional suggest and preview
+services, which OpenRefine uses when you search for a match by hand and
+when you hover over a candidate:
+
+- `GET /reconcile/suggest/entity?prefix=…` gives headings starting with
+  what's been typed (at least two characters), headings before variants
+  and shorter before longer, optionally of one `type`, paged with `cursor`
+- `GET /reconcile/suggest/type` and `GET /reconcile/suggest/property`
+- `GET /reconcile/preview?id=…` gives a small HTML card for a heading: its
+  type, scheme, LCCN and dates, and for a deprecated heading what replaces
+  it
 
 ## Schemes
 
@@ -122,9 +136,12 @@ heading of the requested type whose normalized form equals the query.
 Comparison ignores case, diacritics and most punctuation.
 
 Failing that, a query that is the earlier established form of exactly one
-heading matches that heading: `Cookery` matches `Cooking`, which LC
-replaced it with. This is the usual case in records catalogued before a
-heading changed. It scores 95, a little below an authorized heading.
+heading matches that heading: `Aeroplanes` matches `Airplanes`, which LC
+replaced it with, and `Wang, Pao-li` matches its pinyin form `Wang, Baoli`.
+This is the usual case in records catalogued before a heading changed. It
+scores 95, a little below an authorized heading. A form LC split between
+headings, such as `Cookery` (now `Cooking` and `Cookbooks`), gives both as
+candidates.
 
 A heading can also be given as a MARC field, a marcKey (the `marc_key`
 property). It's compared with each authority's own marcKey subfield by

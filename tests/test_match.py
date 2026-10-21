@@ -1,7 +1,9 @@
 import pytest
 
-from lc_reconcile import Query, Reconciler
+from lc_reconcile import Index, Query, Reconciler
 from lc_reconcile.match import TYPES
+from lc_reconcile.records import AuthorityRecord
+from lc_reconcile.store import Writer
 
 from .conftest import VERNE
 
@@ -142,6 +144,44 @@ def test_shared_earlier_form_is_not_a_match(reconciler):
         GENRE_FORMS + "gf2018026031",
     }
     assert not any(c.match for c in found)
+
+
+def test_earlier_form_by_marc_key(reconciler):
+    # LC gives earlier forms as labels only, so the field's label finds it.
+    [candidate] = _ask(reconciler, "", marc_key="655 7$aGay erotic films.$2lcgft")
+    assert candidate.record.uri == GENRE_FORMS + "gf2018026031"
+    assert candidate.match
+    found = _ask(reconciler, "", marc_key="655 7$aGay pornographic films.$2lcgft")
+    assert len(found) == 2
+    assert not any(c.match for c in found)
+
+
+def test_variant_marc_key_that_is_also_an_earlier_form(tmp_path):
+    # As LC gives a name romanized again in pinyin: the old form is a 4XX
+    # with a marcKey, and also, as a label only, an earlier established form.
+    path = tmp_path / "lc.sqlite"
+    writer = Writer(path, create=True)
+    writer.add(
+        [
+            AuthorityRecord(
+                uri="http://id.loc.gov/authorities/names/n00000001",
+                scheme="names",
+                kind="PersonalName",
+                label="Wang, Baoli",
+                marc_key="1001 $aWang, Baoli",
+                variant_keys=["4001 $aWang, Pao-li"],
+                earlier=["Wang, Pao-li"],
+            )
+        ]
+    )
+    writer.create_indexes()
+    writer.close()
+    with Index(path) as index:
+        [candidate] = Reconciler(index).candidates(
+            Query("", marc_key="7001 $aWang, Pao-li.")
+        )
+    assert candidate.match
+    assert candidate.score == 95
 
 
 @pytest.mark.parametrize(

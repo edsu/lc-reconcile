@@ -97,6 +97,9 @@ SUBDIVISIONS = "collection_Subdivisions"
 
 DEFAULT_LIMIT = 10
 
+#: The shortest prefix, once normalized, that autocomplete looks up.
+SUGGEST_MIN = 2
+
 
 @dataclass(slots=True)
 class Query:
@@ -211,22 +214,31 @@ class Reconciler:
         if query.schemes is None:
             query = replace(query, schemes=_default_schemes(query.types))
         label_key = normalize(_with_dates(query))
-        if not label_key and field and not marc_key:
-            # A field that isn't a heading, such as a 385 of LCDGT terms, is
-            # matched by its label.
+        if not label_key and field:
+            # The field's heading as a label too: a field that isn't a
+            # heading, such as a 385 of LCDGT terms, has nothing else, and LC
+            # gives earlier established forms as labels without marcKeys.
             label_key = normalize(label_from_marc_key(field))
         if label_key:
             keys.append(label_key)
         subdivided = "--" in label_key or (marc_key and is_subdivided(marc_key))
         if query.types and subdivided:
             query = replace(query, types=query.types | {"ComplexSubject"})
-        hits: list[Hit] = []
-        for key in keys:
-            hits = [h for h in self.index.lookup(key) if _wanted(h.record, query)]
-            if hits:
-                break
-
-        authorized = _prefer_headings([h for h in hits if h.via == "authorized"])
+        found = [
+            [h for h in self.index.lookup(key) if _wanted(h.record, query)]
+            for key in dict.fromkeys(keys)
+        ]
+        # The marcKey is tried before the label: an authorized heading is
+        # taken from the first key that finds one, so that a marcKey's exact
+        # match isn't made ambiguous by headings that only read alike.
+        authorized = next(
+            (
+                _prefer_headings(authorized)
+                for hits in found
+                if (authorized := [h for h in hits if h.via == "authorized"])
+            ),
+            [],
+        )
         if authorized:
             unique = len(authorized) == 1
             return [
@@ -242,7 +254,17 @@ class Reconciler:
         # A heading's earlier form is the heading LC replaced, so a record
         # catalogued before the change is matched to its successor -- if
         # nothing else has the label as a variant.
-        variants = _prefer_headings([h for h in hits if h.via in _VARIANTS])
+        # Other forms are pooled across the keys, each record counted once,
+        # as an earlier form if either key finds one: the marcKey can find a
+        # variant whose label is also an earlier form.
+        pooled: dict[str, Hit] = {}
+        for hits in found:
+            for hit in hits:
+                if hit.via in _VARIANTS:
+                    current = pooled.get(hit.record.uri)
+                    if current is None or current.via != "earlier":
+                        pooled[hit.record.uri] = hit
+        variants = _prefer_headings(list(pooled.values()))
         if variants:
             unique = len(variants) == 1
             ranked = sorted(variants, key=lambda h: h.via != "earlier")
@@ -261,6 +283,7 @@ class Reconciler:
             ][: query.limit]
 
         # Only deprecated headings are left: offer what LC says replaces them.
+        hits = next((hits for hits in found if hits), [])
         candidates: dict[str, Candidate] = {}
         for hit in hits:
             note = hit.record.deletion_note
@@ -288,6 +311,45 @@ class Reconciler:
             # subdivision added, may still be like one it has.
             label_key = normalize(label_from_marc_key(query.marc_key))
         return self._similar(label_key, query) if label_key else []
+
+    def suggest(
+        self,
+        prefix: str,
+        *,
+        types: frozenset[str] | None = None,
+        schemes: frozenset[str] | None = None,
+        limit: int = DEFAULT_LIMIT,
+        offset: int = 0,
+    ) -> list[dict[str, Any]]:
+        """Headings starting with ``prefix``, for autocomplete.
+
+        Results have the shape of the 0.2 suggest service. A prefix of fewer
+        than :data:`SUGGEST_MIN` characters finds nothing: it would match a
+        great many labels and say little about any of them.
+        """
+        key = normalize(prefix)
+        if len(key) < SUGGEST_MIN:
+            return []
+        if schemes is None:
+            schemes = _default_schemes(types)
+        found = self.index.starting_with(
+            key, kinds=types, schemes=schemes, limit=limit, offset=offset
+        )
+        results = []
+        for hit, label_key in found:
+            record = hit.record
+            about = ", ".join(filter(None, (record.kind, record.scheme)))
+            if hit.via != "authorized":
+                about += f"; from {hit.via} form “{label_key}”"
+            result: dict[str, Any] = {
+                "id": record.uri,
+                "name": record.label or record.uri,
+                "description": about,
+            }
+            if record.kind:
+                result["notable"] = [{"id": record.kind, "name": record.kind}]
+            results.append(result)
+        return results
 
     def _similar(self, key: str, query: Query) -> list[Candidate]:
         """Headings with labels like ``key``, for when nothing matches it."""
