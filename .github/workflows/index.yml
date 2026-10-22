@@ -37,7 +37,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@v7
 
       # The index, its packed copy and the build's temporary files need about
       # 15 GB, more than a runner is guaranteed to have free.
