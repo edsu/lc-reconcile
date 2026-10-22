@@ -45,7 +45,7 @@ from lc_reconcile.store import SCHEMA_VERSION, Index, IndexUnavailable
 FORMAT = 1
 
 #: Where ``fetch-index`` looks by default: the repository's ``index`` release.
-RELEASE_URL = "https://github.com/blue-core-lod/lc-reconcile/releases/download/index/"
+RELEASE_URL = "https://github.com/edsu/lc-reconcile/releases/download/index/"
 
 #: Under GitHub's limit of 2 GiB for a release asset.
 PART_SIZE = 2_000_000_000

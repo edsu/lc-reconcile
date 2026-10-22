@@ -98,7 +98,7 @@ def manifest(base: str) -> dict[str, Any]:
             kind: {"service_url": base, "service_path": f"/suggest/{kind}"}
             for kind in ("entity", "type", "property")
         },
-        "documentation": "https://github.com/blue-core-lod/lc-reconcile",
+        "documentation": "https://github.com/edsu/lc-reconcile",
         "batchSize": 50,
     }
 

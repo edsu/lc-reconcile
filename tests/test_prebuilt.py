@@ -106,7 +106,7 @@ class _Response:
 
 
 def test_fetch_from_a_release(index_path, packed, tmp_path, monkeypatch):
-    base = "https://github.com/blue-core-lod/lc-reconcile/releases/download/index/"
+    base = "https://github.com/edsu/lc-reconcile/releases/download/index/"
     served = {base + p.name: p.read_bytes() for p in packed.parent.iterdir()}
     requested = []
 

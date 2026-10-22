@@ -18,7 +18,7 @@ except PackageNotFoundError:  # running from a source tree that isn't installed
 
 #: id.loc.gov asks clients to identify themselves.
 DEFAULT_USER_AGENT = (
-    f"lc-reconcile/{_VERSION} (+https://github.com/blue-core-lod/lc-reconcile)"
+    f"lc-reconcile/{_VERSION} (+https://github.com/edsu/lc-reconcile)"
 )
 
 #: A snapshot is a large download, so allow a slow first byte.

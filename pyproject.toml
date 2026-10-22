@@ -36,8 +36,8 @@ server = [
 lc-reconcile = "lc_reconcile.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/blue-core-lod/lc-reconcile"
-Issues = "https://github.com/blue-core-lod/lc-reconcile/issues"
+Homepage = "https://github.com/edsu/lc-reconcile"
+Issues = "https://github.com/edsu/lc-reconcile/issues"
 
 [dependency-groups]
 dev = [

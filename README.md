@@ -37,7 +37,7 @@ and the date LC published it with `--snapshot-date`.
 
 `fetch-index` downloads an index of every scheme, built and synced
 each week by this repository's [Index workflow](.github/workflows/index.yml)
-and published as assets of its [`index` release](https://github.com/blue-core-lod/lc-reconcile/releases/tag/index).
+and published as assets of its [`index` release](https://github.com/edsu/lc-reconcile/releases/tag/index).
 It's one gzip stream in parts, since a release asset must be under 2 GiB,
 and a manifest (`index-v4.json`) that gives each part's checksum. The
 index is checked against the manifest before it replaces the one you have.
