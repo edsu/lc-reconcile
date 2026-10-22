@@ -11,3 +11,6 @@ build/
 *.sqlite
 *.sqlite-*
 *.sqlite.new
+
+# Benchmark timings, which belong to one machine.
+bench/runs/

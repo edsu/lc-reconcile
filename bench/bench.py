@@ -38,19 +38,29 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from lc_reconcile import Index, Query, Reconciler
-from lc_reconcile.marckey import kinds, parse
 
 HEADINGS = Path(__file__).with_name("headings.jsonl")
 
-#: The reconciliation type to give with a label, by the marcKey's tag.
-TYPE_OF_TAG = {
-    "00": "PersonalName",
-    "10": "CorporateName",
-    "11": "ConferenceName",
-    "30": "Title",
-    "50": "Topic",
-    "51": "Geographic",
-    "55": "GenreForm",
+#: The reconciliation types a heading's classes in BIBFRAME stand for. A
+#: hub is a work, so either a name and title or a title alone.
+TYPES_OF_CLASS = {
+    "Person": ["PersonalName"],
+    "PersonalName": ["PersonalName"],
+    "Organization": ["CorporateName"],
+    "Jurisdiction": ["CorporateName"],
+    "CorporateName": ["CorporateName"],
+    "Meeting": ["ConferenceName"],
+    "ConferenceName": ["ConferenceName"],
+    "Family": ["FamilyName"],
+    "FamilyName": ["FamilyName"],
+    "Place": ["Geographic"],
+    "Geographic": ["Geographic"],
+    "HierarchicalGeographic": ["Geographic"],
+    "Topic": ["Topic"],
+    "ComplexSubject": ["ComplexSubject"],
+    "GenreForm": ["GenreForm"],
+    "Temporal": ["Temporal"],
+    "Hub": ["NameTitle", "Title"],
 }
 
 
@@ -59,15 +69,27 @@ def load(path: Path) -> list[dict]:
         return [json.loads(line) for line in lines]
 
 
-def type_name(heading: dict) -> str | None:
-    """The type OpenRefine would be given for a heading: by its tag."""
-    parsed = parse(heading["marc_key"])
-    if parsed is None:
-        return None
-    tag, _, subfields = parsed
-    if tag[1:] in ("00", "10", "11") and any(code == "t" for code, _ in subfields):
-        return "NameTitle"
-    return TYPE_OF_TAG.get(tag[1:])
+def type_names(heading: dict) -> list[str]:
+    """The types OpenRefine would be given for a heading: by its classes."""
+    names = [t for c in heading["types"] for t in TYPES_OF_CLASS.get(c, [])]
+    return list(dict.fromkeys(names))
+
+
+def label_query(heading: dict) -> dict:
+    """A heading as OpenRefine would ask for it: its label and types."""
+    query: dict = {"query": heading["label"]}
+    if names := type_names(heading):
+        query["type"] = names
+    return query
+
+
+def marc_query(heading: dict) -> dict:
+    return {"query": "", "properties": [{"pid": "marc_key", "v": heading["marc_key"]}]}
+
+
+def keyed(headings: list[dict]) -> list[dict]:
+    """The headings that have a marcKey, left over from MARC."""
+    return [h for h in headings if h["marc_key"]]
 
 
 # Accuracy ---------------------------------------------------------------------
@@ -98,13 +120,13 @@ def outcome(candidates: list, expected: str | None) -> str:
 
 def accuracy(reconciler: Reconciler, headings: list[dict]) -> dict[str, dict]:
     results: dict[str, dict] = {}
-    for way in ("marcKey", "label + type"):
+    for way in ("label + type", "marcKey"):
         by_link: dict[str, Counter] = {}
-        for heading in headings:
+        for heading in headings if way == "label + type" else keyed(headings):
             if way == "marcKey":
                 query = Query("", marc_key=heading["marc_key"])
             else:
-                query = Query(heading["label"], types=kinds(heading["marc_key"]))
+                query = Query.from_json(label_query(heading))
             found = reconciler.candidates(query)
             link = heading["link"] or "none"
             by_link.setdefault(link, Counter())[
@@ -186,17 +208,6 @@ class Client:
         return self.request("POST", "/reconcile", body)
 
 
-def marc_query(heading: dict) -> dict:
-    return {"query": "", "properties": [{"pid": "marc_key", "v": heading["marc_key"]}]}
-
-
-def label_query(heading: dict) -> dict:
-    query: dict = {"query": heading["label"]}
-    if type_ := type_name(heading):
-        query["type"] = type_
-    return query
-
-
 def batches(items: list, size: int) -> list[list]:
     return [items[i : i + size] for i in range(0, len(items), size)]
 
@@ -207,11 +218,12 @@ def request_kinds(client: Client, headings: list[dict]) -> dict[str, list[Callab
     unlinked = [h for h in headings if not h["expected"] and h["label"]]
     prefixes = [h["label"][:6] for h in headings if len(h["label"]) >= 6]
     return {
-        "reconcile, one marcKey": [
-            (lambda h=h: client.reconcile({"q0": marc_query(h)})) for h in headings
-        ],
         "reconcile, one label + type": [
             (lambda h=h: client.reconcile({"q0": label_query(h)})) for h in headings
+        ],
+        "reconcile, one marcKey": [
+            (lambda h=h: client.reconcile({"q0": marc_query(h)}))
+            for h in keyed(headings)
         ],
         "reconcile, label LC didn't link": [
             (lambda h=h: client.reconcile({"q0": label_query(h)})) for h in unlinked
@@ -222,7 +234,7 @@ def request_kinds(client: Client, headings: list[dict]) -> dict[str, list[Callab
                     {f"q{i}": marc_query(h) for i, h in enumerate(b)}
                 )
             )
-            for b in batches(headings, 50)
+            for b in batches(keyed(headings), 50)
         ],
         "suggest, 6-character prefix": [
             (lambda p=p: client.get("/reconcile/suggest/entity", prefix=p))
@@ -241,25 +253,17 @@ def in_process_kinds(
     """The same lookups made through the library, with no HTTP."""
     unlinked = [h for h in headings if not h["expected"] and h["label"]]
     return {
-        "marcKey": [
-            (lambda h=h: reconciler.candidates(Query("", marc_key=h["marc_key"])))
-            for h in headings
-        ],
         "label + type": [
-            (
-                lambda h=h: reconciler.candidates(
-                    Query(h["label"], types=kinds(h["marc_key"]))
-                )
-            )
+            (lambda h=h: reconciler.candidates(Query.from_json(label_query(h))))
             for h in headings
         ],
         "label LC didn't link": [
-            (
-                lambda h=h: reconciler.candidates(
-                    Query(h["label"], types=kinds(h["marc_key"]))
-                )
-            )
+            (lambda h=h: reconciler.candidates(Query.from_json(label_query(h))))
             for h in unlinked
+        ],
+        "marcKey": [
+            (lambda h=h: reconciler.candidates(Query("", marc_key=h["marc_key"])))
+            for h in keyed(headings)
         ],
     }
 

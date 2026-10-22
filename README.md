@@ -233,20 +233,69 @@ That's stricter than id.loc.gov's label service, which redirects
 ## Benchmarks
 
 `bench/` holds a benchmark made from LC's own cataloguing.
-`bench/headings.jsonl` is 2,054 agent, subject and genre/form headings
-sampled from LC BIBFRAME records, each with the marcKey and label LC gives
-it and the authority LC linked it to; `bench/extract.py` makes it from the
-records. To run it against a full index:
+`bench/headings.jsonl` is 4,154 contributor, subject and genre/form
+headings from 680 LC BIBFRAME records, sampled across all 346,991 records
+in `bluecore-models/uploads/batch_*.tar.gz`. Each has the label and
+classes the description gives it (`Person`, `Topic` and `ComplexSubject`,
+...), the marcKey if it has one, and the authority LC linked it to, if LC
+did. A label and a class are all a heading described as BIBFRAME has; a
+marcKey is left over from converting MARC, and 3,386 of these have one.
+The 1,137 headings LC didn't link are kept too, with no answer: subjects
+with subdivisions LC never established as one heading, mostly, and they
+are the ones that fall through to the similar-heading search.
+`bench/extract.py` makes the sample from the records:
+
+```
+uv run python bench/extract.py ../bluecore-models/uploads/batch_*.tar.gz
+```
+
+To time every lookup in the sample, one at a time and in-process, and
+compare the answers and timings before and after a change:
+
+```
+uv run python bench/lookups.py run before      # by label and type
+uv run python bench/lookups.py run before-mk --by marcKey
+# ... change something ...
+uv run python bench/lookups.py run after
+uv run python bench/lookups.py compare before after
+```
+
+A run is kept in `bench/runs/NAME.jsonl`, which isn't checked in, and
+prints its timings by how each heading was found and its accuracy against
+LC's links. `compare` prints two runs side by side, and every heading whose
+candidates changed, with what LC linked it to. On 2026-10-22, on the
+machine below, by label and type:
+
+| Found | Headings | Median | 90th percentile | 99th percentile | Slowest | Total |
+|---|---|---|---|---|---|---|
+| an exact heading, earlier form or variant | 3,411 | 0.5 ms | 0.9 ms | 3 ms | 7 ms | 1.8 s |
+| only similar headings | 682 | 226 ms | 1.7 s | 3.4 s | 22 s | 382 s |
+| nothing | 61 | 181 ms | 2.9 s | 12 s | 19 s | 74 s |
+
+The 18% of headings that fall through to the similar-heading search take
+99.6% of the time. The slowest are genre/forms (`Translations into
+English`, 22 s; `Executive department publications`, 10-19 s) and long
+subdivided subjects. By marcKey, the 3,386 headings that have one take
+80 s in all, since a marcKey finds more of them exactly. Of the 2,906
+headings LC linked to an authority, both ways give LC's own choice for
+2,815 (96.9%) and never another heading. The 20 missed, and the 61 given
+their LCSH twin, are all children's headings: a query reaches LC's
+children's subjects only by asking for that scheme, and these don't.
+
+`bench/bench.py` measures accuracy and HTTP latency and throughput against
+the service:
 
 ```
 uv run --extra server lc-reconcile serve --port 8000
 uv run python bench/bench.py --url http://127.0.0.1:8000
 ```
 
-The figures below are from 2026-10-21, on an Apple M3 Pro (12 cores,
-36 GB) with every scheme in a 9.6 GB index, and Python 3.13. Each pass ran
-once untimed first, so the index was in the page cache; the first lookups
-in a cold file take far longer. The clients ran on the same machine.
+The figures below are from 2026-10-21, from the earlier sample of 2,054
+headings, all with marcKeys, from the first nine tarballs. They were on
+an Apple M3 Pro (12 cores, 36 GB) with every scheme in a 9.6 GB index,
+and Python 3.13. Each pass ran once untimed first, so the index was in
+the page cache; the first lookups in a cold file take far longer. The
+clients ran on the same machine.
 
 **Accuracy.** Of the 1,674 headings LC linked to an authority, queried by
 marcKey as marc-bibframe asks:

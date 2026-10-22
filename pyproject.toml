@@ -67,3 +67,8 @@ markers = [
     "network: may reach the network, so the offline guard stands aside",
     "live: talks to the live id.loc.gov, deselected by default",
 ]
+
+[tool.ty.environment]
+# The benchmark scripts are run as bench/NAME.py, with bench/ on the path,
+# and import each other as such.
+extra-paths = ["bench"]
