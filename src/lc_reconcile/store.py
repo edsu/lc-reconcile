@@ -88,6 +88,17 @@ CREATE TABLE scheme (
 );
 """
 
+# Kept by sync, and added to an index made before it was: an index without
+# it is still schema version 4. day is when a record was last fetched, as the
+# date at UTC-12, so a change dated before day was in what was fetched,
+# whatever timezone the feed dates its changes in.
+_FETCHED = """
+CREATE TABLE IF NOT EXISTS fetched (
+    uri TEXT PRIMARY KEY,
+    day TEXT NOT NULL
+) WITHOUT ROWID;
+"""
+
 # Created after a bulk load: maintaining them row by row is far slower.
 _INDEXES = f"""
 CREATE UNIQUE INDEX authority_uri ON authority (uri);
@@ -405,6 +416,7 @@ class Writer:
             self._db.executescript(_SCHEMA)
             self._db.execute(f"PRAGMA user_version = {SCHEMA_VERSION}")
             self._db.commit()
+        self._db.executescript(_FETCHED)
         (last,) = self._db.execute("SELECT max(id) FROM authority").fetchone()
         self._next_id = (last or 0) + 1
 
@@ -432,19 +444,45 @@ class Writer:
             self._db.executemany("INSERT INTO use_instead VALUES (?, ?)", targets)
         return len(authorities)
 
-    def upsert(self, record: AuthorityRecord) -> None:
-        """Replace whatever the index holds for this record."""
+    def upsert(self, record: AuthorityRecord, *, fetched: str | None = None) -> None:
+        """Replace whatever the index holds for this record.
+
+        ``fetched`` is the day (YYYY-MM-DD) it was fetched, for
+        :meth:`fetched_on`.
+        """
         with self._db:
             existed = self._delete(record.uri) is not None
             self.add([record])
             if not existed:
                 self._count(record.scheme, +1)
+            if fetched:
+                self._fetched(record.uri, fetched)
 
-    def delete(self, uri: str) -> None:
+    def delete(self, uri: str, *, fetched: str | None = None) -> None:
         with self._db:
             scheme = self._delete(uri)
             if scheme is not None:
                 self._count(scheme, -1)
+            if fetched:
+                self._fetched(uri, fetched)
+
+    def _fetched(self, uri: str, day: str) -> None:
+        self._db.execute("INSERT OR REPLACE INTO fetched VALUES (?, ?)", (uri, day))
+
+    def fetched_on(self, uri: str) -> str | None:
+        """The day a sync last fetched this record, if it's still kept."""
+        row = self._db.execute(
+            "SELECT day FROM fetched WHERE uri = ?", (uri,)
+        ).fetchone()
+        return row[0] if row else None
+
+    def forget_fetched(self, prefix: str, before: str) -> None:
+        """Forget fetches of records under ``prefix`` made before ``before``."""
+        with self._db:
+            self._db.execute(
+                "DELETE FROM fetched WHERE uri >= ? AND uri < ? AND day < ?",
+                (prefix, prefix + "\U0010ffff", before),
+            )
 
     def _delete(self, uri: str) -> str | None:
         """Remove a record's rows, returning its scheme if it was there."""

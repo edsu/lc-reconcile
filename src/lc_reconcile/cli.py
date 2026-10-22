@@ -264,7 +264,9 @@ def _sync(args: argparse.Namespace) -> int:
     for result in results:
         print(
             f"{result.scheme}: {result.updated:,} updated, {result.deleted:,} "
-            f"removed, synced to {result.cursor}"
+            f"removed"
+            + (f", {result.skipped:,} already up to date" if result.skipped else "")
+            + f", synced to {result.cursor}"
             + ("" if result.finished else " (stopped at the time limit)"),
             file=sys.stderr,
         )

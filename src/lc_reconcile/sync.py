@@ -14,6 +14,8 @@ of changes takes effect, which can be days in the future. So an item's date
 is the later of its ``published`` and ``updated``, the sync looks back
 :data:`MARGIN` before its cursor, and the cursor never passes today. Looking
 at a change twice does no harm: it is applied the same way both times.
+But it costs a request, so the index remembers the day each record was
+fetched, and a change dated before then is not fetched again.
 """
 
 from __future__ import annotations
@@ -62,6 +64,8 @@ class SyncResult:
     cursor: date
     #: False if the sync stopped at its time limit before applying everything.
     finished: bool = True
+    #: Changes not fetched, because the record was fetched since.
+    skipped: int = 0
 
 
 def item_date(item: dict[str, Any]) -> date | None:
@@ -120,6 +124,20 @@ def read_feed(
             return changes, page
 
 
+def fetch_day(now: datetime) -> date:
+    """The date at UTC-12 at ``now``: no timezone has yet to reach it.
+
+    A change dated before it was made before ``now``, in whatever timezone
+    it was dated.
+    """
+    return (now.astimezone(UTC) - timedelta(hours=12)).date()
+
+
+def _counted(n: int, noun: str) -> str:
+    """``n`` and ``noun``, plural unless there's one: "1 record", "2 records"."""
+    return f"{n:,} {noun}" + ("" if n == 1 else "s")
+
+
 def record_url(uri: str) -> str:
     """Where to fetch a record's N-Triples."""
     return "https://" + uri.removeprefix("http://") + ".nt"
@@ -152,7 +170,11 @@ def sync(
     """
     deadline = clock() + time_limit.total_seconds() if time_limit else None
     client = client or Client()
-    today = today or datetime.now(UTC).date()
+    if today is None:
+        now = datetime.now(UTC)
+        today, fetched = now.date(), fetch_day(now).isoformat()
+    else:
+        fetched = today.isoformat()
     wanted = set(schemes) if schemes is not None else None
     say = progress or (lambda scheme, message: None)
     say_more = detail or (lambda scheme, message: None)
@@ -179,16 +201,44 @@ def sync(
             changes, pages = read_feed(
                 client, status.name, since, partial(say_more, status.name)
             )
-            say(status.name, f"{len(changes):,} changed since {since} ({pages} pages)")
+            prefix = f"{ID_LOC}/authorities/{status.name}/"
+            ordered = []
+            for uri, when in sorted(changes.items(), key=lambda c: (c[1], c[0])):
+                seen = writer.fetched_on(uri)
+                if seen is not None and date.fromisoformat(seen) > when:
+                    say_more(
+                        status.name,
+                        f"up to date: {uri} (changed {when}, fetched {seen})",
+                    )
+                else:
+                    ordered.append((uri, when))
+            skipped = len(changes) - len(ordered)
+            say(
+                status.name,
+                f"{_counted(len(changes), 'record')} changed since {since} "
+                f"({_counted(pages, 'feed page')})",
+            )
+            if skipped:
+                say(
+                    status.name,
+                    f"{skipped:,} of them {'is' if skipped == 1 else 'are'} up to "
+                    f"date, fetched since they changed; {len(ordered):,} to fetch",
+                )
 
-            ordered = sorted(changes.items(), key=lambda change: (change[1], change[0]))
             updated = deleted = 0
             for i, (uri, when) in enumerate(ordered):
                 if deadline is not None and clock() >= deadline:
                     say(status.name, f"stopped at the time limit, synced to {cursor}")
                     results.append(
                         SyncResult(
-                            status.name, since, pages, updated, deleted, cursor, False
+                            status.name,
+                            since,
+                            pages,
+                            updated,
+                            deleted,
+                            cursor,
+                            False,
+                            skipped,
                         )
                     )
                     return results
@@ -199,11 +249,11 @@ def sync(
                     else None
                 )
                 if record is None:
-                    writer.delete(uri)
+                    writer.delete(uri, fetched=fetched)
                     deleted += 1
                     say_more(status.name, f"removed {uri}")
                 else:
-                    writer.upsert(record)
+                    writer.upsert(record, fetched=fetched)
                     updated += 1
                     say_more(status.name, f"updated {uri} ({when})")
                 last_of_day = i + 1 == len(ordered) or ordered[i + 1][1] != when
@@ -211,14 +261,21 @@ def sync(
                     cursor = max(cursor, min(when, today))
                     writer.set_cursor(status.name, cursor.isoformat(), finished=False)
                     say(
-                        status.name, f"applied {i + 1:,} of {len(ordered):,}, to {when}"
+                        status.name,
+                        f"applied {i + 1:,} of {len(ordered):,}, "
+                        f"the changes up to {when}",
                     )
             # Everything the feed holds since ``since`` is now applied, so the
             # next sync can start from today, even if nothing changed.
             cursor = max(cursor, today)
             writer.set_cursor(status.name, cursor.isoformat(), finished=True)
+            # The next sync reads nothing dated before its own look-back, so
+            # a fetch before then can't spare it a request.
+            writer.forget_fetched(prefix, (cursor - MARGIN).isoformat())
             results.append(
-                SyncResult(status.name, since, pages, updated, deleted, cursor)
+                SyncResult(
+                    status.name, since, pages, updated, deleted, cursor, True, skipped
+                )
             )
     finally:
         writer.close()

@@ -2,17 +2,21 @@
 
 import json
 import shutil
+import sys
 import urllib.error
-from datetime import date, timedelta
+from datetime import UTC, date, datetime, timedelta
 from email.message import Message
 
 import pytest
 
 from lc_reconcile import Index, cli, normalize
 from lc_reconcile._net import Client, FetchError
+from lc_reconcile.store import Writer
 from lc_reconcile.sync import (
     FEED_URL,
     RebuildNeeded,
+    _counted,
+    fetch_day,
     item_date,
     record_url,
     sync,
@@ -107,6 +111,19 @@ def _feed():
         record_url(KERN): KERN_DEPRECATED.encode(),
         # Schulze is gone: not served, so a 404.
     }
+
+
+class FixedNow(datetime):
+    """A datetime whose now() is 15:00 UTC on the 20th, for the CLI's syncs."""
+
+    @classmethod
+    def now(cls, tz=None):
+        return cls(2026, 10, 20, 15, 0, tzinfo=UTC)
+
+
+@pytest.fixture
+def fixed_now(monkeypatch):
+    monkeypatch.setattr(sys.modules["lc_reconcile.sync"], "datetime", FixedNow)
 
 
 @pytest.fixture
@@ -260,7 +277,7 @@ def test_client_missing_and_failing(monkeypatch):
         client.get("https://id.loc.gov/broken")
 
 
-def test_cli_sync_and_status(index_copy, monkeypatch, capsys):
+def test_cli_sync_and_status(index_copy, monkeypatch, capsys, fixed_now):
     monkeypatch.setattr(cli, "Client", lambda delay: FakeLC(_feed()))
     db = str(index_copy)
     assert cli.main(["--db", db, "status"]) == 0
@@ -268,13 +285,20 @@ def test_cli_sync_and_status(index_copy, monkeypatch, capsys):
     assert cli.main(["--db", db, "sync", "--scheme", "names"]) == 0
     err = capsys.readouterr().err
     assert "names: reading the feed back to 2026-10-11" in err
+    assert "names: 4 records changed since 2026-10-11 (3 feed pages)" in err
     assert "names: 3 updated, 1 removed" in err
-    assert "feed page" not in err
+    assert "feed page 1" not in err
     assert cli.main(["--db", db, "status"]) == 0
     assert "synced to" in capsys.readouterr().out
 
 
-def test_cli_sync_verbose(index_copy, monkeypatch, capsys):
+def test_counted():
+    assert _counted(1, "feed page") == "1 feed page"
+    assert _counted(0, "record") == "0 records"
+    assert _counted(4150, "record") == "4,150 records"
+
+
+def test_cli_sync_verbose(index_copy, monkeypatch, capsys, fixed_now):
     monkeypatch.setattr(cli, "Client", lambda delay: FakeLC(_feed()))
     assert cli.main(["--db", str(index_copy), "sync", "-v"]) == 0
     err = capsys.readouterr().err
@@ -282,6 +306,69 @@ def test_cli_sync_verbose(index_copy, monkeypatch, capsys):
     assert "names: feed page 3, back to 2026-09-30" in err
     assert f"names: updated {VERNE} (2026-10-18)" in err
     assert f"names: removed {SCHULZE}" in err
+
+
+def _fetched(path):
+    writer = Writer(path)
+    try:
+        return dict(writer._db.execute("SELECT uri, day FROM fetched"))
+    finally:
+        writer.close()
+
+
+def test_records_fetched_since_they_changed_are_not_fetched_again(index_copy):
+    sync(index_copy, ["names"], client=FakeLC(_feed()), today=TODAY)
+    # Everything was fetched on the 19th; the removal of Schulze counts too.
+    assert set(_fetched(index_copy).values()) == {"2026-10-19"}
+
+    lc = FakeLC(_feed())
+    [result] = sync(index_copy, ["names"], client=lc, today=date(2026, 10, 20))
+    # The look-back reaches the 16th: Verne (the 18th) was fetched since it
+    # changed, but Irwansyah changed on the 19th, the day it was fetched,
+    # and may have changed again after.
+    assert record_url(VERNE) not in lc.fetched
+    assert record_url(NEW) in lc.fetched
+    assert (result.updated, result.skipped) == (1, 1)
+    assert _fetched(index_copy)[NEW] == "2026-10-20"
+
+
+def test_fetches_too_old_to_matter_are_forgotten(index_copy):
+    sync(index_copy, ["names"], client=FakeLC(_feed()), today=TODAY)
+    later = FakeLC({FEED_URL.format(scheme="names", page=1): _page(1, [], last=True)})
+    sync(index_copy, ["names"], client=later, today=date(2026, 10, 30))
+    # The next sync looks back only to the 27th.
+    assert _fetched(index_copy) == {}
+
+
+def test_an_index_from_before_fetches_were_kept(index_copy):
+    writer = Writer(index_copy)
+    writer._db.execute("DROP TABLE fetched")
+    writer.close()
+    [result] = sync(index_copy, ["names"], client=FakeLC(_feed()), today=TODAY)
+    assert (result.updated, result.skipped) == (3, 0)
+
+
+def test_fetch_day_is_the_earliest_date_anywhere():
+    assert fetch_day(datetime(2026, 10, 22, 14, 57, tzinfo=UTC)) == date(2026, 10, 22)
+    # Just after midnight UTC, it's still the 21st in the Americas.
+    assert fetch_day(datetime(2026, 10, 22, 2, 0, tzinfo=UTC)) == date(2026, 10, 21)
+
+
+def test_cli_says_what_is_up_to_date(index_copy, monkeypatch, capsys, fixed_now):
+    db = str(index_copy)
+    monkeypatch.setattr(cli, "Client", lambda delay: FakeLC(_feed()))
+    sync(db, ["names"], client=FakeLC(_feed()), today=TODAY)
+    # Synced to the 19th, so on the 20th it looks back to the 16th.
+    assert cli.main(["--db", db, "sync", "--scheme", "names", "-v"]) == 0
+    err = capsys.readouterr().err
+    assert "names: 2 records changed since 2026-10-16 (2 feed pages)" in err
+    assert (
+        "names: 1 of them is up to date, fetched since they changed; 1 to fetch" in err
+    )
+    assert f"names: up to date: {VERNE} (changed 2026-10-18, fetched 2026-10-19)" in err
+    assert (
+        "names: 1 updated, 0 removed, 1 already up to date, synced to 2026-10-20" in err
+    )
 
 
 def test_time_limit(index_copy):

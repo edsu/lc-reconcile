@@ -113,16 +113,33 @@ fetches each record that changed, and replaces it in the index. It waits
 half a second between requests (`--delay`), and saves its place after each
 day of changes, so it can be stopped and run again.
 
-LCNAF changes by about 1,200 records a day, and a sync fetches each
-record at about 0.7 seconds. Because it looks back three days, a daily sync
-fetches about four days of changes, some 5,000 records and about an hour.
+A sync looks back three days because the feed's dates aren't exact: items
+on a page aren't in order, and some are dated days ahead. It doesn't fetch
+a record again for a change dated before the day it last fetched it, so
+the look-back costs only the feed's pages. A daily sync of names says
+something like this:
+
+```
+names: reading the feed back to 2026-10-18
+names: 4,315 records changed since 2026-10-18 (45 feed pages)
+names: 2,301 of them are up to date, fetched since they changed; 2,014 to fetch
+names: applied 1,190 of 2,014, the changes up to 2026-10-21
+names: applied 2,014 of 2,014, the changes up to 2026-10-22
+names: 2,014 updated, 0 removed, 2,301 already up to date, synced to 2026-10-22
+```
+
+LCNAF changes by about 1,200 records a day, and a sync fetches each at
+about 0.7 seconds. The feed has dates but no times, so a change dated the
+day of the last sync is fetched again in case it came after, and a daily
+sync fetches about two days of changes: some 2,500 records, half an hour.
 LC's names snapshot is published only every few weeks: a build from one
-24 days old had 26,567 changes to catch up on, about five hours. A sync of an index more than 30 days behind is refused: rebuild
-it from a newer snapshot, or raise the limit with `--max-age`.
-`--max-minutes` stops a sync after that long, keeping what it applied.
-`--verbose` (`-v`) also reports each feed page read and each record
-applied; otherwise a long feed, like a few weeks of names, is read in
-silence.
+24 days old had 26,567 changes to catch up on, about five hours.
+
+A sync of an index more than 30 days behind is refused: rebuild it from a
+newer snapshot, or raise the limit with `--max-age`. `--max-minutes` stops
+a sync after that long, keeping what it applied. `--verbose` (`-v`) also
+reports each feed page read and each record applied or found up to date;
+otherwise a long feed, like a few weeks of names, is read in silence.
 
 ## From Python
 
