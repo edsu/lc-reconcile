@@ -192,7 +192,14 @@ def fetch(
                 for chunk in _read_part(manifest, part["name"]):
                     digest.update(chunk)
                     received += len(chunk)
-                    data = decompressor.decompress(chunk)
+                    try:
+                        data = decompressor.decompress(chunk)
+                    except zlib.error:
+                        # A damaged part can break the stream before its
+                        # checksum is reached.
+                        raise PrebuiltError(
+                            f"{part['name']} is not what {manifest} says"
+                        ) from None
                     whole.update(data)
                     size += len(data)
                     out.write(data)

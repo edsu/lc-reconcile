@@ -52,9 +52,9 @@ def test_fetch_from_a_path(index_path, packed, tmp_path):
         assert index.get("http://id.loc.gov/authorities/names/n79064013") is not None
 
 
-def _corrupt(path):
+def _corrupt(path, at=100):
     data = bytearray(path.read_bytes())
-    data[100] ^= 0xFF
+    data[at] ^= 0xFF
     path.write_bytes(bytes(data))
 
 
@@ -62,6 +62,8 @@ def _corrupt(path):
     ("damage", "message"),
     [
         (lambda out, parts: _corrupt(out / parts[1]["name"]), "is not what"),
+        # The gzip header: the stream breaks before the part's checksum.
+        (lambda out, parts: _corrupt(out / parts[0]["name"], at=0), "is not what"),
         (lambda out, parts: (out / parts[-1]["name"]).unlink(), "is missing"),
     ],
 )
