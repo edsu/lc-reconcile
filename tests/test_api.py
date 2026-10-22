@@ -284,3 +284,13 @@ def test_responses_follow_the_spec(client, schema, path, params):
     validator = jsonschema.Draft7Validator(contents, registry=registry)
     body = client.get(path, params=params).json()
     assert [error.message for error in validator.iter_errors(body)] == []
+
+
+def test_workers_from_the_environment(monkeypatch):
+    # A container sees the host's CPUs, so it says how many workers it wants.
+    from lc_reconcile import cli
+
+    monkeypatch.setenv("LC_RECONCILE_WORKERS", "3")
+    assert cli._parser().parse_args(["serve"]).workers == 3
+    monkeypatch.delenv("LC_RECONCILE_WORKERS")
+    assert cli._parser().parse_args(["serve"]).workers >= 1

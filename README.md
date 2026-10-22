@@ -82,6 +82,29 @@ when you hover over a candidate:
   type, scheme, LCCN and dates, and for a deprecated heading what replaces
   it
 
+## In Docker
+
+```
+docker compose up
+```
+
+builds the image and runs the service on port 8000. The index isn't in
+the image: it's kept on a volume at `/data`, and the first time the service
+starts with an empty volume it fetches the prebuilt index (a 2.7 GB
+download). If there's none to fetch, it says how to build one and waits,
+then starts serving as soon as an index is there. Build one from another
+terminal with, for example:
+
+```
+docker compose run --rm lc-reconcile build --scheme names --scheme subjects --scheme genreForms
+```
+
+The same works for any other command (`status`, `sync`, `match …`). The
+service syncs on starting and every 24 hours. A container sees all the
+host's CPUs, so `compose.yaml` sets how many workers to run with
+`LC_RECONCILE_WORKERS`. The container runs as user 999, so a host directory
+mounted at `/data` instead of the volume has to be writable by that user.
+
 ## Schemes
 
 A query searches names, subjects and genreForms unless it asks for

@@ -93,8 +93,9 @@ def _parser() -> argparse.ArgumentParser:
     serve.add_argument(
         "--workers",
         type=int,
-        default=os.cpu_count() or 1,
-        help="worker processes, which share the index (default: one per core)",
+        default=int(os.environ.get("LC_RECONCILE_WORKERS") or os.cpu_count() or 1),
+        help="worker processes, which share the index "
+        "(default: $LC_RECONCILE_WORKERS or one per core)",
     )
     serve.add_argument(
         "--sync-every",

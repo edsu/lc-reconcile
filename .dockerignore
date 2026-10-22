@@ -1,0 +1,13 @@
+.git
+.github
+.venv
+**/__pycache__
+.pytest_cache
+.ruff_cache
+*.sqlite
+*.sqlite-*
+*.sqlite.new
+bench
+tests
+dist
+build

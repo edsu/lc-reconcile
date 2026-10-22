@@ -1,0 +1,17 @@
+services:
+  lc-reconcile:
+    build: .
+    image: lc-reconcile
+    ports:
+      - "8000:8000"
+    volumes:
+      - data:/data
+    environment:
+      # A container sees all the host's CPUs, so say how many to use. Each
+      # worker is a process; beyond about eight they add little.
+      LC_RECONCILE_WORKERS: "4"
+    init: true
+    restart: unless-stopped
+
+volumes:
+  data:
