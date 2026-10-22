@@ -3,12 +3,21 @@
 Reconcile name, subject and genre/form headings against a local index of
 [id.loc.gov](https://id.loc.gov) authorities.
 
+It speaks the Reconciliation Service API, the protocol Google Refine
+introduced so that the values in a column could be matched against Freebase
+and other sources of identifiers, and which OpenRefine, its successor,
+still uses. Many
+services offer it, Wikidata's among them, and the W3C's
+[Entity Reconciliation Community Group](https://www.w3.org/community/reconciliation/)
+now maintains it as a specification. A tool that can reconcile against one
+of those services can reconcile against this one, and lc-reconcile follows
+[version 0.2](https://www.w3.org/community/reports/reconciliation/CG-FINAL-specs-0.2-20230410/)
+of the specification.
+
 The index is built from LC's [bulk snapshots](https://id.loc.gov/download/)
 of LCNAF, LCSH, LCGFT, children's subject headings, LCDGT (demographic
-group terms) and LCMPT (medium of performance terms), so matching a heading doesn't send a request to
-id.loc.gov. Queries and results follow the
-[Reconciliation Service API 0.2](https://www.w3.org/community/reports/reconciliation/CG-FINAL-specs-0.2-20230410/),
-the protocol OpenRefine speaks.
+group terms) and LCMPT (medium of performance terms), so matching a heading
+doesn't send a request to id.loc.gov.
 
 This is early work.
 
